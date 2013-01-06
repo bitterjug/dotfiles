@@ -10,5 +10,5 @@
 
 fresh freshshell/fresh bin/fresh --bin
 fresh markskipper/dotfiles tmux/tmux.conf --file
-fresh config/inputrc --file
+fresh config/* --file
 fresh freemind/user.properties --file=~/.freemind/user.properties
