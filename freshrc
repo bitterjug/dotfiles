@@ -8,7 +8,11 @@
 #
 # See http://freshshell.com/readme for documentation.
 
+# Fresh
 fresh freshshell/fresh bin/fresh --bin
-fresh markskipper/dotfiles tmux/tmux.conf --file
+
+# All my dotfiles
 fresh config/* --file
+
+# Freemind config (could also add the custom icons here maybe)
 fresh freemind/user.properties --file=~/.freemind/user.properties
