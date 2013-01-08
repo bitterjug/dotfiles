@@ -1,0 +1,17 @@
+[general]
+accounts = Aptivate
+
+[Account Aptivate]
+localrepository = Work
+remoterepository = Aptivate.org
+
+[Repository Work]
+type = Maildir
+localfolders = ~/Mail/Aptivate
+
+[Repository Aptivate.org]
+type = IMAP
+remotehost = mail.aptivate.org
+remoteuser = marks
+ssl = yes
+maxconnections = 3
