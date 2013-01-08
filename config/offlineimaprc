@@ -15,3 +15,4 @@ remotehost = mail.aptivate.org
 remoteuser = marks
 ssl = yes
 maxconnections = 3
+cert_fingerprint = 29fdde8cc823c01c151be5826165c9d6e6a47ad1
