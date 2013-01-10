@@ -8,6 +8,9 @@
 #
 # See http://freshshell.com/readme for documentation.
 
+# make my files private
+umask 0077
+
 # Fresh
 fresh freshshell/fresh bin/fresh --bin
 
@@ -16,3 +19,6 @@ fresh config/* --file
 
 # Freemind config (could also add the custom icons here maybe)
 fresh freemind/user.properties --file=~/.freemind/user.properties
+
+#
+fresh bin --bin
