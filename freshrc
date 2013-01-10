@@ -24,4 +24,8 @@ fresh freemind/user.properties --file=~/.freemind/user.properties
 fresh bin --bin
 
 # Mutt config all lives in .mutt
-fresh mutt --file
+# I think this shoulid work, but for a bug
+# fresh mutt --file=~/.mutt/
+fresh mutt/muttrc --file=~/.mutt/muttrc
+fresh mutt/colours --file=~/.mutt/colours
+
