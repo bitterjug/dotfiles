@@ -1,0 +1,20 @@
+set mbox_type   = Maildir
+set sendmail    = /usr/bin/msmtp
+set from 	= marks@aptivate.org
+
+set folder      = ~/Mail
+set spoolfile   = "+Aptivate/INBOX"
+
+set mbox        = "+Aptivate/Archive"
+set postponed   = "+Aptivate/Drafts"
+unset record
+
+mailboxes +Aptivate/INBOX +Aptivate/Tech +Aptivate/YouWin
+
+# Sidebar
+set sidebar_visible
+set sidebar_width     = 25
+set sidebar_delim     = | 
+
+
+source ~/.mutt/colours

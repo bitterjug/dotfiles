@@ -14,11 +14,14 @@ umask 0077
 # Fresh
 fresh freshshell/fresh bin/fresh --bin
 
-# All my dotfiles
+# All dotfiles into ~
 fresh config/* --file
 
 # Freemind config (could also add the custom icons here maybe)
 fresh freemind/user.properties --file=~/.freemind/user.properties
 
-#
+# Do all the bin files into ~/bin at once, mwahaha
 fresh bin --bin
+
+# Mutt config all lives in .mutt
+fresh mutt --file
