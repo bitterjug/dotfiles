@@ -8,9 +8,6 @@
 #
 # See http://freshshell.com/readme for documentation.
 
-# make my files private
-umask 0077
-
 # Fresh
 fresh freshshell/fresh bin/fresh --bin
 
