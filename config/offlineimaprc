@@ -1,6 +1,8 @@
 [general]
 accounts = Aptivate
 
+pythonfile = ~/bin/offlineimap.py
+
 [Account Aptivate]
 localrepository = Work
 remoterepository = Aptivate.org
@@ -13,7 +15,9 @@ localfolders = ~/Mail/Aptivate
 [Repository Aptivate.org]
 type = IMAP
 remotehost = mail.aptivate.org
-remoteuser = marks
+
+remoteusereval = get_username("mail.aptivate.org")
+remotepasseval = get_password("mail.aptivate.org")
 ssl = yes
 maxconnections = 3
 cert_fingerprint = 29fdde8cc823c01c151be5826165c9d6e6a47ad1
