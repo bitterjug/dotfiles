@@ -13,8 +13,11 @@ mailboxes +Aptivate/INBOX +Aptivate/Tech +Aptivate/YouWin
 
 # Sidebar
 set sidebar_visible
-set sidebar_width     = 25
-set sidebar_delim     = | 
+set sidebar_width  = 25
 
+# Index view options
+set sort           = threads
 
+# other stuff
 source ~/.mutt/colours
+source ~/.mutt/bindings

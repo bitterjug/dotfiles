@@ -1,0 +1,7 @@
+# vim: filetype=muttrc
+#
+bind index,pager <down>   sidebar-next
+bind index,pager <up>     sidebar-prev
+bind index,pager <right>  sidebar-open
+bind index,pager K        sidebar-prev
+bind index,pager J        sidebar-next
