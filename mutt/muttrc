@@ -18,6 +18,13 @@ set sidebar_width  = 25
 # Index view options
 set sort           = threads
 
+# Addressbook
+#
+# Use little brother's database
+set query_command='/usr/bin/lbdbq %s'
+# Add items to addresbook
+macro index,pager A "|abook --add-email-quiet\n" 'add the sender to the address book'
+
 # other stuff
 source ~/.mutt/colours
 source ~/.mutt/bindings
