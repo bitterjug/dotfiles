@@ -1,0 +1,4 @@
+# vim: filetype=muttrc
+# Sync and fetch 
+macro index ^ "<enter-command>unset wait_key<enter><shell-escape>offlineimap<enter><enter-command>set wait_key<enter>"
+

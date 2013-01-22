@@ -28,3 +28,4 @@ macro index,pager A "|abook --add-email-quiet\n" 'add the sender to the address 
 # other stuff
 source ~/.mutt/colours
 source ~/.mutt/bindings
+source ~/.mutt/macros
