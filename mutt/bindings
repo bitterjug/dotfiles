@@ -5,3 +5,21 @@ bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
 bind index,pager K        sidebar-prev
 bind index,pager J        sidebar-next
+
+# Unbind D (delete matching pattern)
+# I'll use tags instead, thanks.
+bind index       D        noop
+
+# Unbind z and Z for thread ops
+bind index,pager z,Z      noop
+# Delete Threads
+bind index,pager zd       delete-subthread
+bind index,pager Zd       delete-thread
+# Tag threads
+bind index       zt,Zt       tag-thread
+# Collapse and expand
+bind index       zz       collapse-thread
+bind index       ZZ       collapse-all
+# Mark threads as read
+bind index       zr       read-subthread
+bind index       Zr       read-thread

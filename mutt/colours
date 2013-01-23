@@ -83,7 +83,7 @@ color index color248 color52 "~F" # Flagged Messages
 #  color index color136 color252 "~v~(~D)" # thread with deleted (doesn't differentiate between all or partial)
 #color index color136 color234 "~(~N)" # messages in threads with some unread
 #color index color64 color234 "~S" # superseded messages
-#color index color160 color234 "~T" # tagged messages
+color index color234 color252 "~T" # tagged messages
 #color index color166 color160 "~=" # duplicated messages
 
 # message headers ------------------------------------------------------
