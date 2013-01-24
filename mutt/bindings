@@ -28,5 +28,5 @@ bind pager       \Cf        half-down
 bind pager       ]          half-down
 bind pager       j          next-line
 bind pager       k          previous-line
-bind pager       n          next-undeleted
-bind pager       p          previous-undeleted
+bind pager       J          next-undeleted
+bind pager       K          previous-undeleted
