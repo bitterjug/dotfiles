@@ -1,12 +1,17 @@
-set mbox_type   = Maildir
-set sendmail    = /usr/bin/msmtp
-set from 	= marks@aptivate.org
+set mbox_type    = Maildir
+set sendmail     = /usr/bin/msmtp
 
-set folder      = ~/Mail
-set spoolfile   = "+Aptivate/INBOX"
+# Aptivate identity
+set from 	     = marks@aptivate.org
+set realname     = "Mark Skipper"
+set signature    = ~/.aptivate-signature   
+my_hdr X-Homepage: http://aptivate.org/
 
-set mbox        = "+Aptivate/Archive"
-set postponed   = "+Aptivate/Drafts"
+set folder       = ~/Mail
+set spoolfile    = "+Aptivate/INBOX"
+set mbox         = "+Aptivate/Archive"
+set postponed    = "+Aptivate/Drafts"
+set header_cache = ~/.mailcache/
 unset record
 
 mailboxes +Aptivate/INBOX +Aptivate/Tech +Aptivate/YouWin
@@ -17,6 +22,8 @@ set sidebar_width  = 25
 
 # Index view options
 set sort           = threads
+
+set edit_headers   = yes
 
 # Addressbook
 #
