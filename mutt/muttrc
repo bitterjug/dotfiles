@@ -28,9 +28,7 @@ set edit_headers   = yes
 # Addressbook
 #
 # Use little brother's database
-set query_command='/usr/bin/lbdbq %s'
-# Add items to addresbook
-macro index,pager A "|abook --add-email-quiet\n" 'add the sender to the address book'
+set query_command="lbdbq %s"
 
 # other stuff
 source ~/.mutt/colours
