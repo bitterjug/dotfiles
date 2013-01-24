@@ -1,6 +1,5 @@
 [general]
 accounts = Aptivate
-ui = Blinkenlights
 pythonfile = ~/bin/offlineimap.py
 
 [Account Aptivate]
