@@ -23,6 +23,9 @@ set sidebar_width  = 25
 # Index view options
 set sort           = threads
 
+
+# Take me directly to the editor, I'll edit stuff there
+set fast_reply
 set edit_headers   = yes
 
 # Addressbook
