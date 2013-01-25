@@ -47,10 +47,11 @@ mono error bold
 color index color246 color234 "~A" # all messages
 color index color248 color236 "~N" # new messages
 color index color248 color234 "~O" # old messages
-color index color248 color052 "~F" # Flagged Messages
 color index color240 color234 "~P" # messages from me
 color index color250 color234 "~p" # messages to me
 
+# Flagged overrised all the above
+color index color248 color052 "~F" # Flagged Messages
 # Deleted comes last to override above
 color index color240 color232 "~D" # deleted messages
 

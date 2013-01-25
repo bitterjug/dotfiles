@@ -30,3 +30,5 @@ bind pager       j          next-line
 bind pager       k          previous-line
 bind pager       J          next-undeleted
 bind pager       K          previous-undeleted
+
+bind index,pager R          group-reply
