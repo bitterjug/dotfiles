@@ -3,5 +3,5 @@
 macro index ^ "<enter-command>unset wait_key<enter><shell-escape>getmail.sh<enter><enter-command>set wait_key<enter>"
 
 # Add items to addresbook
-macro index,pager A "|abook --datafile ~/Ubuntu\\ One/Stuff/abook/addressbook --add-email-quiet\n" 'add the sender to the address book'
+macro index,pager A "|abook --add-email-quiet\n" 'add the sender to the address book'
 
