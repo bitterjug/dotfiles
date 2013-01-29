@@ -17,6 +17,10 @@ unset record
 
 mailboxes +Aptivate/INBOX +Aptivate/Tech +Aptivate/YouWin
 
+# HTML EMAIL
+auto_view text/html
+
+
 # Sidebar
 set sidebar_visible
 set sidebar_width  = 25
