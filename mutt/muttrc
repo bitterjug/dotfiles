@@ -6,6 +6,7 @@ set from 	     = marks@aptivate.org
 set realname     = "Mark Skipper"
 set signature    = ~/.aptivate-signature   
 my_hdr X-Homepage: http://aptivate.org/
+set hostname     = "aptivate.org"
 
 set folder       = ~/Mail
 set spoolfile    = "+Aptivate/INBOX"
