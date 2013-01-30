@@ -5,6 +5,7 @@ set sendmail     = /usr/bin/msmtp
 set from 	     = marks@aptivate.org
 set realname     = "Mark Skipper"
 set signature    = ~/.aptivate-signature   
+set hostname     = "aptivate.org"
 my_hdr X-Homepage: http://aptivate.org/
 
 set folder       = ~/Mail
@@ -31,6 +32,9 @@ set wrap           = 100
 set fast_reply
 set edit_headers   = yes
 
+# HTML EMail
+auto_view text/html
+
 # Addressbook
 #
 # Use little brother's database
@@ -40,3 +44,4 @@ set query_command="lbdbq %s"
 source ~/.mutt/colours
 source ~/.mutt/bindings
 source ~/.mutt/macros
+source ~/.mutt/notmuch
