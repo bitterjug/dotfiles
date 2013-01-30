@@ -1,3 +1,5 @@
+# vim: filetype=muttrc
+
 [general]
 accounts = Aptivate
 pythonfile = ~/bin/offlineimap.py
@@ -6,6 +8,7 @@ pythonfile = ~/bin/offlineimap.py
 localrepository = Work
 remoterepository = Aptivate.org
 status_backend = sqlite
+postsynchook = notmuch new
 
 [Repository Work]
 type = Maildir
