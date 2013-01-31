@@ -26,7 +26,7 @@ set sort           = threads
 
 # Pager
 ignore X-Google*
-set wrap           = 100
+set wrap           = 140
 
 # Take me directly to the editor, I'll edit stuff there
 set fast_reply
@@ -34,6 +34,7 @@ set edit_headers   = yes
 
 # HTML EMail
 auto_view text/html
+alternative_order text/plain text/html
 
 # Addressbook
 #
