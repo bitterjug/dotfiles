@@ -25,3 +25,6 @@ fresh mail/* --file
 
 # Mutt config all lives in .mutt
 fresh mutt --file=~/.mutt/
+
+# Bash scripts
+fresh 'bash/*'
