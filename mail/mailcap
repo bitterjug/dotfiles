@@ -3,4 +3,4 @@
 #text/html; elinks -dump -dump-charset iso-8859-15 -default-mime-type text/html %s; needsterminal; copiousoutput;
 #text/html; elinks -default-mime-type text/html %s; 
 
-application/pdf; xopen %s;
+application/pdf; xdg-open %s;
