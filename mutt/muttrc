@@ -1,5 +1,6 @@
 set mbox_type    = Maildir
 set sendmail     = /usr/bin/msmtp
+set pager_index_lines = 8
 
 # Aptivate identity
 set from 	     = marks@aptivate.org
