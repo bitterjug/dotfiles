@@ -22,6 +22,9 @@ mailboxes +Aptivate/INBOX +Aptivate/Tech +Aptivate/YouWin
 set sidebar_visible
 set sidebar_width  = 25
 
+# Composing
+set include = yes
+
 # Index view options
 set sort           = threads
 
