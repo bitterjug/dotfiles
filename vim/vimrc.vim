@@ -154,6 +154,7 @@
 
 " mail
     autocmd BufEnter * if &ft ==# 'mail' | setlocal spell | endif
+    autocmd BufEnter * if &ft ==# 'mail' | set number| endif
     nmap <silent> <LocalLeader>@ :call LbdbExpandCurLine()<RETURN>
     vmap <silent> <LocalLeader>@ :call LbdbExpandVisual()<RETURN>
     imap <silent> <LocalLeader>@ <ESC>:call LbdbExpandCurLine()<RETURN>A
