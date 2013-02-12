@@ -22,7 +22,6 @@ rotate
     rotate clockwise by a quarter
 
 EOF
-notify-send "Not Recognised"
 }
 
 function rotatewacom(){
