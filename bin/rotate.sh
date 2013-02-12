@@ -1,6 +1,29 @@
+#!/bin/bash
 # Set rotation for screen and wacom
 PROGNAME=${0##*/}
 orientation="$1"
+
+function use(){
+cat << EOF
+$PROGNAME [option]
+
+Where [option] is one of:
+
+left|inverted|right|normal
+
+    Set orientation
+
+flip
+
+    flip between normal and inverted
+
+rotate
+
+    rotate clockwise by a quarter
+
+EOF
+notify-send "Not Recognised"
+}
 
 function rotatewacom(){
 xsetwacom --list devices |\
@@ -56,26 +79,6 @@ function rotate(){
     esac
 }
 
-function use(){
-cat << EOF
-$PROGNAME [option]
-
-Where [option] is one of:
-
-left|inverted|right|normal
-
-    Set orientation
-
-flip
-
-    flip between normal and inverted
-
-rotate
-
-    rotate clockwise by a quarter
-
-EOF
-}
 
 case "$orientation" in 
     left)
