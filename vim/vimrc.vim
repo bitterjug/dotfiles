@@ -106,6 +106,7 @@
     Bundle 'lbdbq'
     Bundle 'gerw/vim-HiLinkTrace'
     Bundle 'Mark'
+    Bundle 'Efficient-python-folding'
    "...
    "
     if iCanHazVundle == 0
