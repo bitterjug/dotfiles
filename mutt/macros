@@ -1,6 +1,6 @@
 # vim: filetype=muttrc
 # Sync and fetch  mail
-macro index ^ "<enter-command>unset wait_key<enter><shell-escape>getmail.sh<enter><enter-command>set wait_key<enter>"
+macro index,pager ^ "<enter-command>unset wait_key<enter><shell-escape>getmail.sh<enter><enter-command>set wait_key<enter>"
 
 # Add items to addresbook
 macro index,pager A "|abook --add-email-quiet\n" 'add the sender to the address book'
