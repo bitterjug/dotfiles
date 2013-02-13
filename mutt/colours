@@ -93,9 +93,9 @@ color index color234 color252 "~T" # tagged messages
 # message headers ------------------------------------------------------
 
 #color header color240 color234 "^"
-color hdrdefault color138 color234
-color header color146  color234 "^(From)"
-color header color255 color234 "^(Subject)"
+color hdrdefault color243 color233
+color header color251  color233 "^(From)"
+color header color255 color233 "^(Subject)"
 
 # sidebar -----------------------------------------------------------------
 color sidebar_new color190 default
