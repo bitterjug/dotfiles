@@ -8,6 +8,6 @@ virtual-mailboxes \
     "vYouWiN"  "notmuch://?query=(tag:inbox and NOT tag:archive and folder:YouWin) or (subject:MandE)"\
     "vTech"  "notmuch://?query=tag:inbox and NOT tag:archive and folder:Tech"\
     "vRecruitment"  "notmuch://?query=tag:inbox and NOT tag:archive and folder:Recruitment"\
-    "vALL"  "notmuch://?query=tag:inbox and NOT tag:archive"
+    "vALL"  "notmuch://?query=tag:inbox and tag:unread"
 
 bind index   S vfolder-from-query
