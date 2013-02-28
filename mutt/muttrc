@@ -45,6 +45,10 @@ alternative_order text/plain text/html
 # Use little brother's database
 set query_command="lbdbq %s"
 
+# My aliases
+set alias_file=~/.abook/muttaliases
+source ~/.abook/muttaliases
+
 # other stuff
 source ~/.mutt/colours
 source ~/.mutt/bindings
