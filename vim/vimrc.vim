@@ -160,3 +160,6 @@
     nmap <silent> <LocalLeader>@ :call LbdbExpandCurLine()<RETURN>
     vmap <silent> <LocalLeader>@ :call LbdbExpandVisual()<RETURN>
     imap <silent> <LocalLeader>@ <ESC>:call LbdbExpandCurLine()<RETURN>A
+
+" GitGutter
+EnableGitGutterLineHighlights
