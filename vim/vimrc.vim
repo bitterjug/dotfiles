@@ -107,6 +107,7 @@
     Bundle 'gerw/vim-HiLinkTrace'
     Bundle 'Mark'
     Bundle 'Efficient-python-folding'
+    Bundle 'airblade/vim-gitgutter'
    "...
    "
     if iCanHazVundle == 0
