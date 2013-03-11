@@ -24,6 +24,8 @@
 # must be an icon in the notification area. This may be the wrong
 # assumption, but, oh well...
 
+export GDK_NATIVE_WINDOWS=1
+
 if [[ "$1" == "-v" || "$1" == "--verbose" ]]; then
     verbose=echo
     shift
