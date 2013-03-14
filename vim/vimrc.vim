@@ -5,7 +5,6 @@
 " always see the tab-line
 "     set showtabline=2
 
-
 " Remove commas from keyword detection
     set iskeyword-=(,)
 
@@ -13,7 +12,7 @@
 "    set autochdir
 
 " Wildcard completion in status bar
-    se wildmode=list:longest
+    set wildmode=list:longest
 
 " No blinking cursor
     set gcr=a:blinkon0
@@ -155,8 +154,10 @@
     let g:pymode_lint_ignore="E126,E128,E501"
 
 " mail
+    set dictionary=/usr/share/dict/words
     autocmd BufEnter * if &ft ==# 'mail' | setlocal spell | endif
     autocmd BufEnter * if &ft ==# 'mail' | set number| endif
+    autocmd BufEnter * if &ft ==# 'mail' | set complete+=k | endif
     nmap <silent> <LocalLeader>@ :call LbdbExpandCurLine()<RETURN>
     vmap <silent> <LocalLeader>@ :call LbdbExpandVisual()<RETURN>
     imap <silent> <LocalLeader>@ <ESC>:call LbdbExpandCurLine()<RETURN>A
