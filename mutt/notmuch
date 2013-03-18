@@ -4,10 +4,11 @@
 set nm_default_uri="notmuch://$HOME/Mail"
 set virtual_spoolfile = yes
 virtual-mailboxes \
-    "vINBOX"  "notmuch://?query=tag:inbox and NOT tag:archive and folder:INBOX"\
-    "vYouWiN"  "notmuch://?query=(tag:inbox and NOT tag:archive and folder:YouWin) or (subject:MandE)"\
-    "vTech"  "notmuch://?query=tag:inbox and NOT tag:archive and folder:Tech"\
-    "vRecruitment"  "notmuch://?query=tag:inbox and NOT tag:archive and folder:Recruitment"\
-    "vALL"  "notmuch://?query=tag:inbox and tag:unread"
+    "INBOX"  "notmuch://?query=tag:inbox and NOT tag:archive and folder:INBOX and NOT from:aptivate@econsensus.org"\
+    "YouWiN"  "notmuch://?query=(tag:inbox and NOT tag:archive and folder:YouWin) or (subject:MandE)"\
+    "Tech"  "notmuch://?query=tag:inbox and NOT tag:archive and folder:Tech"\
+    "Recruitment"  "notmuch://?query=tag:inbox and NOT tag:archive and folder:Recruitment"\
+    "e-consensus"  "notmuch://?query=tag:inbox and NOT tag:archive and from:aptivate@econsensus.org"\
+    "All unread"  "notmuch://?query=tag:inbox and tag:unread"
 
 bind index   S vfolder-from-query
