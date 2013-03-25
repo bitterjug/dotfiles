@@ -1,7 +1,6 @@
 # Sync selected mail folders 
-# By default only check the
+# By default only check the mutt mailboxes
 
-# TODO: allow override UI, default to something quiet
 # TODO: serch the muttrc  like mutt does
 MUTTRC=$HOME/.mutt/muttrc
 
@@ -22,20 +21,17 @@ EOUSE
 all="no"
 for opt in $@; do
     case $opt in
-        -a|--all) all="yes"; exit 0;;
-	-h|--help) usage; exit 0;;
+        -a|--all) all="yes";;
+        -h|--help) usage; exit 0;;
         *)  ;;
     esac
 done
 
-folders=`grep mailboxes $MUTTRC | cut -c 11- | sed -e 's/+Aptivate\\///g'| tr ' ' ,`
 
-echo "all=  $all"
 if [ "$all" = "yes" ] ; then
-	echo "all"
 	options=""
 else
-	echo "default"
+    folders=`grep mailboxes $MUTTRC | cut -c 11- | sed -e 's/+Aptivate\\///g'| tr ' ' ,`
 	options="-f $folders"
 fi
 
