@@ -158,6 +158,10 @@
     autocmd BufEnter * if &ft ==# 'mail' | setlocal spell | endif
     autocmd BufEnter * if &ft ==# 'mail' | set number| endif
     autocmd BufEnter * if &ft ==# 'mail' | set complete+=k | endif
+    " Default dlbdbq bindings
     nmap <silent> <LocalLeader>@ :call LbdbExpandCurLine()<RETURN>
     vmap <silent> <LocalLeader>@ :call LbdbExpandVisual()<RETURN>
     imap <silent> <LocalLeader>@ <ESC>:call LbdbExpandCurLine()<RETURN>A
+    " Let's map these to control-t too, the same as in Mutt
+    nmap <silent> <C-t> :call LbdbExpandCurLine()<RETURN>
+    imap <silent> <C-t> <ESC>:call LbdbExpandCurLine()<RETURN>A
