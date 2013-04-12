@@ -121,7 +121,9 @@
 
 " colours (do this after installing freyr bundle
     set t_Co=256
-    colorscheme bitterjug
+    " colorscheme jitterbug
+" while developing jitterbug
+colorscheme jitterbug
 
 " Powerline Status bar 
     set nocompatible   " Disable vi-compatibility
