@@ -107,6 +107,7 @@
     Bundle 'Mark'
     Bundle 'Efficient-python-folding'
     Bundle 'airblade/vim-gitgutter'
+    Bundle 'unimpaired.vim'
    "...
    "
     if iCanHazVundle == 0
