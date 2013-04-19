@@ -28,6 +28,8 @@
     set tabstop=4
     set shiftwidth=4
     set smarttab
+    " highlight long lines
+    match ErrorMsg '\%>78v.\+'
 
 " Long lines
     set nowrap
