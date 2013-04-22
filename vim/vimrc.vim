@@ -29,7 +29,7 @@
     set shiftwidth=4
     set smarttab
     " highlight long lines
-    match ErrorMsg '\%>78v.\+'
+    autocmd BufEnter * if &ft ==# 'python' | match ErrorMsg '\%>78v.\+' | endif
 
 " Long lines
     set nowrap
@@ -110,6 +110,7 @@
     Bundle 'Efficient-python-folding'
     Bundle 'airblade/vim-gitgutter'
     Bundle 'unimpaired.vim'
+    Bundle 'majutsushi/tagbar'
    "...
    "
     if iCanHazVundle == 0
