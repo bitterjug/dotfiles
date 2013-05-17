@@ -13,7 +13,7 @@ set folder       = ~/Mail
 set spoolfile    = "+Aptivate/INBOX"
 set mbox         = "+Aptivate/Archive"
 set postponed    = "+Aptivate/Drafts"
-set header_cache = ~/.mailcache/
+# set header_cache = ~/.mailcache/
 unset record
 
 mailboxes +Aptivate/INBOX +Aptivate/Tech +Aptivate/YouWin
