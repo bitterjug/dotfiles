@@ -6,10 +6,12 @@ set virtual_spoolfile = yes
 # This stuff is just screaming out to be refactored into initial tagging. Oh when will I get the time?
 virtual-mailboxes \
     "INBOX"  "notmuch://?query=tag:inbox and NOT tag:archive and folder:INBOX and NOT from:aptivate@econsensus.org"\
-    "YouWiN"  "notmuch://?query=(date:2_weeks.. or tag:flagged) and ((tag:inbox and NOT tag:archive and folder:YouWin) or (subject:MandE))"\
-    "Tech"  "notmuch://?query=tag:inbox and NOT tag:archive and folder:Tech"\
-    "Recruitment"  "notmuch://?query=tag:inbox and NOT tag:archive and folder:Recruitment"\
-    "e-consensus"  "notmuch://?query=tag:inbox and NOT tag:archive and from:aptivate@econsensus.org"\
-    "All unread"  "notmuch://?query=tag:inbox and tag:unread"
+    "YouWiN"  "notmuch://?query=(date:2_weeks.. or tag:flagged) and ((folder:YouWin) or (subject:MandE))"\
+    "Tech"  "notmuch://?query=tag:unread and NOT tag:archive and folder:Tech"\
+    "Recruitment"  "notmuch://?query=tag:unread and NOT tag:archive and folder:Recruitment"\
+    "e-consensus"  "notmuch://?query=tag:unread and NOT tag:archive and from:aptivate@econsensus.org"\
+    "All unread"  "notmuch://?query=tag:unread"
 
 bind index   S vfolder-from-query
+
+set index_format="%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s%> %g"

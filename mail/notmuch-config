@@ -46,7 +46,7 @@ primary_email=marks@aptivate.org
 #		be ignored, independent of its depth/location in the mail store.
 #
 [new]
-tags=unread;inbox;
+tags=new
 ignore=
 
 # Search configuration

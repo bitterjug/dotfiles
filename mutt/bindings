@@ -32,3 +32,5 @@ bind pager       J          next-undeleted
 bind pager       K          previous-undeleted
 
 bind index,pager R          group-reply
+
+bind index,pager ,          modify-labels-then-hide

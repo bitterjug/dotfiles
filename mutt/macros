@@ -5,3 +5,6 @@ macro index,pager ^ "<enter-command>unset wait_key<enter><shell-escape>getmail.s
 # Add items to addresbook
 macro index,pager A "|abook --add-email-quiet\n" 'add the sender to the address book'
 
+
+macro index a "<tag-prefix><save-message>~/Mail/Aptivate/Archives<enter>y"
+macro pager a "<save-message>~/Mail/Aptivate/Archives<enter>y"
