@@ -171,3 +171,6 @@ colorscheme jitterbug
     " Let's map these to control-t too, the same as in Mutt
     nmap <silent> <C-t> :call LbdbExpandCurLine()<RETURN>
     imap <silent> <C-t> <ESC>:call LbdbExpandCurLine()<RETURN>A
+
+" new windows
+    set switchbuf=useopen,split
