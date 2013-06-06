@@ -174,3 +174,8 @@ colorscheme jitterbug
 
 " new windows
     set switchbuf=useopen,split
+
+" TagBar
+    command TT TagbarToggle
+    command OO TagbarOpenAutoClose
+
