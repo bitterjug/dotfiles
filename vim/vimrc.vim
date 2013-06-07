@@ -1,6 +1,6 @@
 
 " Try and unify the clipboards (not sure if working)
-    set clipboard=unnamed,autoselect,exclude:cons\\\|linux
+    set clipboard=unnamedplus,autoselect,exclude:cons\\\|linux
 
 " always see the tab-line
 "     set showtabline=2
