@@ -29,7 +29,8 @@
     set shiftwidth=4
     set smarttab
     " highlight long lines
-    autocmd BufEnter * if &ft ==# 'python' | match ErrorMsg '\%>78v.\+' | endif
+    highlight LongLines gui=underline cterm=underline
+    autocmd BufEnter * if &ft ==# 'python' | match LongLines '\%>79v.\+' | endif
 
 " Long lines
     set nowrap
