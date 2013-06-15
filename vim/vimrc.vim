@@ -177,6 +177,6 @@ colorscheme jitterbug
     set switchbuf=useopen,split
 
 " TagBar
-    command TT TagbarToggle
-    command OO TagbarOpenAutoClose
-
+    command! TT TagbarToggle
+    command! OO TagbarOpenAutoClose
+    nmap <Leader>o :TagbarOpenAutoClose<enter>
