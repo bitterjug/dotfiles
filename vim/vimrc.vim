@@ -91,7 +91,6 @@
     Bundle 'tpope/vim-ragtag'
     Bundle 'surround.vim'
     Bundle 'SuperTab-continued.'
-    Bundle 'ack.vim'
     Bundle 'Textile-for-VIM'
     Bundle 'Markdown'
     Bundle 'ctrlp.vim'
@@ -180,3 +179,9 @@ colorscheme jitterbug
     command! TT TagbarToggle
     command! OO TagbarOpenAutoClose
     nmap <Leader>o :TagbarOpenAutoClose<enter>
+
+" Ack-grep
+    Bundle 'ack.vim'
+    " My ackrd hides .ve directories, this putts them back
+    command! -nargs=* -complete=file Vack Ack --noignore-dir=.ve <args>
+
