@@ -147,7 +147,7 @@ colorscheme jitterbug
     " Excluded file types
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc
     " Don't manage working directory by default
-    let g:ctrlp_working_path_mode = 0
+    " let g:ctrlp_working_path_mode = 0
 
 " UltiSnips
     let g:UltiSnipsSnippetsDir='~/Ubuntu\ One/vim/UltiSnips'
