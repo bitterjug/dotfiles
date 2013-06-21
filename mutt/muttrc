@@ -29,7 +29,10 @@ set include = yes
 set sort           = threads
 
 # Pager
-ignore X-Google*
+ignore *
+unignore from date subject to cc
+unignore organization organisation x-mailer: x-newsreader: x-mailing-list:
+unignore posted-to:
 set wrap           = 140
 
 # Take me directly to the editor, I'll edit stuff there
