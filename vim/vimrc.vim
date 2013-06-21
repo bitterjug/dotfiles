@@ -83,7 +83,6 @@
     "add bundles
     Bundle 'UltiSnips'
     Bundle 'Syntastic'
-    Bundle 'tpope/vim-fugitive'
     Bundle 'Lokaltog/vim-powerline'
     Bundle 'vcscommand.vim'
     Bundle 'svncommand.vim'
@@ -111,6 +110,7 @@
     Bundle 'airblade/vim-gitgutter'
     Bundle 'unimpaired.vim'
     Bundle 'majutsushi/tagbar'
+    Bundle 'tpope/vim-fugitive'
    "...
    "
     if iCanHazVundle == 0
@@ -144,7 +144,7 @@ colorscheme jitterbug
     " Extensions
     " let g:ctrlp_extensions = ['dir', 'line']
     " Excluded file types
-    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.pyc
+    set wildignore+=*/.hg/*,*/.svn/*,*.pyc
     " Don't manage working directory by default
     " let g:ctrlp_working_path_mode = 0
 
