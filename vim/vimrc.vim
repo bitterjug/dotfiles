@@ -149,7 +149,7 @@ colorscheme jitterbug
     " let g:ctrlp_working_path_mode = 0
 
 " UltiSnips
-    let g:UltiSnipsSnippetsDir='~/Ubuntu\ One/vim/UltiSnips'
+    " let g:UltiSnipsSnippetsDir='~/Ubuntu\ One/vim/UltiSnips'
     let g:UltiSnipsEditSplit="horizontal"
 
 " Rope
