@@ -185,3 +185,5 @@ colorscheme jitterbug
     " My ackrd hides .ve directories, this putts them back
     command! -nargs=* -complete=file Vack Ack --noignore-dir=.ve <args>
 
+"List mode
+set listchars=eol:¬,tab:▸·,trail:•
