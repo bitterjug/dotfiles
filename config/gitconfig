@@ -1,0 +1,13 @@
+[user]
+	email = marks@aptivate.org
+	name = Mark Skipper
+[core]
+	excludesfile = /home/marks/.gitignore.global
+
+[push]
+    default = simple
+[color]
+	ui = true
+
+[merge]
+  defaultToUpstream = true
