@@ -9,10 +9,10 @@ set signature    = ~/.aptivate-signature
 set hostname     = "aptivate.org"
 my_hdr X-Homepage: http://aptivate.org/
 
-set folder       = ~/Mail
-set spoolfile    = "+Aptivate/INBOX"
-set mbox         = "+Aptivate/Archive"
-set postponed    = "+Aptivate/Drafts"
+set folder       = ~/Mail/Aptivate
+set spoolfile    = "+INBOX"
+set mbox         = "+Archive"
+set postponed    = "+Drafts"
 # set header_cache = ~/.mailcache/
 unset record
 
