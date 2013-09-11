@@ -17,6 +17,8 @@ fresh config/* --file
 # Freemind config (could also add the custom icons here maybe)
 fresh freemind/user.properties --file=~/.freemind/user.properties
 
+fresh ranger --file=~/.config/ranger/
+
 # Do all the bin files into ~/bin at once, mwahaha
 fresh bin --bin
 
