@@ -6,12 +6,13 @@ import qualified Data.Map as M
 keysToAdd x = 
     [ 
         -- Previous workspace
-            ((modMask x, xK_f), prevWS)
+           (((modMask x .|. controlMask), xK_h), prevWS)
         -- Next workspace
-       ,    ((modMask x, xK_g), nextWS)
+       ,   (((modMask x .|. controlMask), xK_l), nextWS)
     ]
 
 
+-- add my keys to add to the defaults from gnomeConfig
 myKeys x = M.union (keys gnomeConfig x) (M.fromList (keysToAdd x))
 
 main = do
