@@ -1,3 +1,15 @@
 import XMonad
 import XMonad.Config.Gnome
-main=xmonad gnomeConfig
+import qualified Data.Map as M
+
+keysToAdd x = 
+    [ ]
+
+
+myKeys x = M.union (keys gnomeConfig x) (M.fromList (keysToAdd x))
+
+main = do
+    xmonad $ gnomeConfig {
+        keys = myKeys
+    }
+
