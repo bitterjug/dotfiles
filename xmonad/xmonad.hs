@@ -11,9 +11,7 @@ maximize = doTo Next EmptyWS getSortByIndex shiftAndFollow
 
 -- Shift active window to selected workspace, and view it there.
 shiftAndFollow :: WorkspaceId -> X ()
-shiftAndFollow i = do
-    (windows . shift) i
-    (windows . view) i
+shiftAndFollow = windows . (\i -> view i . shift i)
 
 keysToAdd x = 
     [ 
