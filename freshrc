@@ -35,5 +35,8 @@ fresh 'bash/*'
 fresh vim/vimrc.vim --file=~/.vimrc
 fresh vim/gvimrc.vim --file=~/.gvimrc
 
+# Haskell
+fresh ghc/ghci --file=~/.ghci
+
 # XMonad
 fresh xmonad/xmonad.hs --file=~/.xmonad/xmonad.hs
