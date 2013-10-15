@@ -41,10 +41,16 @@ myManagementHooks =
 -- add my keys to add to the defaults from gnomeConfig
 myKeys x = M.union (keys gnomeConfig x) (M.fromList (keysToAdd x))
 
+-- normal: 
+-- focus: #EA6F3D
+--
 main = do
     xmonad $ gnomeConfig {
         keys = myKeys
         , manageHook = manageHook gnomeConfig 
                     <+> composeAll myManagementHooks
+        , normalBorderColor  = "#4F4D46"
+        , focusedBorderColor = "#DD4814"
+        , borderWidth = 2  
     }
 
