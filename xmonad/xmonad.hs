@@ -50,7 +50,7 @@ main = do
         , manageHook = manageHook gnomeConfig 
                     <+> composeAll myManagementHooks
         , normalBorderColor  = "#4F4D46"
-        , focusedBorderColor = "#DD4814"
-        , borderWidth = 2  
+        , focusedBorderColor = "#FF4400"
+        -- , borderWidth = 2  
     }
 
