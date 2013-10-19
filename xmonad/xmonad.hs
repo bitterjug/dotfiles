@@ -4,6 +4,8 @@ import XMonad.Util.WorkspaceCompare
 import XMonad.Config.Gnome
 import XMonad.Actions.CycleWS
 import XMonad.Layout.NoBorders (smartBorders)
+import XMonad.Prompt.Window
+import XMonad.Prompt
 import qualified Data.Map as M
 
 -- maximize: move window to next empty ws, and follow it
@@ -14,6 +16,13 @@ maximize = doTo Next EmptyWS getSortByIndex shiftAndFollow
 shiftAndFollow :: WorkspaceId -> X ()
 shiftAndFollow = windows . (\i -> view i . shift i)
 
+
+-- Prompts need a big font so I can see them
+myXPConfig  :: XPConfig
+myXPConfig  = defaultXPConfig { 
+        -- font = "-*-avant garde gothic-demi-r-*-*"
+        font = "xft:Profont:pixelsize=15:autohint=true"
+    }
 
 keysToAdd x = 
     [ 
@@ -26,13 +35,15 @@ keysToAdd x =
         -- 'maximize' to first empty workspace, and view
        ,   (((modMask x .|. controlMask), xK_i), maximize)
         -- move currnet window next and follow it
-        ,   ((modMask x, xK_plus), shiftToNext >> nextWS)
+        ,  ((modMask x, xK_plus), shiftToNext >> nextWS)
         -- move currnet window previous and follow it
        ,   ((modMask x, xK_minus), shiftToPrev >> prevWS)
         -- launch synapse
        ,   ((modMask x, xK_o), spawn "synapse")
+       -- goto/bring window with Alt-(shift)-X
+       ,   (((modMask x .|. shiftMask), xK_x), windowPromptBring myXPConfig)
+       ,   ((modMask x, xK_x), windowPromptGoto myXPConfig)
     ]
-
 
 myManagementHooks :: [ManageHook]
 myManagementHooks = 
@@ -41,11 +52,13 @@ myManagementHooks =
         resource =? "Do"      --> doIgnore
     ]
 
--- add my keys to add to the defaults from gnomeConfig
+-- Add my keys to add to the defaults from gnomeConfig
 myKeys x = M.union (keys gnomeConfig x) (M.fromList (keysToAdd x))
 
+-- Border colours
 darkGray = "#4F4D46" 
 ubuntuOrange = "#FF4400" 
+
 main = do
     xmonad $ gnomeConfig {
         keys = myKeys
