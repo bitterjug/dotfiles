@@ -3,6 +3,7 @@ import XMonad.StackSet
 import XMonad.Util.WorkspaceCompare
 import XMonad.Config.Gnome
 import XMonad.Actions.CycleWS
+import XMonad.Layout.NoBorders (smartBorders)
 import qualified Data.Map as M
 
 -- maximize: move window to next empty ws, and follow it
@@ -12,6 +13,7 @@ maximize = doTo Next EmptyWS getSortByIndex shiftAndFollow
 -- Shift active window to selected workspace, and view it there.
 shiftAndFollow :: WorkspaceId -> X ()
 shiftAndFollow = windows . (\i -> view i . shift i)
+
 
 keysToAdd x = 
     [ 
@@ -35,7 +37,8 @@ keysToAdd x =
 myManagementHooks :: [ManageHook]
 myManagementHooks = 
     [  
-        resource =? "synapse" --> doIgnore 
+        resource =? "synapse" --> doIgnore,
+        resource =? "Do"      --> doIgnore
     ]
 
 -- add my keys to add to the defaults from gnomeConfig
@@ -46,5 +49,6 @@ main = do
         keys = myKeys
         , manageHook = manageHook gnomeConfig 
                     <+> composeAll myManagementHooks
+        , layoutHook = smartBorders $ layoutHook gnomeConfig
     }
 
