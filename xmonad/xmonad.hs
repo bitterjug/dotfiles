@@ -44,11 +44,16 @@ myManagementHooks =
 -- add my keys to add to the defaults from gnomeConfig
 myKeys x = M.union (keys gnomeConfig x) (M.fromList (keysToAdd x))
 
+darkGray = "#4F4D46" 
+ubuntuOrange = "#FF4400" 
 main = do
     xmonad $ gnomeConfig {
         keys = myKeys
         , manageHook = manageHook gnomeConfig 
                     <+> composeAll myManagementHooks
         , layoutHook = smartBorders $ layoutHook gnomeConfig
+        , normalBorderColor  = darkGray
+        , focusedBorderColor = ubuntuOrange
+        -- , borderWidth = 2  
     }
 
