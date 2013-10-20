@@ -1,3 +1,4 @@
+import Data.List (isInfixOf)
 import XMonad
 import XMonad.StackSet
 import XMonad.Util.WorkspaceCompare
@@ -22,6 +23,11 @@ myXPConfig  :: XPConfig
 myXPConfig  = defaultXPConfig { 
         -- font = "-*-avant garde gothic-demi-r-*-*"
         font = "xft:Profont:pixelsize=15:autohint=true"
+        ,   height = 30
+        -- more fuzzy searching, match anywhere
+        ,   searchPredicate = isInfixOf
+        -- always highlight a result, so I can hit enter any time
+        ,   alwaysHighlight = True
     }
 
 keysToAdd x = 
