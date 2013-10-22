@@ -32,8 +32,10 @@ myXPConfig  = defaultXPConfig {
 
 keysToAdd x = 
     [ 
+        -- Close window
+       ((modMask x, xK_F4), kill)
         -- Previous workspace
-           (((modMask x .|. controlMask), xK_h), prevWS)
+       ,    (((modMask x .|. controlMask), xK_h), prevWS)
         -- Next workspace
        ,   (((modMask x .|. controlMask), xK_l), nextWS)
         -- 'minimize' to first empty workspace
@@ -41,7 +43,7 @@ keysToAdd x =
         -- 'maximize' to first empty workspace, and view
        ,   (((modMask x .|. controlMask), xK_i), maximize)
         -- move currnet window next and follow it
-        ,  ((modMask x, xK_plus), shiftToNext >> nextWS)
+       ,  ((modMask x, xK_plus), shiftToNext >> nextWS)
         -- move currnet window previous and follow it
        ,   ((modMask x, xK_minus), shiftToPrev >> prevWS)
         -- launch synapse
