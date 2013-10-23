@@ -34,10 +34,12 @@ keysToAdd x =
     [ 
         -- Close window
        ((modMask x, xK_F4), kill)
-        -- Previous (non-empty) workspace
-       ,    (((modMask x .|. controlMask), xK_h), moveTo Prev NonEmptyWS)
         -- Next (non-empty) workspace
        ,   (((modMask x .|. controlMask), xK_l), moveTo Next NonEmptyWS)
+       ,   ((modMask x, xK_grave), moveTo Next NonEmptyWS)
+        -- Previous (non-empty) workspace
+       ,    (((modMask x .|. controlMask), xK_h), moveTo Prev NonEmptyWS)
+       ,    (((modMask x .|. shiftMask), xK_grave), moveTo Prev NonEmptyWS)
         -- 'minimize' to first empty workspace
        ,   ((modMask x, xK_i), shiftTo Next EmptyWS)
         -- 'maximize' to first empty workspace, and view
