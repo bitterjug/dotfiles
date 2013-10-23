@@ -34,18 +34,18 @@ keysToAdd x =
     [ 
         -- Close window
        ((modMask x, xK_F4), kill)
-        -- Previous workspace
-       ,    (((modMask x .|. controlMask), xK_h), prevWS)
-        -- Next workspace
-       ,   (((modMask x .|. controlMask), xK_l), nextWS)
+        -- Previous (non-empty) workspace
+       ,    (((modMask x .|. controlMask), xK_h), moveTo Prev NonEmptyWS)
+        -- Next (non-empty) workspace
+       ,   (((modMask x .|. controlMask), xK_l), moveTo Next NonEmptyWS)
         -- 'minimize' to first empty workspace
        ,   ((modMask x, xK_i), shiftTo Next EmptyWS)
         -- 'maximize' to first empty workspace, and view
        ,   (((modMask x .|. controlMask), xK_i), maximize)
         -- move currnet window next and follow it
-       ,  ((modMask x, xK_plus), shiftToNext >> nextWS)
+       ,   (((modMask x .|. shiftMask .|. controlMask), xK_l), shiftToNext >> nextWS)
         -- move currnet window previous and follow it
-       ,   ((modMask x, xK_minus), shiftToPrev >> prevWS)
+       ,   (((modMask x .|. shiftMask .|. controlMask), xK_h), shiftToPrev >> prevWS)
         -- launch synapse
        ,   ((modMask x, xK_o), spawn "synapse")
        -- goto/bring window with Alt-(shift)-X
