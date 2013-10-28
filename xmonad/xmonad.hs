@@ -46,6 +46,8 @@ keysToAdd x =
        ,   ((modMask x, xK_i), shiftTo Next EmptyWS)
         -- 'maximize' to first empty workspace, and view
        ,   (((modMask x .|. controlMask), xK_i), maximize)
+        -- View/goto first empty workspace
+       ,   (((modMask x .|. shiftMask), xK_i), moveTo Next EmptyWS)
         -- move currnet window next and follow it
        ,   (((modMask x .|. shiftMask .|. controlMask), xK_l), shiftToNext >> nextWS)
         -- move currnet window previous and follow it
