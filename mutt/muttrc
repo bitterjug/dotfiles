@@ -49,6 +49,7 @@ alternative_order text/plain text/html
 set query_command="lbdbq %s"
 
 # My aliases
+alias issue <projects-issue->
 set alias_file=~/.abook/muttaliases
 source ~/.abook/muttaliases
 
