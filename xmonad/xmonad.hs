@@ -4,6 +4,7 @@ import XMonad.StackSet
 import XMonad.Util.WorkspaceCompare
 import XMonad.Config.Gnome
 import XMonad.Actions.CycleWS
+import XMonad.Actions.GridSelect
 import XMonad.Layout.NoBorders (smartBorders)
 import XMonad.Prompt.Window
 import XMonad.Prompt
@@ -54,9 +55,11 @@ keysToAdd x =
        ,   (((modMask x .|. shiftMask .|. controlMask), xK_h), shiftToPrev >> prevWS)
         -- launch synapse
        ,   ((modMask x, xK_o), spawn "synapse")
-       -- goto/bring window with Alt-(shift)-X
+        -- goto/bring window with Alt-(shift)-X
        ,   (((modMask x .|. shiftMask), xK_x), windowPromptBring myXPConfig)
        ,   ((modMask x, xK_x), windowPromptGoto myXPConfig)
+        -- grid select
+       ,   ((modMask x, xK_g), goToSelected defaultGSConfig)
     ]
 
 myManagementHooks :: [ManageHook]
