@@ -5,6 +5,9 @@ macro index,pager ^ "<enter-command>unset wait_key<enter><shell-escape>offlineim
 # Add items to addresbook
 macro index,pager A "|abook --add-email-quiet\n" 'add the sender to the address book'
 
+# View embedded links and urls
+macro index,pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
 
 macro index a "<tag-prefix><save-message>~/Mail/Aptivate/Archives<enter>y"
 macro pager a "<save-message>~/Mail/Aptivate/Archives<enter>y"
+

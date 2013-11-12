@@ -14,6 +14,8 @@ virtual-mailboxes \
     "G+"  "notmuch://?query=tag:g+ and NOT tag:archive"\
     "Recruitment"  "notmuch://?query=tag:unread and NOT tag:archive and folder:Recruitment"\
     "e-consensus"  "notmuch://?query=tag:unread and NOT tag:archive and tag:ec"\
+    "PD"  "notmuch://?query=tag:unread and NOT tag:archive and tag:pd"\
+    "Wordpress"  "notmuch://?query=tag:wp and NOT tag:archive"\
     "All unread"  "notmuch://?query=tag:unread"
 
 bind index   S vfolder-from-query
