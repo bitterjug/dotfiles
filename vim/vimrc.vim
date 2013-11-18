@@ -58,6 +58,9 @@
     map Q gwap
     vmap Q gqap
 
+" format lists
+    set formatoptions+=n
+
 "Shortcuts for moving among windows
     map <A-S-h> <C-w>h map <A-S-j> <C-w>j map <A-S-k> <C-w>k map <A-S-l> <C-w>l
 
@@ -113,6 +116,8 @@
     Bundle 'majutsushi/tagbar'
     Bundle 'tpope/vim-fugitive'
     Bundle 'ack.vim'
+    Bundle 'open-browser.vim'
+
    "...
    "
     if iCanHazVundle == 0
@@ -188,6 +193,9 @@ colorscheme jitterbug
 
 "List mode
 set listchars=eol:¬,tab:▸·,trail:•
+
+" Evernote/Markdown
+    autocmd BufEnter * if &ft ==# 'markdown' | setlocal spell | endif
 
 " Stuff I dont want to put on git
 tabnew ~/Ubuntu\ One/vim/local.vim
