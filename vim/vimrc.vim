@@ -84,6 +84,7 @@
     call vundle#rc()
     Bundle 'gmarik/vundle'
     "add bundles
+    Bundle 'open-browser.vim'
     Bundle 'UltiSnips'
     Bundle 'Syntastic'
     Bundle 'Lokaltog/vim-powerline'
@@ -116,7 +117,6 @@
     Bundle 'majutsushi/tagbar'
     Bundle 'tpope/vim-fugitive'
     Bundle 'ack.vim'
-    Bundle 'open-browser.vim'
 
    "...
    "
