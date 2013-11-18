@@ -10,7 +10,8 @@ virtual-mailboxes \
     "Tech"  "notmuch://?query=tag:unread and NOT tag:archive and folder:Tech"\
     "Alfie"  "notmuch://?query=tag:alfie and NOT tag:archive"\
     "Support"  "notmuch://?query=tag:support and NOT tag:archive"\
-    "3ie"  "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:3ie"\
+    "3ie"  "notmuch://?query=(date:2_weeks.. or tag:flagged or is:unread) and tag:3ie"\
+    "V4C"  "notmuch://?query=(date:2_weeks.. or tag:flagged or is:unread) and tag:v4c"\
     "G+"  "notmuch://?query=tag:g+ and NOT tag:archive"\
     "Recruitment"  "notmuch://?query=tag:unread and NOT tag:archive and folder:Recruitment"\
     "e-consensus"  "notmuch://?query=tag:unread and NOT tag:archive and tag:ec"\
