@@ -192,10 +192,22 @@ colorscheme jitterbug
     command! -nargs=* -complete=file Vack Ack --noignore-dir=.ve <args>
 
 "List mode
-set listchars=eol:¬,tab:▸·,trail:•
+    set listchars=eol:¬,tab:▸·,trail:•
 
 " Evernote/Markdown
     autocmd BufEnter * if &ft ==# 'markdown' | setlocal spell | endif
+
+" Open Browser
+    "   Search with DuckDuckGo
+    let g:openbrowser_default_search="duckduckgo"
+	" If it looks like URI, Open URI under cursor.
+	" Otherwise, Search word under cursor.
+	nmap <Leader>b <Plug>(openbrowser-smart-search)
+	" If it looks like URI, Open selected URI.
+	" Otherwise, Search selected word.
+	vmap <Leader>b <Plug>(openbrowser-smart-search)
+
+
 
 " Stuff I dont want to put on git
 tabnew ~/Ubuntu\ One/vim/local.vim
