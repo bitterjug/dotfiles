@@ -93,6 +93,7 @@
     Bundle 'Textile-for-VIM'
     Bundle 'Markdown'
     Bundle 'ctrlp.vim'
+    Bundle 'kakkyz81/evervim'
     Bundle 'klen/python-mode'
     Bundle 'vim-json-bundle'
     Bundle 'matchit.zip'
@@ -111,6 +112,7 @@
     Bundle 'unimpaired.vim'
     Bundle 'majutsushi/tagbar'
     Bundle 'tpope/vim-fugitive'
+    Bundle 'ack.vim'
    "...
    "
     if iCanHazVundle == 0
@@ -181,9 +183,12 @@ colorscheme jitterbug
     nmap <Leader>o :TagbarOpenAutoClose<enter>
 
 " Ack-grep
-    Bundle 'ack.vim'
     " My ackrd hides .ve directories, this putts them back
     command! -nargs=* -complete=file Vack Ack --noignore-dir=.ve <args>
 
 "List mode
 set listchars=eol:¬,tab:▸·,trail:•
+
+" Stuff I dont want to put on git
+tabnew ~/Ubuntu\ One/vim/local.vim
+
