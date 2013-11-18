@@ -210,5 +210,5 @@ colorscheme jitterbug
 
 
 " Stuff I dont want to put on git
-tabnew ~/Ubuntu\ One/vim/local.vim
+source ~/Ubuntu\ One/vim/local.vim
 
