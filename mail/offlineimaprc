@@ -26,4 +26,6 @@ cert_fingerprint = 29fdde8cc823c01c151be5826165c9d6e6a47ad1
 folderfilter = lambda folder: folder not in [
     'INBOX.Sent',
     'INBOX.Drafts',
-    'INBOX.Trash']
+    'PartiMob',
+    'Hinari',
+    'INBOX.Trash' ] and not folder.startswith('Projects')
