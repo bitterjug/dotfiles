@@ -117,6 +117,7 @@
     Bundle 'majutsushi/tagbar'
     Bundle 'tpope/vim-fugitive'
     Bundle 'ack.vim'
+    Bundle 'VOoM'
 
    "...
    "
@@ -171,6 +172,7 @@ colorscheme jitterbug
     autocmd BufEnter * if &ft ==# 'mail' | setlocal spell | endif
     autocmd BufEnter * if &ft ==# 'mail' | set number| endif
     autocmd BufEnter * if &ft ==# 'mail' | set complete+=k | endif
+    autocmd BufEnter * if &ft ==# 'mail' | set formatoptions+=n | endif
     " Default dlbdbq bindings
     nmap <silent> <LocalLeader>@ :call LbdbExpandCurLine()<RETURN>
     vmap <silent> <LocalLeader>@ :call LbdbExpandVisual()<RETURN>
@@ -210,5 +212,6 @@ colorscheme jitterbug
 
 
 " Stuff I dont want to put on git
-source ~/Ubuntu\ One/vim/local.vim
+source ~/.evervim/key-mcs.vim
+
 
