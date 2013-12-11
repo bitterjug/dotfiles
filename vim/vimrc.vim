@@ -51,8 +51,8 @@
     imap <C-Space> _
 
 " alt-h and alt-l move among tabs
-    map è gT
-    map ì gt
+    map <C-tab> gt
+    map <C-S-tab> gT
 
 " Q reformats paragraph (maybe should be specific to text formats?)
     map Q gwap
