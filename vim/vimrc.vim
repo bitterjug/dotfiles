@@ -119,7 +119,6 @@
     Bundle 'ack.vim'
     Bundle 'VOoM'
 
-
    "...
    "
     if iCanHazVundle == 0
