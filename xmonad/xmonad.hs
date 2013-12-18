@@ -55,6 +55,8 @@ keysToAdd x =
        ,   (((modMask x .|. shiftMask .|. controlMask), xK_h), shiftToPrev >> prevWS)
         -- launch synapse
        ,   ((modMask x, xK_o), spawn "synapse")
+        -- launch gtg
+       ,   ((modMask x, xK_d), spawn "gtg")
         -- goto/bring window with Alt-(shift)-X
        ,   (((modMask x .|. shiftMask), xK_x), windowPromptBring myXPConfig)
        ,   ((modMask x, xK_x), windowPromptGoto myXPConfig)
