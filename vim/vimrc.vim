@@ -97,7 +97,6 @@
     Bundle 'Textile-for-VIM'
     Bundle 'Markdown'
     Bundle 'ctrlp.vim'
-    Bundle 'kakkyz81/evervim'
     Bundle 'klen/python-mode'
     Bundle 'vim-json-bundle'
     Bundle 'matchit.zip'
@@ -208,10 +207,3 @@ colorscheme jitterbug
 	" If it looks like URI, Open selected URI.
 	" Otherwise, Search selected word.
 	vmap <Leader>b <Plug>(openbrowser-smart-search)
-
-
-
-" Stuff I dont want to put on git
-source ~/.evervim/key-mcs.vim
-
-
