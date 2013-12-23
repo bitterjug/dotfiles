@@ -181,12 +181,16 @@ colorscheme jitterbug
     imap <silent> <C-t> <ESC>:call LbdbExpandCurLine()<RETURN>A
 
 " new windows
-    set switchbuf=useopen,split
+    set switchbuf=useopen,usetab
 
 " TagBar
     command! TT TagbarToggle
     command! OO TagbarOpenAutoClose
     nmap <Leader>o :TagbarOpenAutoClose<enter>
+
+" Voom
+    let g:voom_ft_modes = {'markdown': 'markdown', 'rst': 'rest'}
+    nmap <Leader>v :VoomToggle<enter>
 
 " Ack-grep
     " My ackrd hides .ve directories, this putts them back
