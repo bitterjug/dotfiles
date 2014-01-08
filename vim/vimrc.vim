@@ -29,8 +29,8 @@
     set shiftwidth=4
     set smarttab
     " highlight long lines
-    highlight LongLines gui=underline cterm=underline
-    autocmd BufEnter * if &ft ==# 'python' | match LongLines '\%>79v.\+' | endif
+    " autocmd BufEnter * if &ft ==# 'python' | match LongLines '\%>79v.\+' | endif
+    autocmd BufWinEnter *.py let w:m1=matchadd('SpellLocal', '\%>80v.\+', -1)
 
 " Long lines
     set nowrap
@@ -110,7 +110,6 @@
     Bundle 'lbdbq'
     Bundle 'gerw/vim-HiLinkTrace'
     Bundle 'Mark'
-    Bundle 'Efficient-python-folding'
     Bundle 'airblade/vim-gitgutter'
     Bundle 'unimpaired.vim'
     Bundle 'majutsushi/tagbar'
@@ -187,6 +186,8 @@ colorscheme jitterbug
     command! TT TagbarToggle
     command! OO TagbarOpenAutoClose
     nmap <Leader>o :TagbarOpenAutoClose<enter>
+    " I prefer tags in file order, unless I sort them
+    let g:tagbar_sort = 0
 
 " Voom
     let g:voom_ft_modes = {'markdown': 'markdown', 'rst': 'rest'}
