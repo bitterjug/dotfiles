@@ -2,14 +2,8 @@
 " Try and unify the clipboards (not sure if working)
     set clipboard=unnamedplus,autoselect,exclude:cons\\\|linux
 
-" always see the tab-line
-"     set showtabline=2
-
 " Remove commas from keyword detection
     set iskeyword-=(,)
-
-" Change directory to the curren file
-"    set autochdir
 
 " Wildcard completion in status bar
     set wildmode=list:longest
@@ -23,14 +17,15 @@
 " This was mostly about python, which now uses pymode
 " Might have to use other settings for other languages
 " Indentation and tabs -- putting back for stuff like this file
+    function MyVimrc_setup_python()
+        match SpellLocal '\%>79v.\+' 
+    endfunction
+    autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_python() | endif
     set autoindent
     set expandtab
     set tabstop=4
     set shiftwidth=4
     set smarttab
-    " highlight long lines
-    highlight LongLines gui=underline cterm=underline
-    autocmd BufEnter * if &ft ==# 'python' | match LongLines '\%>79v.\+' | endif
 
 " Long lines
     set nowrap
@@ -46,14 +41,8 @@
     let g:netrw_list_hide='.*\.pyc,.*\.swp'
 
 " .==============MAPPINGS==========.
-"
-" Map control space for underline to save clawing
-    imap <C-Space> _
 
-" alt-h and alt-l move among tabs
-    noremap <C-tab> gt
-    noremap <C-S-tab> gT
-" Also cotrol-H and L
+" ctrl--h and ctrl--l move among tabs
     noremap <C-h> gT
     noremap <C-l> gt
 
@@ -63,12 +52,6 @@
 
 " format lists
     set formatoptions+=n
-
-"Shortcuts for moving among windows
-    map <A-S-h> <C-w>h map <A-S-j> <C-w>j map <A-S-k> <C-w>k map <A-S-l> <C-w>l
-
-" select all
-    map <C-a> ggVG
 
 " `=============/MAPPINGS=========='
 
@@ -106,9 +89,7 @@
     Bundle 'MatchTag'
     Bundle 'bitterjug/vim-colors-freyr'
     Bundle 'bitterjug/vim-colors-bitterjug'
-    " Bundle 'jade.vim'
     Bundle 'digitaltoad/vim-jade'
-    Bundle 'DirDiff.vim'
     Bundle 'vim-coffee-script'
     Bundle 'lbdbq'
     Bundle 'gerw/vim-HiLinkTrace'
@@ -120,6 +101,7 @@
     Bundle 'tpope/vim-fugitive'
     Bundle 'ack.vim'
     Bundle 'VOoM'
+    Bundle 'jceb/vim-orgmode'
 
    "...
    "
@@ -134,9 +116,8 @@
 
 " colours (do this after installing freyr bundle
     set t_Co=256
-    " colorscheme jitterbug
-" while developing jitterbug
-colorscheme jitterbug
+    " while developing jitterbug
+    colorscheme jitterbug
 
 " Powerline Status bar 
     set nocompatible   " Disable vi-compatibility
@@ -152,14 +133,12 @@ colorscheme jitterbug
 
 " Ctrl-P
     " Extensions
-    " let g:ctrlp_extensions = ['dir', 'line']
+    let g:ctrlp_extensions = ['quickfix', 'mixed']
     " Excluded file types
     set wildignore+=*/.hg/*,*/.svn/*,*.pyc
-    " Don't manage working directory by default
-    " let g:ctrlp_working_path_mode = 0
 
 " UltiSnips
-    " let g:UltiSnipsSnippetsDir='~/Ubuntu\ One/vim/UltiSnips'
+    let g:UltiSnipsSnippetsDir='~/Ubuntu\ One/vim/UltiSnips'
     let g:UltiSnipsEditSplit="horizontal"
 
 " Rope
@@ -170,18 +149,17 @@ colorscheme jitterbug
     let g:pymode_lint_ignore="E126,E128,E501"
 
 " mail
-    set dictionary=/usr/share/dict/words
-    autocmd BufEnter * if &ft ==# 'mail' | setlocal spell | endif
-    autocmd BufEnter * if &ft ==# 'mail' | set number| endif
-    autocmd BufEnter * if &ft ==# 'mail' | set complete+=k | endif
-    autocmd BufEnter * if &ft ==# 'mail' | set formatoptions+=n | endif
-    " Default dlbdbq bindings
-    nmap <silent> <LocalLeader>@ :call LbdbExpandCurLine()<RETURN>
-    vmap <silent> <LocalLeader>@ :call LbdbExpandVisual()<RETURN>
-    imap <silent> <LocalLeader>@ <ESC>:call LbdbExpandCurLine()<RETURN>A
-    " Let's map these to control-t too, the same as in Mutt
-    nmap <silent> <C-t> :call LbdbExpandCurLine()<RETURN>
-    imap <silent> <C-t> <ESC>:call LbdbExpandCurLine()<RETURN>A
+    autocmd BufEnter * if &ft ==# 'mail' | call MyVimrc_setup_mail() | endif
+    function MyVimrc_setup_mail()
+        set dictionary=/usr/share/dict/words
+        setlocal spell 
+        set number
+        set complete+=k 
+        " dlbdbq bindings
+        " map these to control-t like in Mutt
+        nnoremap <silent> <C-t> :call LbdbExpandCurLine()<RETURN>
+        inoremap <silent> <C-t> <ESC>:call LbdbExpandCurLine()<RETURN>A
+    endfunction
 
 " new windows
     set switchbuf=useopen,usetab
@@ -192,11 +170,11 @@ colorscheme jitterbug
     nmap <Leader>o :TagbarOpenAutoClose<enter>
 
 " Voom
-    let g:voom_ft_modes = {'markdown': 'markdown', 'rst': 'rest'}
+    let g:voom_ft_modes = {'markdown': 'markdown', 'rst': 'rest', 'org': 'org'}
     nmap <Leader>v :VoomToggle<enter>
 
 " Ack-grep
-    " My ackrd hides .ve directories, this putts them back
+    " My ackrc hides .ve directories, this putts them back
     command! -nargs=* -complete=file Vack Ack --noignore-dir=.ve <args>
 
 "List mode
