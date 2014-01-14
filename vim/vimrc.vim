@@ -160,6 +160,10 @@
         inoremap <silent> <C-t> <ESC>:call LbdbExpandCurLine()<RETURN>A
     endfunction
 
+" spell check docs 
+    autocmd BufEnter * if &ft ==# 'rst' | setlocal spell | endif
+    autocmd BufEnter * if &ft ==# 'markdown' | setlocal spell | endif
+
 " new windows
     set switchbuf=useopen,usetab
 
@@ -180,9 +184,6 @@
 
 "List mode
     set listchars=eol:¬,tab:▸·,trail:•
-
-" Evernote/Markdown
-    autocmd BufEnter * if &ft ==# 'markdown' | setlocal spell | endif
 
 " Open Browser
     "   Search with DuckDuckGo
