@@ -102,6 +102,7 @@
     Bundle 'ack.vim'
     Bundle 'VOoM'
     Bundle 'jceb/vim-orgmode'
+    Bundle 'rking/ag.vim'
 
    "...
    "
@@ -192,3 +193,6 @@
 	" If it looks like URI, Open selected URI.
 	" Otherwise, Search selected word.
 	vmap <Leader>b <Plug>(openbrowser-smart-search)
+
+" Ag the silver searcher
+    let g:aghighlight=1
