@@ -94,7 +94,6 @@
     Bundle 'lbdbq'
     Bundle 'gerw/vim-HiLinkTrace'
     Bundle 'Mark'
-    Bundle 'Efficient-python-folding'
     Bundle 'airblade/vim-gitgutter'
     Bundle 'unimpaired.vim'
     Bundle 'majutsushi/tagbar'
@@ -169,6 +168,8 @@
     command! TT TagbarToggle
     command! OO TagbarOpenAutoClose
     nmap <Leader>o :TagbarOpenAutoClose<enter>
+    " I prefer tags in file order, unless I sort them
+    let g:tagbar_sort = 0
 
 " Voom
     let g:voom_ft_modes = {'markdown': 'markdown', 'rst': 'rest', 'org': 'org'}
