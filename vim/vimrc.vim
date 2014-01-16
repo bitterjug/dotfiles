@@ -101,6 +101,7 @@
     Bundle 'VOoM'
     Bundle 'jceb/vim-orgmode'
     Bundle 'rking/ag.vim'
+    Bundle 'scrooloose/nerdtree'
 
    "...
    "
