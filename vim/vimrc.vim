@@ -50,12 +50,11 @@
     NeoBundle 'majutsushi/tagbar'
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'VOoM'
-    NeoBundle 'jceb/vim-orgmode'
     NeoBundle 'rking/ag.vim'
-    NeoBundle 'scrooloose/nerdtree'
-    NeoBundle 'scrooloose/nerdtree'
     NeoBundle "Shougo/neocomplete.vim"
     NeoBundle "Shougo/unite.vim"
+    NeoBundle "Shougo/vimshell.vim"
+    NeoBundle "Shougo/vimfiler.vim"
 
     " Rcommended to install
     NeoBundle 'Shougo/vimproc', {
