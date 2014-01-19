@@ -1,6 +1,5 @@
 #!/bin/bash
-NOTEFILE=$HOME/"Ubuntu One"/Stuff/devjournal.md
-SERVER=NOTE
+NOTEFILE=$HOME/SparkleShare/devjournal/devjournal.md
 COMMAND="call append(line('$'), ['', join(['##', strftime('%F %R %A') ]),'',''])"
-gvim --servername $SERVER -c"$COMMAND" "$NOTEFILE" -c"$" 
+gvim -c"$COMMAND" "$NOTEFILE" -c"$" 
 
