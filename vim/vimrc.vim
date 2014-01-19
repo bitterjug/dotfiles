@@ -46,7 +46,7 @@
     NeoBundle 'surround.vim'
     NeoBundle 'SuperTab-continued.'
     NeoBundle 'Textile-for-VIM'
-    NeoBundle 'Markdown'
+    NeoBundle 'tpope/vim-markdown'
     NeoBundle 'ctrlp.vim'
     NeoBundle 'klen/python-mode'
     NeoBundle 'vim-json-bundle'
@@ -63,7 +63,6 @@
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'VOoM'
     NeoBundle 'rking/ag.vim'
-
 
     " My Bundles here:
     " Refer to |:NeoBundle-examples|.
@@ -214,7 +213,7 @@
     let g:tagbar_sort = 0
 
 " Voom
-    let g:voom_ft_modes = {'markdown': 'markdown', 'rst': 'rest', 'org': 'org'}
+    let g:voom_ft_modes = {'markdown': 'markdown', 'ghmarkdown': 'markdown', 'rst': 'rest', 'org': 'org'}
     nmap <Leader>v :VoomToggle<enter>
 
 "List mode
