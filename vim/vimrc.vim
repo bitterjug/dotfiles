@@ -19,8 +19,22 @@
     " Let NeoBundle manage NeoBundle
     NeoBundleFetch 'Shougo/neobundle.vim'
 
-    NeoBundle 'bitterjug/vim-colors-freyr'
+    " Rcommended to install
+    NeoBundle 'Shougo/vimproc', {
+     \ 'build' : {
+     \     'windows' : 'make -f make_mingw32.mak',
+     \     'cygwin' : 'make -f make_cygwin.mak',
+     \     'mac' : 'make -f make_mac.mak',
+     \     'unix' : 'make -f make_unix.mak',
+     \    },
+     \ }
     NeoBundle "Shougo/neocomplete.vim"
+    NeoBundle "Shougo/unite.vim"
+    NeoBundle "Shougo/vimshell.vim"
+    NeoBundle "Shougo/vimfiler.vim"
+    NeoBundle 'bitterjug/vim-colors-freyr'
+    NeoBundle 'bitterjug/vim-colors-bitterjug'
+    NeoBundle 'bitterjug/vim-colors-freyr'
     NeoBundle 'open-browser.vim'
     NeoBundle 'UltiSnips'
     NeoBundle 'Syntastic'
@@ -38,8 +52,6 @@
     NeoBundle 'vim-json-bundle'
     NeoBundle 'matchit.zip'
     NeoBundle 'MatchTag'
-    NeoBundle 'bitterjug/vim-colors-freyr'
-    NeoBundle 'bitterjug/vim-colors-bitterjug'
     NeoBundle 'digitaltoad/vim-jade'
     NeoBundle 'vim-coffee-script'
     NeoBundle 'lbdbq'
@@ -51,20 +63,7 @@
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'VOoM'
     NeoBundle 'rking/ag.vim'
-    NeoBundle "Shougo/neocomplete.vim"
-    NeoBundle "Shougo/unite.vim"
-    NeoBundle "Shougo/vimshell.vim"
-    NeoBundle "Shougo/vimfiler.vim"
 
-    " Rcommended to install
-    NeoBundle 'Shougo/vimproc', {
-     \ 'build' : {
-     \     'windows' : 'make -f make_mingw32.mak',
-     \     'cygwin' : 'make -f make_cygwin.mak',
-     \     'mac' : 'make -f make_mac.mak',
-     \     'unix' : 'make -f make_unix.mak',
-     \    },
-     \ }
 
     " My Bundles here:
     " Refer to |:NeoBundle-examples|.
@@ -221,9 +220,6 @@
 "List mode
     set listchars=eol:¬,tab:▸·,trail:•
 
-" Evernote/Markdown
-    autocmd BufEnter * if &ft ==# 'markdown' | setlocal spell | endif
-
 " Open Browser
     "   Search with DuckDuckGo
     let g:openbrowser_default_search="duckduckgo"
@@ -321,3 +317,20 @@
     " For perlomni.vim setting.
     " https://github.com/c9s/perlomni.vim
     let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+" Unite
+" grep
+	if executable('ag')
+	  " Use ag in unite grep source.
+	  let g:unite_source_grep_command = 'ag'
+	  let g:unite_source_grep_default_opts =
+	  \ '--line-numbers --nocolor --nogroup --hidden --ignore ' .
+	  \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+	  let g:unite_source_grep_recursive_opt = ''
+	elseif executable('ack-grep')
+	  " Use ack in unite grep source.
+	  let g:unite_source_grep_command = 'ack-grep'
+	  let g:unite_source_grep_default_opts =
+	  \ '--no-heading --no-color -a -H'
+	  let g:unite_source_grep_recursive_opt = ''
+	endif
