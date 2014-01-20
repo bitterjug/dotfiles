@@ -18,4 +18,5 @@ set defsearch=duckduckgo
 autocmd LocationChange .* :js modes.passAllKeys = /mail\.google\.com/.test(buffer.URL)
 autocmd LocationChange .* :js modes.passAllKeys = /docs\.google\.com/.test(buffer.URL)
 
+" Complete tabs and Awesome bar suggestions
 set cpt=tl
