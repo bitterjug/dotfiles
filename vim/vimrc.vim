@@ -98,9 +98,10 @@
     Bundle 'unimpaired.vim'
     Bundle 'majutsushi/tagbar'
     Bundle 'tpope/vim-fugitive'
-    Bundle 'ack.vim'
     Bundle 'VOoM'
     Bundle 'jceb/vim-orgmode'
+    Bundle 'rking/ag.vim'
+    Bundle 'scrooloose/nerdtree'
 
    "...
    "
@@ -178,10 +179,6 @@
     let g:voom_ft_modes = {'markdown': 'markdown', 'rst': 'rest', 'org': 'org'}
     nmap <Leader>v :VoomToggle<enter>
 
-" Ack-grep
-    " My ackrc hides .ve directories, this putts them back
-    command! -nargs=* -complete=file Vack Ack --noignore-dir=.ve <args>
-
 "List mode
     set listchars=eol:¬,tab:▸·,trail:•
 
@@ -194,3 +191,6 @@
 	" If it looks like URI, Open selected URI.
 	" Otherwise, Search selected word.
 	vmap <Leader>b <Plug>(openbrowser-smart-search)
+
+" Ag the silver searcher
+    let g:aghighlight=1
