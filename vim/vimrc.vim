@@ -81,7 +81,7 @@
     Bundle 'surround.vim'
     Bundle 'SuperTab-continued.'
     Bundle 'Textile-for-VIM'
-    Bundle 'Markdown'
+    Bundle 'tpope/vim-markdown'
     Bundle 'ctrlp.vim'
     Bundle 'klen/python-mode'
     Bundle 'vim-json-bundle'
