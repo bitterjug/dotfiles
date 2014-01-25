@@ -142,18 +142,64 @@
 
 " `=============/MAPPINGS=========='
 
+" Vundle boot
+    filetype off
+    let iCanHazVundle=1
+    let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+    if !filereadable(vundle_readme)
+        echo "Installing Vundle..."
+        echo ""
+        silent !mkdir -p ~/.vim/bundle
+        silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        let iCanHazVundle=0
+    endif
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+    Bundle 'gmarik/vundle'
+    "add bundles
+    Bundle 'open-browser.vim'
+    Bundle 'UltiSnips'
+    Bundle 'Syntastic'
+    Bundle 'Lokaltog/vim-powerline'
+    Bundle 'vcscommand.vim'
+    Bundle 'svncommand.vim'
+    Bundle 'vcsbzr.vim'
+    Bundle 'tpope/vim-ragtag'
+    Bundle 'surround.vim'
+    Bundle 'SuperTab-continued.'
+    Bundle 'Textile-for-VIM'
+    Bundle 'tpope/vim-markdown'
+    Bundle 'ctrlp.vim'
+    Bundle 'klen/python-mode'
+    Bundle 'vim-json-bundle'
+    Bundle 'matchit.zip'
+    Bundle 'MatchTag'
+    Bundle 'bitterjug/vim-colors-freyr'
+    Bundle 'bitterjug/vim-colors-bitterjug'
+    Bundle 'digitaltoad/vim-jade'
+    Bundle 'vim-coffee-script'
+    Bundle 'lbdbq'
+    Bundle 'gerw/vim-HiLinkTrace'
+    Bundle 'Mark'
+    Bundle 'airblade/vim-gitgutter'
+    Bundle 'unimpaired.vim'
+    Bundle 'majutsushi/tagbar'
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'VOoM'
+    Bundle 'jceb/vim-orgmode'
+    Bundle 'rking/ag.vim'
+    Bundle 'scrooloose/nerdtree'
 
-"
-"   "...
-"   "
-"    if iCanHazVundle == 0
-"        echo "Installing Bundles..."
-"        echo ""
-"        :BundleInstall
-"    endif
-"" File type detection and indentation on, this needs to be after Vundle is
-"" setup
-"    filetype plugin indent on
+   "...
+   "
+    if iCanHazVundle == 0
+        echo "Installing Bundles..."
+        echo ""
+        :BundleInstall
+    endif
+" File type detection and indentation on, this needs to be after Vundle is
+" setup
+    filetype plugin indent on
 
 " colours (do this after installing freyr bundle
     set t_Co=256
