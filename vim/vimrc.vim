@@ -346,3 +346,4 @@
     let g:NERDTreeMapActivateNode = 'l'
     let g:NERDTreeMapUpdir = 'h'
     let NERDTreeIgnore=['\.pyc$', '\~$']
+    let NERDTreeMinimalUI=1
