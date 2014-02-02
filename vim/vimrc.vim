@@ -137,6 +137,9 @@
     map Q gwap
     vmap Q gqap
 
+" kj mash
+    inoremap kj <esc>
+
 " format lists
     set formatoptions+=n
 
@@ -332,6 +335,7 @@
 "Nerd Tree
     noremap <Leader>f :NERDTreeToggle<cr>
     let g:NERDTreeMapActivateNode = 'l'
-    let g:NERDTreeMapUpdir = 'h'
+    let g:NERDTreeMapJumpParent = 'h'
+    let g:NERDTreeMapUpdir = 'H'
     let NERDTreeIgnore=['\.pyc$', '\~$']
     let NERDTreeMinimalUI=1
