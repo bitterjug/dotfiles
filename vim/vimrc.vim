@@ -105,7 +105,7 @@
 " Might have to use other settings for other languages
 " Indentation and tabs -- putting back for stuff like this file
     function MyVimrc_setup_python()
-        match SpellLocal '\%>79v.\+' 
+        match LongLines '\%>79v.\+' 
     endfunction
     autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_python() | endif
     set autoindent
