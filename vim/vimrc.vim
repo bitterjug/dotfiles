@@ -330,7 +330,7 @@
     noremap ! :VimShellPop<cr>
 
 "Nerd Tree
-    noremap <Leader>f :NERDTree<cr>
+    noremap <Leader>f :NERDTreeToggle<cr>
     let g:NERDTreeMapActivateNode = 'l'
     let g:NERDTreeMapUpdir = 'h'
     let NERDTreeIgnore=['\.pyc$', '\~$']
