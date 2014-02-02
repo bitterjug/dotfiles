@@ -336,6 +336,6 @@
     noremap <Leader>f :NERDTreeToggle<cr>
     let g:NERDTreeMapActivateNode = 'l'
     let g:NERDTreeMapJumpParent = 'h'
-    let g:NERDTreeMapUpdir = 'H'
+    let g:NERDTreeMapUpdirKeepOpen = 'H'
     let NERDTreeIgnore=['\.pyc$', '\~$']
     let NERDTreeMinimalUI=1
