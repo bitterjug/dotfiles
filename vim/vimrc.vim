@@ -63,6 +63,7 @@
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'VOoM'
     NeoBundle 'rking/ag.vim'
+    NeoBundle 'mustache/vim-mustache-handlebars'
 
     " My Bundles here:
     " Refer to |:NeoBundle-examples|.
@@ -330,11 +331,12 @@
     noremap ! :VimShellPop<cr>
 
 "Nerd Tree
-    noremap <Leader>f :NERDTree<cr>
+    noremap <Leader>f :NERDTreeToggle<cr>
     let g:NERDTreeMapActivateNode = 'l'
-    let g:NERDTreeMapUpdir = 'h'
-    let NERDTreeIgnore=['\.pyc$', '\~$']
-    let NERDTreeMinimalUI=1
+    let g:NERDTreeMapJumpParent = 'h'
+    let g:NERDTreeMapUpdirKeepOpen = 'H'
+    let g:NERDTreeIgnore=['\.pyc$', '\~$']
+    let g:NERDTreeMinimalUI=1
 
 " Syntastic 
     let g:syntastic_id_checkers=1
