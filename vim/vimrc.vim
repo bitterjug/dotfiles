@@ -106,6 +106,7 @@
 " Might have to use other settings for other languages
 " Indentation and tabs -- putting back for stuff like this file
     function MyVimrc_setup_python()
+        hi link LongLines SpellLocal
         match LongLines '\%>79v.\+' 
     endfunction
     autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_python() | endif
@@ -345,5 +346,7 @@
     let g:syntastic_enable_highlighting = 1
     let g:syntastic_auto_loc_list=1
     let g:syntastic_loc_list_height=5
+    let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['python'] }
+
 "   Javascript
     let g:syntastic_javascript_checkers = ['jshint']
