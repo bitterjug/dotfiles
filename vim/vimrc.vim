@@ -63,6 +63,7 @@
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'VOoM'
     NeoBundle 'rking/ag.vim'
+    NeoBundle 'mustache/vim-mustache-handlebars'
 
     " My Bundles here:
     " Refer to |:NeoBundle-examples|.
