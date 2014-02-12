@@ -140,6 +140,9 @@
     map Q gwap
     vmap Q gqap
 
+" kj mash
+    inoremap kj <esc>
+
 " format lists
     set formatoptions+=n
 
@@ -345,7 +348,6 @@
     let g:syntastic_error_symbol='✗'
     let g:syntastic_warning_symbol='⚠'
     let g:syntastic_enable_highlighting = 1
-    let g:syntastic_auto_loc_list=1
     let g:syntastic_loc_list_height=5
     let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['python'] }
 
