@@ -351,3 +351,6 @@
 
 "   Javascript
     let g:syntastic_javascript_checkers = ['jshint']
+
+" Gitv
+    let g:Gitv_OpenHorizontal = 'auto'
