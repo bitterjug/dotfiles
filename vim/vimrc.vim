@@ -46,7 +46,8 @@
     NeoBundle 'surround.vim'
     NeoBundle 'SuperTab-continued.'
     NeoBundle 'Textile-for-VIM'
-    NeoBundle 'tpope/vim-markdown'
+    " NeoBundle 'tpope/vim-markdown'
+    NeoBundle 'jtratner/vim-flavored-markdown'
     NeoBundle 'ctrlp.vim'
     NeoBundle 'klen/python-mode'
     NeoBundle 'vim-json-bundle'
@@ -64,6 +65,7 @@
     NeoBundle 'VOoM'
     NeoBundle 'rking/ag.vim'
     NeoBundle 'mustache/vim-mustache-handlebars'
+    " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
     " My Bundles here:
     " Refer to |:NeoBundle-examples|.
@@ -105,16 +107,20 @@
 " This was mostly about python, which now uses pymode
 " Might have to use other settings for other languages
 " Indentation and tabs -- putting back for stuff like this file
-    function MyVimrc_setup_python()
+    function MyVimrc_setup_prog()
         hi link LongLines SpellLocal
         match LongLines '\%>79v.\+' 
+        set number
     endfunction
-    autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_python() | endif
+    autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_prog() | endif
     set autoindent
     set expandtab
     set tabstop=4
     set shiftwidth=4
     set smarttab
+
+" Javascript
+   autocmd BufEnter * if &ft ==# 'javascript' | call MyVimrc_setup_prog() | endif
 
 " Long lines
     set nowrap
@@ -208,6 +214,7 @@
     nmap <Leader>o :TagbarOpenAutoClose<enter>
     " I prefer tags in file order, unless I sort them
     let g:tagbar_sort = 0
+    let g:tagbar_foldlevel = 0
 
 " Voom
     let g:voom_ft_modes = {'markdown': 'markdown', 'ghmarkdown': 'markdown', 'rst': 'rest', 'org': 'org'}
