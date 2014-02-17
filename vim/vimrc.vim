@@ -62,6 +62,7 @@
     NeoBundle 'unimpaired.vim'
     NeoBundle 'majutsushi/tagbar'
     NeoBundle 'tpope/vim-fugitive'
+    NeoBundle 'gregsexton/gitv'
     NeoBundle 'VOoM'
     NeoBundle 'rking/ag.vim'
     NeoBundle 'mustache/vim-mustache-handlebars'
@@ -359,3 +360,6 @@
 
 "   Javascript
     let g:syntastic_javascript_checkers = ['jshint']
+
+" Gitv
+    let g:Gitv_OpenHorizontal = 'auto'
