@@ -139,8 +139,8 @@
 " .==============MAPPINGS==========.
 
 " ctrl--h and ctrl--l move among tabs
-    noremap <C-h> gT
-    noremap <C-l> gt
+"    noremap <C-h> gT
+"    noremap <C-l> gt
 
 " Q reformats paragraph (maybe should be specific to text formats?)
     map Q gwap
@@ -302,6 +302,9 @@
     "let g:neocomplete#enable_auto_select = 1
     "let g:neocomplete#disable_auto_complete = 1
     "inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
+    
+    "Mouse
+    set mouse=a
 
     " Enable omni completion.
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
