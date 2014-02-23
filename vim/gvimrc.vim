@@ -16,7 +16,7 @@
 " Gui font
 "    set guifont=Ubuntu\ Mono\ 12
 "    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
-    set guifont=Source\ Code\ Pro\ for\ Powerline\ 11
+    set guifont=Source\ Code\ Pro
     let Powerline_symbols = 'fancy'
 
 " Make marked files show up in explorer

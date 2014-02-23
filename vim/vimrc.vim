@@ -38,7 +38,7 @@
     NeoBundle 'open-browser.vim'
     NeoBundle 'UltiSnips'
     NeoBundle 'Syntastic'
-    NeoBundle 'Lokaltog/vim-powerline'
+    NeoBundle 'Lokaltog/powerline'
     NeoBundle 'vcscommand.vim'
     NeoBundle 'svncommand.vim'
     NeoBundle 'vcsbzr.vim'
@@ -154,11 +154,6 @@
     " while developing jitterbug
     colorscheme jitterbug
 
-" Powerline Status bar 
-    set nocompatible   " Disable vi-compatibility
-    set laststatus=2   " Always show the statusline
-    set encoding=utf-8 " Necessary to show unicode glyphs
-    let g:Powerline_symbols = 'fancy'
 
 " compview Smart Search
     map <Leader>/ <Plug>CompView
@@ -356,3 +351,7 @@
 
 " Gitv
     let g:Gitv_OpenHorizontal = 'auto'
+
+" Powerline
+    set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+    set encoding=utf-8
