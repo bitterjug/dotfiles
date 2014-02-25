@@ -66,6 +66,12 @@
     NeoBundle 'rking/ag.vim'
     NeoBundle 'mustache/vim-mustache-handlebars'
 
+    " org mode and related
+    NeoBundle 'hsitz/VimOrganizer'
+    NeoBundle 'chrisbra/NrrwRgn'
+    NeoBundle 'vim-scripts/utl.vim'
+    NeoBundle 'mattn/calendar-vim'
+
     " My Bundles here:
     " Refer to |:NeoBundle-examples|.
     "
@@ -79,13 +85,11 @@
     " :NeoBundleInstall(!)    - install(update) bundles
     " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
-    " Installation check.
-        NeoBundleCheck
 
     if iCanHazNeoBundle == 0
         echo "Installing Bundles..."
         echo ""
-        NeoBundleInstall
+        NeoBundleCheck
     endif
 
 " Try and unify the clipboards (not sure if working)
@@ -339,3 +343,10 @@
 " Powerline
     set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
     set encoding=utf-8
+
+" VimOrganizer
+    let g:ft_ignore_pat = '\.org'
+    filetype plugin indent on
+    " and then put these lines in vimrc somewhere after the line above
+    au! BufRead,BufWrite,BufWritePost,BufNewFile *.org 
+    au BufEnter *.org            call org#SetOrgFileType()
