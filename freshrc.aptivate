@@ -41,3 +41,6 @@ fresh ghc/ghci --file=~/.ghci
 
 # XMonad
 fresh xmonad/xmonad.hs --file=~/.xmonad/xmonad.hs
+
+# powerline
+fresh powerline --file=~/.config/powerline/
