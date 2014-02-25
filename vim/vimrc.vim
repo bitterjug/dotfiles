@@ -46,7 +46,8 @@
     NeoBundle 'surround.vim'
     NeoBundle 'SuperTab-continued.'
     NeoBundle 'Textile-for-VIM'
-    NeoBundle 'tpope/vim-markdown'
+    " NeoBundle 'tpope/vim-markdown'
+    NeoBundle 'jtratner/vim-flavored-markdown'
     NeoBundle 'ctrlp.vim'
     NeoBundle 'klen/python-mode'
     NeoBundle 'vim-json-bundle'
@@ -65,6 +66,7 @@
     NeoBundle 'VOoM'
     NeoBundle 'rking/ag.vim'
     NeoBundle 'mustache/vim-mustache-handlebars'
+    " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
     " org mode and related
     NeoBundle 'hsitz/VimOrganizer'
@@ -110,16 +112,20 @@
 " This was mostly about python, which now uses pymode
 " Might have to use other settings for other languages
 " Indentation and tabs -- putting back for stuff like this file
-    function MyVimrc_setup_python()
+    function MyVimrc_setup_prog()
         hi link LongLines SpellLocal
         match LongLines '\%>79v.\+' 
+        set number
     endfunction
-    autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_python() | endif
+    autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_prog() | endif
     set autoindent
     set expandtab
     set tabstop=4
     set shiftwidth=4
     set smarttab
+
+" Javascript
+   autocmd BufEnter * if &ft ==# 'javascript' | call MyVimrc_setup_prog() | endif
 
 " Long lines
     set nowrap
@@ -137,8 +143,8 @@
 " .==============MAPPINGS==========.
 
 " ctrl--h and ctrl--l move among tabs
-    noremap <C-h> gT
-    noremap <C-l> gt
+"    noremap <C-h> gT
+"    noremap <C-l> gt
 
 " Q reformats paragraph (maybe should be specific to text formats?)
     map Q gwap
@@ -211,6 +217,7 @@
     nmap <Leader>o :TagbarOpenAutoClose<enter>
     " I prefer tags in file order, unless I sort them
     let g:tagbar_sort = 0
+    let g:tagbar_foldlevel = 0
 
 " Voom
     let g:voom_ft_modes = {'markdown': 'markdown', 'ghmarkdown': 'markdown', 'rst': 'rest', 'org': 'org'}
@@ -278,6 +285,28 @@
     inoremap <expr><C-e>  neocomplete#cancel_popup()
     " Close popup by <Space>.
     "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
+
+    " For cursor moving in insert mode(Not recommended)
+    "inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
+    "inoremap <expr><Right> neocomplete#close_popup() . "\<Right>"
+    "inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>"
+    "inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"
+    " Or set this.
+    "let g:neocomplete#enable_cursor_hold_i = 1
+    " Or set this.
+    "let g:neocomplete#enable_insert_char_pre = 1
+
+    " AutoComplPop like behavior.
+    "let g:neocomplete#enable_auto_select = 1
+
+    " Shell like behavior(not recommended).
+    "set completeopt+=longest
+    "let g:neocomplete#enable_auto_select = 1
+    "let g:neocomplete#disable_auto_complete = 1
+    "inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
+    
+    "Mouse
+    set mouse=a
 
     " Enable omni completion.
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
