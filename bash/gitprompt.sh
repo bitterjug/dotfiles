@@ -32,20 +32,19 @@ function parse_git_branch {
   fi
   if [[ ${git_status} =~ ${branch_pattern} ]]; then
     branch=${BASH_REMATCH[1]}
-    echo "(${branch})${remote}${state}"
+    echo "${branch}${remote}${state}"
   fi
 }
 
 function prompt_func() {
     if [ -n "${VIRTUAL_ENV:+x}" ]
     then
-        vdir=`basename ${VIRTUAL_ENV}`
-        ve="${BLUE}[`basename \` dirname ${VIRTUAL_ENV}\``]"
+        ve="${BLUE}`basename \` dirname ${VIRTUAL_ENV}\``"
     else
         ve=""
     fi
     previous_return_value=$?;
-    prompt="${ve}${BLUE}${YELLOW}\w${GREEN}$(parse_git_branch)${COLOR_NONE}"
+    prompt="${ve}${YELLOW}\w${GREEN}$(parse_git_branch)${COLOR_NONE}"
     if test $previous_return_value -eq 0
     then
         PS1="${prompt}➔ "
