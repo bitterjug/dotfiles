@@ -65,6 +65,8 @@
     NeoBundle 'gregsexton/gitv'
     NeoBundle 'VOoM'
     NeoBundle 'rking/ag.vim'
+    NeoBundle 'mileszs/ack.vim'
+    NeoBundle 'vsushkov/nerdtree-ack'
     NeoBundle 'mustache/vim-mustache-handlebars'
     " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
@@ -379,3 +381,6 @@
     " and then put these lines in vimrc somewhere after the line above
     au! BufRead,BufWrite,BufWritePost,BufNewFile *.org 
     au BufEnter *.org            call org#SetOrgFileType()
+
+" Make Ack use Ag
+    let g:ackprg = 'ag --nogroup --nocolor --column'
