@@ -6,8 +6,9 @@ import XMonad.Config.Gnome
 import XMonad.Actions.CycleWS
 import XMonad.Actions.GridSelect
 import XMonad.Layout.NoBorders (smartBorders)
-import XMonad.Prompt.Window
 import XMonad.Prompt
+import XMonad.Prompt.Window
+import XMonad.Prompt.RunOrRaise
 import qualified Data.Map as M
 
 -- maximize: move window to next empty ws, and follow it
@@ -54,7 +55,8 @@ keysToAdd x =
         -- move currnet window previous and follow it
        ,   (((modMask x .|. shiftMask .|. controlMask), xK_h), shiftToPrev >> prevWS)
         -- launch synapse
-       ,   ((modMask x, xK_o), spawn "synapse")
+       ,   ((modMask x, xK_o), runOrRaisePrompt myXPConfig)
+       ,   (((modMask x .|. shiftMask), xK_o), spawn "synapse")
         -- launch gtg
        ,   ((modMask x, xK_d), spawn "gtg")
         -- launch development journal
