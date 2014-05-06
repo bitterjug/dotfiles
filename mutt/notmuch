@@ -7,17 +7,19 @@ set virtual_spoolfile = yes
 virtual-mailboxes \
     "INBOX"        "notmuch://?query=tag:inbox and NOT tag:archive and folder:INBOX"\
     "YouWiN"       "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:youwin"\
-    "Tech"         "notmuch://?query=tag:unread and NOT tag:archive and folder:Tech"\
     "Alfie"        "notmuch://?query=tag:alfie and NOT tag:archive"\
+    "Yemen"        "notmuch://?query=tag:yemen and NOT tag:archive"\
     "Support"      "notmuch://?query=tag:support and NOT tag:archive"\
     "OSI"          "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:osi"\
     "3ie"          "notmuch://?query=tag:unread and NOT tag:archive and tag:3ie"\
     "V4C"          "notmuch://?query=tag:unread and NOT tag:archive and tag:v4c"\
-    "G+"           "notmuch://?query=tag:g+ and NOT tag:archive"\
+    "Tech"         "notmuch://?query=tag:unread and NOT tag:archive and folder:Tech"\
     "Recruitment"  "notmuch://?query=tag:unread and NOT tag:archive and folder:Recruitment"\
     "e-consensus"  "notmuch://?query=tag:unread and NOT tag:archive and tag:ec"\
     "PD"           "notmuch://?query=tag:unread and NOT tag:archive and tag:pd"\
+    "MarComms"     "notmuch://?query=tag:unread and NOT tag:archive and tag:marcomms"\
     "Wordpress"    "notmuch://?query=tag:wp and NOT tag:archive"\
+    "G+"           "notmuch://?query=tag:g+ and NOT tag:archive"\
     "All unread"   "notmuch://?query=tag:unread"
 
 bind index   S vfolder-from-query
