@@ -48,12 +48,13 @@ color index color246 color234 "~A" # all messages
 color index color248 color236 "~N" # new messages
 color index color248 color234 "~O" # old messages
 color index color240 color234 "~P" # messages from me
-color index color250 color234 "~p" # messages to me
+color index color245 color234 "~p" # messages to me
 
 # Flagged overrised all the above
 color index color248 color052 "~F" # Flagged Messages
 # Deleted comes last to override above
 color index color240 color232 "~D" # deleted messages
+color index color244 color232 "~Y '\W?archive\W?'"
 
 #color index color160 color234 "~D(!~p|~p)" # deleted
 #color index color166 color234 ~= # duplicate messages

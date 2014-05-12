@@ -8,6 +8,7 @@ macro index,pager A "|abook --add-email-quiet\n" 'add the sender to the address 
 # View embedded links and urls
 macro index,pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
 
-macro index a "<tag-prefix><save-message>~/Mail/Aptivate/Archives<enter>y"
-macro pager a "<save-message>~/Mail/Aptivate/Archives<enter>y"
+#macro index a "<tag-prefix><modify-labels-then-hide>+archive -inbox\n<sync-mailbox>"
+macro index a "<tag-prefix><modify-labels-then-hide>+archive -inbox\n"
+macro pager a "<modify-labels-then-hide>+archive -inbox\n"
 
