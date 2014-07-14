@@ -25,10 +25,11 @@ virtual-mailboxes \
 
 bind index   S vfolder-from-query
 
-set index_format="%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s%> %g"
-set nm_query_type = threads
+set index_format="%4C %Z %{%c} %-15.15L (%?l?%4l&%4c?) %s%> %g"
+# set index_format="%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s%> %g"
+# set nm_query_type = threads
 
-set nm_hidden_tags =
+# set nm_hidden_tags =
 
 tag-transforms "attachment" "⌧" \
                "replied" "↫"
