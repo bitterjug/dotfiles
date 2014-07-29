@@ -86,6 +86,7 @@ ubuntuOrange = "#FF4400"
 main = do
     xmonad $ gnomeConfig {
         keys = myKeys
+        , modMask = mod4Mask
         , manageHook = manageHook gnomeConfig 
                     <+> composeAll myManagementHooks
         , layoutHook = smartBorders $ layoutHook gnomeConfig
