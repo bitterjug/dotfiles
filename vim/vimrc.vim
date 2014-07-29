@@ -32,9 +32,9 @@
     NeoBundle "Shougo/unite.vim"
     NeoBundle "Shougo/vimshell.vim"
     NeoBundle "scrooloose/nerdtree"
-    NeoBundle 'bitterjug/vim-colors-freyr'
     NeoBundle 'bitterjug/vim-colors-bitterjug'
     NeoBundle 'bitterjug/vim-colors-freyr'
+    NeoBundle 'bitterjug/vim-notebook'
     NeoBundle 'open-browser.vim'
     NeoBundle 'UltiSnips'
     NeoBundle 'Syntastic'
