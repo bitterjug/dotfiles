@@ -68,11 +68,12 @@
     NeoBundle 'mileszs/ack.vim'
     NeoBundle 'vsushkov/nerdtree-ack'
     NeoBundle 'mustache/vim-mustache-handlebars'
+    NeoBundle 'Rykka/riv.vim' "Restructured text
     " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
     " org mode and related
-    NeoBundle 'hsitz/VimOrganizer'
-    NeoBundle 'chrisbra/NrrwRgn'
+    NeoBundle 'hsitz/VimOrganizer' " org mode
+    NeoBundle 'chrisbra/NrrwRgn'   " narrowing
     NeoBundle 'vim-scripts/utl.vim'
     NeoBundle 'mattn/calendar-vim'
 
