@@ -4,6 +4,7 @@ import XMonad.StackSet
 import XMonad.Util.WorkspaceCompare
 import XMonad.Config.Gnome
 import XMonad.Actions.CycleWS
+import XMonad.Actions.CycleWindows
 import XMonad.Actions.GridSelect
 import XMonad.Layout.NoBorders (smartBorders)
 import XMonad.Prompt
@@ -35,15 +36,16 @@ myXPConfig  = defaultXPConfig {
 keysToAdd x = 
     [ 
         -- Close window
-       ((modMask x, xK_F4), kill)
+       ((mod1Mask, xK_F4), kill)
+       ,   ((modMask x, xK_c), kill)
+        -- Normal alt-tab behaviour?
+       ,   ((mod1Mask, xK_Tab), cycleRecentWindows [xK_Alt_L] xK_Tab xK_Caps_Lock)
         -- Next (non-empty) workspace
        ,   (((modMask x .|. controlMask), xK_l), moveTo Next NonEmptyWS)
        ,   ((modMask x, xK_grave), moveTo Next NonEmptyWS)
-       ,   ((mod4Mask, xK_Tab), moveTo Next NonEmptyWS)
         -- Previous (non-empty) workspace
        ,   (((modMask x .|. controlMask), xK_h), moveTo Prev NonEmptyWS)
        ,   (((modMask x .|. shiftMask), xK_grave), moveTo Prev NonEmptyWS)
-       ,   (((mod4Mask .|. shiftMask), xK_Tab), moveTo Prev NonEmptyWS)
         -- 'minimize' to first empty workspace
        ,   ((modMask x, xK_i), shiftTo Next EmptyWS)
         -- 'maximize' to first empty workspace, and view
@@ -60,9 +62,9 @@ keysToAdd x =
        ,   ((modMask x, xK_d), spawn "gtg")
         -- launch development journal
        ,   (((modMask x .|. shiftMask), xK_n), spawn "$HOME/bin/note.sh")
-        -- goto/bring window with Alt-(shift)-X
-       ,   (((modMask x .|. shiftMask), xK_x), windowPromptBring myXPConfig)
-       ,   ((modMask x, xK_x), windowPromptGoto myXPConfig)
+        -- goto/bring window with Win-(shift)-Z
+       ,   (((modMask x .|. shiftMask), xK_z), windowPromptBring myXPConfig)
+       ,   ((modMask x, xK_z), windowPromptGoto myXPConfig)
         -- Run Or Raise
        ,   ((modMask x, xK_o), runOrRaisePrompt myXPConfig)
         -- grid select
