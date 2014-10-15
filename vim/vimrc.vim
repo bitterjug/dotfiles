@@ -77,6 +77,9 @@
     NeoBundle 'vim-scripts/utl.vim'
     NeoBundle 'mattn/calendar-vim'
 
+    " redmine wiki 
+    NeoBundle 's3rvac/vim-syntax-redminewiki'
+
     " My Bundles here:
     " Refer to |:NeoBundle-examples|.
     "
@@ -385,3 +388,8 @@
 
 " Make Ack use Ag
     let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Riv Restructured Text Devjournal
+    let devjournal = { 'path': '~/SparkleShare/devjournal', }
+    let aptivateprocess = { 'path': '~/workspace/aptivate-process/', 'build_path': 'build'}
+    let g:riv_projects= [devjournal,aptivateprocess]
