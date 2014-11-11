@@ -15,7 +15,7 @@
         set runtimepath+=~/.vim/bundle/neobundle.vim/
     endif
 
-    call neobundle#rc(expand('~/.vim/bundle/'))
+    call neobundle#begin(expand('~/.vim/bundle/'))
     " Let NeoBundle manage NeoBundle
     NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -44,7 +44,7 @@
     NeoBundle 'vcsbzr.vim'
     NeoBundle 'tpope/vim-ragtag'
     NeoBundle 'surround.vim'
-    NeoBundle 'SuperTab-continued.'
+    NeoBundle 'ervandew/supertab'
     NeoBundle 'Textile-for-VIM'
     " NeoBundle 'tpope/vim-markdown'
     NeoBundle 'jtratner/vim-flavored-markdown'
@@ -79,6 +79,8 @@
 
     " redmine wiki 
     NeoBundle 's3rvac/vim-syntax-redminewiki'
+
+    call neobundle#end()
 
     " My Bundles here:
     " Refer to |:NeoBundle-examples|.
