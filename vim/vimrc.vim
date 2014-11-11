@@ -68,7 +68,12 @@
     NeoBundle 'mileszs/ack.vim'
     NeoBundle 'vsushkov/nerdtree-ack'
     NeoBundle 'mustache/vim-mustache-handlebars'
-    NeoBundle 'Rykka/riv.vim' "Restructured text
+
+    " RIV currently depends on crappy clickable which doesn't work
+    "NeoBundle 'Rykka/riv.vim' "Restructured text
+    "NeoBundle 'rykka/clickable.vim' "needed by Riv
+    "NeoBundle 'rykka/os.vim' "needed by Riv
+    "
     " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
     " org mode and related
