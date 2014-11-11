@@ -139,7 +139,7 @@
     set nowrap
 
 " Diff options
-    set diffopt=filler,iwhite
+    set diffopt=filler,iwhite,vertical
 
 " folding, off by default
     set nofoldenable
