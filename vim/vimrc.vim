@@ -360,6 +360,8 @@
     let g:NERDTreeMapUpdirKeepOpen = 'H'
     let g:NERDTreeIgnore=['\.pyc$', '\~$']
     let g:NERDTreeMinimalUI=1
+"Open NERDTree if no file arguments
+    autocmd VimEnter * if !argc() | NERDTree | endif
 
 " Syntastic 
     let g:syntastic_id_checkers=1
