@@ -24,3 +24,6 @@ set cpt=tl
 
 " minimal gui
 set gui=none,tabs
+
+" Select dark theme
+colorscheme zenburn
