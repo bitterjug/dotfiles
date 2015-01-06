@@ -7,7 +7,7 @@
 [push]
     default = simple
 [color]
-	ui = true
+	ui = auto
 
 [merge]
   defaultToUpstream = true
