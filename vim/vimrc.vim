@@ -38,7 +38,7 @@
     NeoBundle 'open-browser.vim'
     NeoBundle 'UltiSnips'
     NeoBundle 'Syntastic'
-    NeoBundle 'Lokaltog/powerline'
+    NeoBundle 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
     NeoBundle 'vcscommand.vim'
     NeoBundle 'svncommand.vim'
     NeoBundle 'vcsbzr.vim'
@@ -77,10 +77,10 @@
     " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
     " org mode and related
-    NeoBundle 'hsitz/VimOrganizer' " org mode
-    NeoBundle 'chrisbra/NrrwRgn'   " narrowing
-    NeoBundle 'vim-scripts/utl.vim'
-    NeoBundle 'mattn/calendar-vim'
+    " NeoBundle 'hsitz/VimOrganizer' " org mode
+    " NeoBundle 'chrisbra/NrrwRgn'   " narrowing
+    " NeoBundle 'vim-scripts/utl.vim'
+    " NeoBundle 'mattn/calendar-vim'
 
     " redmine wiki 
     NeoBundle 's3rvac/vim-syntax-redminewiki'
@@ -385,7 +385,8 @@
     let g:Gitv_OpenHorizontal = 'auto'
 
 " Powerline
-    set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+    " set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim -- set in bundle
+    " line
     set encoding=utf-8
 
 " VimOrganizer
