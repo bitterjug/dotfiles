@@ -18,6 +18,7 @@ fresh config/* --file
 fresh freemind/user.properties --file=~/.freemind/user.properties
 
 fresh ranger/rc.conf --file=~/.config/ranger/rc.conf
+fresh ranger/rifle.conf --file=~/.config/ranger/rifle.conf
 fresh ranger/colorschemes --file=~/.config/ranger/colorschemes/
 
 # Do all the bin files into ~/bin at once, mwahaha
