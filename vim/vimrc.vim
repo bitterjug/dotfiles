@@ -43,6 +43,7 @@
     NeoBundle 'svncommand.vim'
     NeoBundle 'vcsbzr.vim'
     NeoBundle 'tpope/vim-ragtag'
+    NeoBundle 'ap/vim-css-color'
     NeoBundle 'surround.vim'
     NeoBundle 'ervandew/supertab'
     NeoBundle 'Textile-for-VIM'
