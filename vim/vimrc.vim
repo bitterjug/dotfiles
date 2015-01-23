@@ -35,6 +35,7 @@
     NeoBundle 'bitterjug/vim-colors-bitterjug'
     NeoBundle 'bitterjug/vim-colors-freyr'
     NeoBundle 'bitterjug/vim-notebook'
+    NeoBundle 'jnurmine/Zenburn'
     NeoBundle 'open-browser.vim'
     NeoBundle 'UltiSnips'
     NeoBundle 'Syntastic'
