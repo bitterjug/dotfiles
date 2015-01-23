@@ -47,3 +47,6 @@ fresh powerline --file=~/.config/powerline/
 
 # Use note.sh from the vim-notebook repo
 fresh bitterjug/vim-notebook bin/note.sh --bin
+
+# Add vimperator colourschemes
+fresh vimperator/colors --file=~/.vimperator/colors/
