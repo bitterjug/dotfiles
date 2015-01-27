@@ -406,3 +406,6 @@
     let devjournal = { 'path': '~/SparkleShare/devjournal', }
     let aptivateprocess = { 'path': '~/workspace/aptivate-process/', 'build_path': 'build'}
     let g:riv_projects= [devjournal,aptivateprocess]
+
+" Use proper vertical bar for vertsplit 
+    set fillchars=vert:\│
