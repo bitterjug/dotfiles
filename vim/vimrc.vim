@@ -184,9 +184,6 @@
     colorscheme jitterbug
 
 
-" compview Smart Search
-    map <Leader>/ <Plug>CompView
-
 " xml.vim 
     let xml_use_xhtml = 1
 
