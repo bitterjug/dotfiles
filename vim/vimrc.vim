@@ -50,7 +50,7 @@
     NeoBundle 'Textile-for-VIM'
     " NeoBundle 'tpope/vim-markdown'
     NeoBundle 'jtratner/vim-flavored-markdown'
-    NeoBundle 'ctrlp.vim'
+    " NeoBundle 'ctrlp.vim'
     NeoBundle 'klen/python-mode'
     NeoBundle 'vim-json-bundle'
     NeoBundle 'matchit.zip'
@@ -188,10 +188,10 @@
     let xml_use_xhtml = 1
 
 " Ctrl-P
-    " Extensions
-    let g:ctrlp_extensions = ['quickfix', 'mixed']
-    " Excluded file types
-    set wildignore+=*/.hg/*,*/.svn/*,*.pyc
+"    " Extensions
+"    let g:ctrlp_extensions = ['quickfix', 'mixed']
+"    " Excluded file types
+"    set wildignore+=*/.hg/*,*/.svn/*,*.pyc
 
 " UltiSnips
     let g:UltiSnipsSnippetsDir='~/Ubuntu\ One/vim/UltiSnips'
@@ -341,7 +341,13 @@
     let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " Unite
-" grep
+" Working highlight fix (move to colorscheme)
+" By default this maps to "special"
+    hi uniteCandidateSourceName ctermfg=241
+" Unite-binding ctrl-p like:
+	call unite#filters#matcher_default#use(['matcher_fuzzy'])
+	nnoremap <C-p> :<C-u>Unite -start-insert buffer file_rec<CR>
+" Unite-grep
 	if executable('ag')
 	  " Use ag in unite grep source.
 	  let g:unite_source_grep_command = 'ag'
