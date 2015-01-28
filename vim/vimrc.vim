@@ -31,7 +31,9 @@
     NeoBundle "Shougo/neocomplete.vim"
     NeoBundle "Shougo/unite.vim"
     NeoBundle "Shougo/vimshell.vim"
-    NeoBundle "scrooloose/nerdtree"
+    NeoBundle "Shougo/vimfiler.vim"
+    " NeoBundle "scrooloose/nerdtree"
+    " NeoBundle 'vsushkov/nerdtree-ack'
     NeoBundle 'bitterjug/vim-colors-bitterjug'
     NeoBundle 'bitterjug/vim-colors-freyr'
     NeoBundle 'bitterjug/vim-notebook'
@@ -68,7 +70,6 @@
     NeoBundle 'VOoM'
     NeoBundle 'rking/ag.vim'
     NeoBundle 'mileszs/ack.vim'
-    NeoBundle 'vsushkov/nerdtree-ack'
     NeoBundle 'mustache/vim-mustache-handlebars'
     NeoBundle 'groenewege/vim-less'
 
@@ -225,8 +226,6 @@
     set switchbuf=useopen,usetab
 
 " TagBar
-    command! TT TagbarToggle
-    command! OO TagbarOpenAutoClose
     nmap <Leader>o :TagbarOpenAutoClose<enter>
     " I prefer tags in file order, unless I sort them
     let g:tagbar_sort = 0
@@ -351,15 +350,15 @@
 	if executable('ag')
 	  " Use ag in unite grep source.
 	  let g:unite_source_grep_command = 'ag'
-	  let g:unite_source_grep_default_opts =
-	  \ '--line-numbers --nocolor --nogroup --hidden --ignore ' .
-	  \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
-	  let g:unite_source_grep_recursive_opt = ''
+      let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --hidden --ignore ''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+ 	  let g:unite_source_grep_recursive_opt = ''
+"	  let g:unite_source_grep_default_opts =
+"	  \ '--line-numbers --nocolor --nogroup --hidden --ignore ' .
+"	  \  '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
 	elseif executable('ack-grep')
 	  " Use ack in unite grep source.
 	  let g:unite_source_grep_command = 'ack-grep'
-	  let g:unite_source_grep_default_opts =
-	  \ '--no-heading --no-color -a -H'
+	  let g:unite_source_grep_default_opts = '--no-heading --no-color -a -H'
 	  let g:unite_source_grep_recursive_opt = ''
 	endif
 
@@ -367,14 +366,25 @@
     noremap ! :VimShellPop<cr>
 
 "Nerd Tree
-    noremap <Leader>f :NERDTreeToggle<cr>
-    let g:NERDTreeMapActivateNode = 'l'
-    let g:NERDTreeMapJumpParent = 'h'
-    let g:NERDTreeMapUpdirKeepOpen = 'H'
-    let g:NERDTreeIgnore=['\.pyc$', '\~$']
-    let g:NERDTreeMinimalUI=1
-"Open NERDTree if no file arguments
-    autocmd VimEnter * if !argc() | NERDTree | endif
+"    noremap <Leader>f :NERDTreeToggle<cr>
+"    let g:NERDTreeMapActivateNode = 'l'
+"    let g:NERDTreeMapJumpParent = 'h'
+"    let g:NERDTreeMapUpdirKeepOpen = 'H'
+"    let g:NERDTreeIgnore=['\.pyc$', '\~$']
+"    let g:NERDTreeMinimalUI=1
+
+" VimFiler
+    noremap <Leader>f :VimFilerExplorer -toggle<cr>
+    "Open  if no file argumentsNERDTree
+    autocmd VimEnter * if !argc() | VimFiler | endif
+    " use inplace of netrw
+	let g:vimfiler_as_default_explorer = 1
+	" Like Textmate icons.
+	let g:vimfiler_tree_leaf_icon = ' '
+	let g:vimfiler_tree_opened_icon = '▾'
+	let g:vimfiler_tree_closed_icon = '▸'
+	let g:vimfiler_file_icon = '-'
+	let g:vimfiler_marked_file_icon = '*'
 
 " Syntastic 
     let g:syntastic_id_checkers=1
