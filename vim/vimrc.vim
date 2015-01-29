@@ -41,7 +41,8 @@
     NeoBundle 'open-browser.vim'
     NeoBundle 'UltiSnips'
     NeoBundle 'Syntastic'
-    NeoBundle 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
+    " NeoBundle 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
+    NeoBundle 'itchyny/lightline.vim'
     NeoBundle 'vcscommand.vim'
     NeoBundle 'svncommand.vim'
     NeoBundle 'vcsbzr.vim'
@@ -175,6 +176,10 @@
 
 "mouse
     set mouse=a
+
+" Lightline
+    set laststatus=2
+    runtime lightline.vim
 
 " `=============/MAPPINGS=========='
 

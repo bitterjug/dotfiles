@@ -36,6 +36,7 @@ fresh 'bash/*'
 # Vim
 fresh vim/vimrc.vim --file=~/.vimrc
 fresh vim/gvimrc.vim --file=~/.gvimrc
+fresh vim/lightline.vim --file=~/.vim/lightline.vim
 
 # Haskell
 fresh ghc/ghci --file=~/.ghci
