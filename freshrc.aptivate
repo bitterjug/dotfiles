@@ -18,6 +18,7 @@ fresh config/* --file
 fresh freemind/user.properties --file=~/.freemind/user.properties
 
 fresh ranger/rc.conf --file=~/.config/ranger/rc.conf
+fresh ranger/rifle.conf --file=~/.config/ranger/rifle.conf
 fresh ranger/colorschemes --file=~/.config/ranger/colorschemes/
 
 # Do all the bin files into ~/bin at once, mwahaha
@@ -35,6 +36,7 @@ fresh 'bash/*'
 # Vim
 fresh vim/vimrc.vim --file=~/.vimrc
 fresh vim/gvimrc.vim --file=~/.gvimrc
+fresh vim/lightline.vim --file=~/.vim/lightline.vim
 
 # Haskell
 fresh ghc/ghci --file=~/.ghci
@@ -42,11 +44,8 @@ fresh ghc/ghci --file=~/.ghci
 # XMonad
 fresh xmonad/xmonad.hs --file=~/.xmonad/xmonad.hs
 
-# powerline
-fresh powerline --file=~/.config/powerline/
+# vimperator
+fresh vimperator/colors --file=~/.vimperator/colors/
 
 # Use note.sh from the vim-notebook repo
 fresh bitterjug/vim-notebook bin/note.sh --bin
-
-# Add vimperator colourschemes
-fresh vimperator/colors --file=~/.vimperator/colors/
