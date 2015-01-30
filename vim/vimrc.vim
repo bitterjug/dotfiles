@@ -42,6 +42,7 @@
     NeoBundle 'UltiSnips'
     NeoBundle 'Syntastic'
     " NeoBundle 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
+    NeoBundle 'edkolev/tmuxline.vim'
     NeoBundle 'itchyny/lightline.vim'
     NeoBundle 'vcscommand.vim'
     NeoBundle 'svncommand.vim'
