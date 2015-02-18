@@ -74,6 +74,7 @@
     NeoBundle 'mileszs/ack.vim'
     NeoBundle 'mustache/vim-mustache-handlebars'
     NeoBundle 'groenewege/vim-less'
+    NeoBundle 'shime/vim-livedown'
 
     " RIV currently depends on crappy clickable which doesn't work
     "NeoBundle 'Rykka/riv.vim' "Restructured text
