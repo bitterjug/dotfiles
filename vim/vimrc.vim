@@ -91,6 +91,7 @@
 
     " redmine wiki 
     NeoBundle 's3rvac/vim-syntax-redminewiki'
+    NeoBundle 'will133/vim-dirdiff'
 
     call neobundle#end()
 
@@ -433,3 +434,6 @@
 
 " Use proper vertical bar for vertsplit 
     set fillchars=vert:\│
+
+" DirDiff
+    let g:DirDiffExcludes = ".git,.pyc,*.swp,CVS,*.class,*.exe,.*.swp"
