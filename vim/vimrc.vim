@@ -210,6 +210,8 @@
 " Rope
     " Go to definition in a new buffer: horizontal split 
     let g:pymode_rope_goto_def_newwin='new'
+    " Don't keep doing things when I type dot
+    let g:pymode_rope_complete_on_dot = 0
 
 " Pymode:Lint
     let g:pymode_lint_ignore="E126,E128,E501"
