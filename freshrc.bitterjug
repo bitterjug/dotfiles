@@ -49,3 +49,6 @@ fresh vimperator/colors --file=~/.vimperator/colors/
 
 # Use note.sh from the vim-notebook repo
 fresh bitterjug/vim-notebook bin/note.sh --bin
+
+# Tmux
+fresh 'tmux/*' --file=~/.tmux.conf
