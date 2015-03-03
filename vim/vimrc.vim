@@ -137,6 +137,7 @@
         hi link LongLines SpellLocal
         match LongLines '\%>79v.\+' 
         set number
+        inoremap <C-u> _
     endfunction
     autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_prog() | endif
     set autoindent
