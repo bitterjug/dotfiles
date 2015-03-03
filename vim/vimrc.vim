@@ -56,6 +56,7 @@
     NeoBundle 'jtratner/vim-flavored-markdown'
     " NeoBundle 'ctrlp.vim'
     NeoBundle 'klen/python-mode'
+    NeoBundle 'davidhalter/jedi-vim'
     NeoBundle 'vim-json-bundle'
     NeoBundle 'matchit.zip'
     NeoBundle 'MatchTag'
@@ -145,6 +146,7 @@
     set tabstop=4
     set shiftwidth=4
     set smarttab
+    let g:pymode_rope_complete_on_dot = 0
 
 " Javascript
    autocmd BufEnter * if &ft ==# 'javascript' | call MyVimrc_setup_prog() | endif
@@ -210,8 +212,6 @@
 " Rope
     " Go to definition in a new buffer: horizontal split 
     let g:pymode_rope_goto_def_newwin='new'
-    " Don't keep doing things when I type dot
-    let g:pymode_rope_complete_on_dot = 0
 
 " Pymode:Lint
     let g:pymode_lint_ignore="E126,E128,E501"
@@ -267,7 +267,7 @@
     " Disable AutoComplPop.
     let g:acp_enableAtStartup = 0
     " Use neocomplete.
-    let g:neocomplete#enable_at_startup = 1
+    let g:neocomplete#enable_at_startup = 0
     " Use smartcase.
     let g:neocomplete#enable_smart_case = 1
     " Set minimum syntax keyword length.
