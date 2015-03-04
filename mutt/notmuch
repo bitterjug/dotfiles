@@ -8,11 +8,13 @@ virtual-mailboxes \
     "INBOX"        "notmuch://?query=tag:inbox and NOT tag:archive and folder:INBOX"\
     "Here"         "notmuch://?query=tag:here and NOT tag:archive"\
     "Support"      "notmuch://?query=tag:support and NOT tag:archive"\
+    "Planning"     "notmuch://?query=tag:planning and NOT tag:archive"\
     "e-consensus"  "notmuch://?query=tag:unread and NOT tag:archive and tag:ec"\
     "3ie"          "notmuch://?query=(date:2_weeks.. or is:flagged or is:unread) and is:3ie"\
     "Alfie"        "notmuch://?query=tag:alfie and NOT tag:archive"\
     "ATA"          "notmuch://?query=tag:ata and NOT tag:archive"\
     "Beam"         "notmuch://?query=tag:beam and NOT tag:archive"\
+    "Inasp"        "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:inasp"\
     "OCDS"         "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:ocds"\
     "OSI"          "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:osi"\
     "V4C"          "notmuch://?query=(date:2_weeks.. or is:flagged or is:unread) and is:v4c"\
