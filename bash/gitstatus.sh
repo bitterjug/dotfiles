@@ -1,1 +1,1 @@
-alias gst='vim -c "Gstatus | only" .'
+alias gst='vim -c "Gstatus" _'
