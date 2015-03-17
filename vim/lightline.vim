@@ -34,7 +34,6 @@ endfunction
 
 function! MyVimFilerStatus()
    let parts = split(vimfiler#get_status_string())
-   echo parts[0] . parts[-1] == '*safe*' ? '⭤' : ''
    return parts[0] . (parts[-1] == '*safe*' ? '⭤' : '')
 endfunction
 
