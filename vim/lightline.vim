@@ -13,6 +13,11 @@ let g:lightline = {
       \   'fileencoding': 'MyFileencoding',
       \   'mode': 'MyMode',
       \   'ctrlpmark': 'CtrlPMark',
+      \   'percent': 'MyPercent',
+      \   'lineinfo': 'MyLineInfo',
+      \ },
+      \ 'component_visible_condition': {
+      \    'percent': 0,
       \ },
       \ 'component_expand': {
       \   'syntastic': 'SyntasticStatuslineFlag',
@@ -23,6 +28,14 @@ let g:lightline = {
       \ 'separator': { 'left': '⮀', 'right': '⮂' },
       \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
   \ }
+
+function MyPercent()
+    return &ft =~? 'vimfiler' ? '' : (100 * line('.') / line('$')) . '%'
+endfunction
+
+function MyLineInfo()
+    return &ft =~? 'vimfiler' ? '' : line('.').':'.col('.')
+endfunction
 
 function! MyModified()
   return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
@@ -82,7 +95,7 @@ function! MyMode()
         \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
         \ fname =~ 'NERD_tree' ? 'NERDTree' :
         \ &ft == 'unite' ? 'Unite' :
-        \ &ft == 'vimfiler' ? '𐎅' :
+        \ &ft == 'vimfiler' ? '' :
         \ &ft == 'vimshell' ? 'VimShell' :
         \ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
