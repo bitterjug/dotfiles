@@ -388,7 +388,7 @@
     " use inplace of netrw
 	let g:vimfiler_as_default_explorer = 1
     " Ignore dotfiles and .pyc files.
-    let g:vimfiler_ignore_pattern = '^\%(\..*\|.*\.pyc\|__pycache__\)$'
+    let g:vimfiler_ignore_pattern = '^\%(\..*\|.*\.pyc\|.*\.pyo\|__pycache__\)$'
 	" Like Textmate icons.
 	let g:vimfiler_tree_leaf_icon = '╰─'
 	let g:vimfiler_tree_opened_icon = '─▾'
