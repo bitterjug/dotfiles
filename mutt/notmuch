@@ -19,6 +19,7 @@ virtual-mailboxes \
     "Inasp"           "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:inasp"\
     "OCDS"            "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:ocds"\
     "OSI"             "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:osi"\
+    "Tess"            "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:tess"\
     "V4C"             "notmuch://?query=(date:2_weeks.. or is:flagged or is:unread) and is:v4c"\
     "Yemen"           "notmuch://?query=tag:yemen and NOT tag:archive"\
     "YouWiN"          "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:youwin"\
