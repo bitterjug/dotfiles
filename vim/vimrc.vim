@@ -31,9 +31,9 @@
     NeoBundle "Shougo/neocomplete.vim"
     NeoBundle "Shougo/unite.vim"
     NeoBundle "Shougo/vimshell.vim"
-    NeoBundle "Shougo/vimfiler.vim"
-    " NeoBundle "scrooloose/nerdtree"
-    " NeoBundle 'vsushkov/nerdtree-ack'
+    " NeoBundle "Shougo/vimfiler.vim"
+    NeoBundle "scrooloose/nerdtree"
+    NeoBundle 'vsushkov/nerdtree-ack'
     NeoBundle 'bitterjug/vim-colors-bitterjug'
     NeoBundle 'bitterjug/vim-colors-freyr'
     NeoBundle 'bitterjug/vim-notebook'
@@ -375,32 +375,32 @@
     noremap ! :VimShellPop<cr>
 
 "Nerd Tree
-"    noremap <Leader>f :NERDTreeToggle<cr>
-"    let g:NERDTreeMapActivateNode = 'l'
-"    let g:NERDTreeMapJumpParent = 'h'
-"    let g:NERDTreeMapUpdirKeepOpen = 'H'
-"    let g:NERDTreeIgnore=['\.pyc$', '\~$']
-"    let g:NERDTreeMinimalUI=1
+    noremap <Leader>f :NERDTreeToggle<cr>
+    let g:NERDTreeMapActivateNode = 'l'
+    let g:NERDTreeMapJumpParent = 'h'
+    let g:NERDTreeMapUpdirKeepOpen = 'H'
+    let g:NERDTreeIgnore=['\.pyc$', '\~$']
+    let g:NERDTreeMinimalUI=1
 
 " VimFiler
-    noremap <Leader>f :VimFilerExplorer -toggle<cr>
-    "Open  if no file argumentsNERDTree
-    autocmd VimEnter * if !argc() | VimFiler | endif
-    " use inplace of netrw
-	let g:vimfiler_as_default_explorer = 1
-    " Ignore dotfiles and .pyc files.
-    let g:vimfiler_ignore_pattern = '^\%(\..*\|.*\.pyc\|.*\.pyo\|__pycache__\)$'
-	" Like Textmate icons.
-	let g:vimfiler_tree_leaf_icon = '╰─'
-	let g:vimfiler_tree_opened_icon = '─▾'
-	let g:vimfiler_tree_closed_icon = '─▷'
-	let g:vimfiler_file_icon = '─╴'
-
-    let g:vimfiler_readonly_file_icon ='─╸'
-	let g:vimfiler_marked_file_icon = ' ✔'
-    let g:vimfiler_tree_indentation = 3
-	" let g:vimfiler_tree_closed_icon = '▸'
-	"let g:vimfiler_file_icon = '╼'
+"    noremap <Leader>f :VimFilerExplorer -toggle<cr>
+"    "Open  if no file argumentsNERDTree
+"    autocmd VimEnter * if !argc() | VimFiler | endif
+"    " use inplace of netrw
+"	let g:vimfiler_as_default_explorer = 1
+"    " Ignore dotfiles and .pyc files.
+"    let g:vimfiler_ignore_pattern = '^\%(\..*\|.*\.pyc\|.*\.pyo\|__pycache__\)$'
+"	" Like Textmate icons.
+"	let g:vimfiler_tree_leaf_icon = '╰─'
+"	let g:vimfiler_tree_opened_icon = '─▾'
+"	let g:vimfiler_tree_closed_icon = '─▷'
+"	let g:vimfiler_file_icon = '─╴'
+"
+"    let g:vimfiler_readonly_file_icon ='─╸'
+"	let g:vimfiler_marked_file_icon = ' ✔'
+"    let g:vimfiler_tree_indentation = 3
+"	" let g:vimfiler_tree_closed_icon = '▸'
+"	"let g:vimfiler_file_icon = '╼'
 
 " Syntastic 
     let g:syntastic_id_checkers=1
