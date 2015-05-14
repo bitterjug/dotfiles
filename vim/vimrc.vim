@@ -70,6 +70,7 @@
     NeoBundle 'majutsushi/tagbar'
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'gregsexton/gitv'
+    NeoBundle 'chrisbra/vim-diff-enhanced'
     NeoBundle 'VOoM'
     NeoBundle 'rking/ag.vim'
     NeoBundle 'mileszs/ack.vim'
