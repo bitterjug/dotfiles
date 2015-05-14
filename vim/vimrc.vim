@@ -1,4 +1,4 @@
-" NeoBundle boot
+"" NeoBundle boot
     filetype off
     let iCanHazNeoBundle=1
     let nb_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
@@ -78,20 +78,17 @@
     NeoBundle 'groenewege/vim-less'
     NeoBundle 'shime/vim-livedown'
 
-    " RIV currently depends on crappy clickable which doesn't work
-    "NeoBundle 'Rykka/riv.vim' "Restructured text
-    "NeoBundle 'rykka/clickable.vim' "needed by Riv
+    NeoBundle 'Rykka/riv.vim' "Restructured text
     "NeoBundle 'rykka/os.vim' "needed by Riv
-    "
-    " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+   " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
-    " org mode and related
+   " org mode and related
     " NeoBundle 'hsitz/VimOrganizer' " org mode
     " NeoBundle 'chrisbra/NrrwRgn'   " narrowing
     " NeoBundle 'vim-scripts/utl.vim'
     " NeoBundle 'mattn/calendar-vim'
 
-    " redmine wiki 
+   " redmine wiki 
     NeoBundle 's3rvac/vim-syntax-redminewiki'
     NeoBundle 'will133/vim-dirdiff'
 
