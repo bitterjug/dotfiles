@@ -13,5 +13,5 @@ macro index a "<tag-prefix><modify-labels-then-hide>+archive -inbox\n"
 macro pager a "<modify-labels-then-hide>+archive -inbox\n"
 
 # Sidebar switch
-macro pager \174 '<enter-command>toggle sidebar_visible<enter>'
-macro index \174 '<enter-command>toggle sidebar_visible<enter>'
+macro pager ¬ '<enter-command>toggle sidebar_visible<enter>'
+macro index ¬ '<enter-command>toggle sidebar_visible<enter>'

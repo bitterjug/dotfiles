@@ -3,7 +3,6 @@
 bind index,pager <down>   sidebar-next
 bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
-bind index,pager | noop
 
 
 # Unbind D (delete matching pattern)
