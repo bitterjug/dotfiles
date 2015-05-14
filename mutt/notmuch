@@ -17,6 +17,7 @@ virtual-mailboxes \
     "ATA"             "notmuch://?query=tag:ata and NOT tag:archive"\
     "Beam"            "notmuch://?query=tag:beam and NOT tag:archive"\
     "Inasp"           "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:inasp"\
+    "Internews"       "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:inter"\
     "OCDS"            "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:ocds"\
     "OSI"             "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:osi"\
     "Tess"            "notmuch://?query=(date:2_weeks.. or tag:flagged) and tag:tess"\
