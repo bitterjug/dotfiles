@@ -79,8 +79,7 @@
     NeoBundle 'shime/vim-livedown'
 
     NeoBundle 'Rykka/riv.vim' "Restructured text
-    "NeoBundle 'rykka/os.vim' "needed by Riv
-   " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+    " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
    " org mode and related
     " NeoBundle 'hsitz/VimOrganizer' " org mode
