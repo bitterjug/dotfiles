@@ -56,7 +56,7 @@
     NeoBundle 'jtratner/vim-flavored-markdown'
     " NeoBundle 'ctrlp.vim'
     NeoBundle 'klen/python-mode'
-    NeoBundle 'davidhalter/jedi-vim'
+    " NeoBundle 'davidhalter/jedi-vim'
     NeoBundle 'vim-json-bundle'
     NeoBundle 'matchit.zip'
     NeoBundle 'MatchTag'
@@ -428,9 +428,17 @@
     let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Riv Restructured Text Devjournal
-    let devjournal = { 'path': '~/SparkleShare/devjournal', }
-    let aptivateprocess = { 'path': '~/workspace/aptivate-process/', 'build_path': 'build'}
-    let g:riv_projects= [devjournal,aptivateprocess]
+    let riv_home = { 'Name': 'Home Dev Notes', 'path': '~/SparkleShare/devjournal/home/rst', }
+    let riv_work = { 'Name': 'Work Dev Notes', 'path': '~/SparkleShare/devjournal/work/rst', }
+    let g:riv_projects= [riv_home, riv_work]
+    " Disable annoying folding
+    let g:riv_disable_folding = 1
+    hi link rstSections Title
+    hi link rstStrongEmphasis Title
+    hi link rstEmphasis Special
+    hi link rstFileLink Underlined
+    hi link rstDirective PreProc
+    hi link rstStrongEmphasisDelimiter LineNr
 
 " Use proper vertical bar for vertsplit 
     set fillchars=vert:\│
