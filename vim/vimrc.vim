@@ -385,7 +385,7 @@
     let g:NERDTreeMapActivateNode = 'l'
     let g:NERDTreeMapJumpParent = 'h'
     let g:NERDTreeMapUpdirKeepOpen = 'H'
-    let g:NERDTreeIgnore=['\.pyc$', '\~$']
+    let g:NERDTreeIgnore=['\.pyc$', '\~$', '__pycache__']
     let g:NERDTreeMinimalUI=1
 
 " VimFiler
