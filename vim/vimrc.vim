@@ -77,6 +77,8 @@
     NeoBundle 'mustache/vim-mustache-handlebars'
     NeoBundle 'groenewege/vim-less'
     NeoBundle 'shime/vim-livedown'
+    NeoBundle 'reedes/vim-pencil'
+    NeoBundle 'reedes/vim-wordy'
 
     NeoBundle 'Rykka/riv.vim' "Restructured text
     " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
@@ -350,7 +352,7 @@
     hi uniteCandidateSourceName ctermfg=241
 " Unite-binding ctrl-p like:
 	call unite#filters#matcher_default#use(['matcher_fuzzy'])
-	nnoremap <C-p> :<C-u>Unite -start-insert buffer file_rec<CR>
+	nnoremap <C-p> :<C-u>Unite buffer file_rec<CR>
 " Unite-grep
 	if executable('ag')
 	  " Use ag in unite grep source.
