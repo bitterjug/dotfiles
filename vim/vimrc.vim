@@ -165,9 +165,19 @@
 
 " .==============MAPPINGS==========.
 
-" ctrl--h and ctrl--l move among tabs
-    noremap <C-h> gT
-    noremap <C-l> gt
+" ctrl-s-h and ctrl-s-l move among tabs
+    noremap <M-h> gT
+    noremap <M-l> gt
+    noremap <C-[> gT
+    noremap <C-]> gt
+    noremap h gT
+    noremap l gt
+
+" ctrl--h and ctrl--l move among windows
+    nnoremap <C-J> <C-W>j
+    nnoremap <C-K> <C-W>k
+    nnoremap <C-H> <C-W>h
+    nnoremap <C-L> <C-W>l
 
 " Q reformats paragraph (maybe should be specific to text formats?)
     map Q gwap
