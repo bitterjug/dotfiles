@@ -77,6 +77,7 @@
     NeoBundle 'mustache/vim-mustache-handlebars'
     NeoBundle 'groenewege/vim-less'
     NeoBundle 'shime/vim-livedown'
+    NeoBundle 'reedes/vim-pencil'
 
     NeoBundle 'Rykka/riv.vim' "Restructured text
     " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
@@ -166,8 +167,6 @@
 " ctrl-s-h and ctrl-s-l move among tabs
     noremap <M-h> gT
     noremap <M-l> gt
-    noremap <C-[> gT
-    noremap <C-]> gt
     noremap h gT
     noremap l gt
 
@@ -387,6 +386,7 @@
     let g:NERDTreeMapUpdirKeepOpen = 'H'
     let g:NERDTreeIgnore=['\.pyc$', '\~$', '__pycache__']
     let g:NERDTreeMinimalUI=1
+    let g:NERDTreeQuitOnOpen=1
 
 " VimFiler
 "    noremap <Leader>f :VimFilerExplorer -toggle<cr>
