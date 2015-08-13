@@ -456,6 +456,11 @@
 " DirDiff
     let g:DirDiffExcludes = ".git,.pyc,*.swp,CVS,*.class,*.exe,.*.swp"
 
-"Mouse
+" Mouse
     set mouse=a
 
+" Make stuff easier to type
+    command WQ wq
+    command Wq wq
+    command W w
+    command Q q
