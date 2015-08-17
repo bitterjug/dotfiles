@@ -170,8 +170,8 @@
     noremap <M-l> gt
     noremap <C-[> gT
     noremap <C-]> gt
-    " noremap h gT
-    " noremap l gt
+    noremap h gT
+    noremap l gt
 
 " ctrl--h and ctrl--l move among windows
     nnoremap <C-J> <C-W>j
@@ -459,6 +459,11 @@
 " DirDiff
     let g:DirDiffExcludes = ".git,.pyc,*.swp,CVS,*.class,*.exe,.*.swp"
 
-"Mouse
+" Mouse
     set mouse=a
 
+" Make stuff easier to type
+    command WQ wq
+    command Wq wq
+    command W w
+    command Q q
