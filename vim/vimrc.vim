@@ -170,8 +170,8 @@
     noremap <M-l> gt
     noremap <C-[> gT
     noremap <C-]> gt
-    noremap h gT
-    noremap l gt
+    " noremap h gT
+    " noremap l gt
 
 " ctrl--h and ctrl--l move among windows
     nnoremap <C-J> <C-W>j
@@ -387,8 +387,9 @@
     let g:NERDTreeMapActivateNode = 'l'
     let g:NERDTreeMapJumpParent = 'h'
     let g:NERDTreeMapUpdirKeepOpen = 'H'
-    let g:NERDTreeIgnore=['\.pyc$', '\~$']
+    let g:NERDTreeIgnore=['\.pyc$', '\~$', '__pycache__']
     let g:NERDTreeMinimalUI=1
+    let g:NERDTreeQuitOnOpen=1
 
 " VimFiler
 "    noremap <Leader>f :VimFilerExplorer -toggle<cr>
