@@ -79,7 +79,7 @@
     NeoBundle 'shime/vim-livedown'
     NeoBundle 'reedes/vim-pencil'
     NeoBundle 'reedes/vim-wordy'
-
+    NeoBundle 'christoomey/vim-tmux-navigator'
     NeoBundle 'Rykka/riv.vim' "Restructured text
     " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
