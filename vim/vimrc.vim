@@ -29,6 +29,8 @@
      \    },
      \ }
     NeoBundle "Shougo/neocomplete.vim"
+    " NeoBundle "lambdatoast/elm.vim"
+    NeoBundle 'elmcast/elm-vim'
     NeoBundle "Shougo/unite.vim"
     NeoBundle "Shougo/vimshell.vim"
     " NeoBundle "Shougo/vimfiler.vim"
@@ -44,9 +46,9 @@
     " NeoBundle 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
     NeoBundle 'edkolev/tmuxline.vim'
     NeoBundle 'itchyny/lightline.vim'
-    NeoBundle 'vcscommand.vim'
-    NeoBundle 'svncommand.vim'
-    NeoBundle 'vcsbzr.vim'
+    " NeoBundle 'vcscommand.vim'
+    " NeoBundle 'svncommand.vim'
+    " NeoBundle 'vcsbzr.vim'
     NeoBundle 'tpope/vim-ragtag'
     NeoBundle 'ap/vim-css-color'
     NeoBundle 'surround.vim'
@@ -60,9 +62,9 @@
     NeoBundle 'vim-json-bundle'
     NeoBundle 'matchit.zip'
     NeoBundle 'MatchTag'
-    NeoBundle 'digitaltoad/vim-jade'
-    NeoBundle 'vim-coffee-script'
-    NeoBundle 'lbdbq'
+    " NeoBundle 'digitaltoad/vim-jade'
+    " NeoBundle 'vim-coffee-script'
+    " NeoBundle 'lbdbq'
     NeoBundle 'gerw/vim-HiLinkTrace'
     NeoBundle 'Mark'
     NeoBundle 'airblade/vim-gitgutter'
@@ -74,9 +76,9 @@
     NeoBundle 'VOoM'
     NeoBundle 'rking/ag.vim'
     NeoBundle 'mileszs/ack.vim'
-    NeoBundle 'mustache/vim-mustache-handlebars'
+    " NeoBundle 'mustache/vim-mustache-handlebars'
     NeoBundle 'groenewege/vim-less'
-    NeoBundle 'shime/vim-livedown'
+    " NeoBundle 'shime/vim-livedown'
     NeoBundle 'reedes/vim-pencil'
     NeoBundle 'reedes/vim-wordy'
     NeoBundle 'bitterjug/vim-tmux-navigator'
@@ -134,22 +136,25 @@
 " This was mostly about python, which now uses pymode
 " Might have to use other settings for other languages
 " Indentation and tabs -- putting back for stuff like this file
-    function MyVimrc_setup_prog()
+    function MyVimrc_setup_prog(indent)
         hi link LongLines SpellLocal
         match LongLines '\%>79v.\+' 
         set number
+        let &tabstop=a:indent
+        let &shiftwidth=a:indent
         inoremap <C-u> _
     endfunction
-    autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_prog() | endif
+    autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_prog(4) | endif
     set autoindent
     set expandtab
-    set tabstop=4
-    set shiftwidth=4
     set smarttab
     let g:pymode_rope_complete_on_dot = 0
 
 " Javascript
-   autocmd BufEnter * if &ft ==# 'javascript' | call MyVimrc_setup_prog() | endif
+   autocmd BufEnter * if &ft ==# 'javascript' | call MyVimrc_setup_prog(2) | endif
+
+" Elm
+   autocmd BufEnter * if &ft ==# 'elm' | call MyVimrc_setup_prog(2) | endif
 
 " Long lines
     set nowrap
