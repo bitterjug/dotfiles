@@ -17,9 +17,15 @@ fresh config/* --file
 # Freemind config (could also add the custom icons here maybe)
 fresh freemind/user.properties --file=~/.freemind/user.properties
 
+# Ranger
 fresh ranger/rc.conf --file=~/.config/ranger/rc.conf
 fresh ranger/rifle.conf --file=~/.config/ranger/rifle.conf
 fresh ranger/colorschemes --file=~/.config/ranger/colorschemes/
+
+# NeoVim Experiment
+fresh nvim/init.vim --file=~/.config/nvim/init.vim
+fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
+fresh vim/lightline.vim --file=~/.config/nvim/lightline.vim
 
 # Do all the bin files into ~/bin at once, mwahaha
 fresh bin --bin
