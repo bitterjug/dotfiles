@@ -24,6 +24,7 @@ fresh ranger/colorschemes --file=~/.config/ranger/colorschemes/
 
 # NeoVim Experiment
 fresh nvim/init.vim --file=~/.config/nvim/init.vim
+fresh nvim/init.d --file=~/.config/nvim/init.d/
 fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
 fresh vim/lightline.vim --file=~/.config/nvim/lightline.vim
 
