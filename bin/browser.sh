@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-wmctrl -a firefox || firefox
+wmctrl -a $BROWSER || $BROWSER
