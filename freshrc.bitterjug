@@ -59,3 +59,7 @@ fresh bitterjug/vim-notebook bin/note.sh --bin
 
 # Tmux
 fresh 'tmux/*' --file=~/.tmux.conf
+
+# Liquidprompt
+fresh nojhan/liquidprompt liquidprompt
+fresh liquidprompt/liquidpromptrc --file=~/.config/liquidpromptrc
