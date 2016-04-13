@@ -14,8 +14,14 @@ Plug 'itchyny/lightline.vim'
 Plug 'bitterjug/vim-tmux-navigator'
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv'
-Plug 'bitterjug/vim-colors-bitterjug'
 Plug 'Shougo/deoplete.nvim'
+Plug 'xolox/vim-notes'
+Plug 'xolox/vim-misc'
+Plug 'bitterjug/vim-colors-bitterjug'
+Plug 'bitterjug/vim-colors-freyr'
+" I'm not ready to invest the energy into this yet
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
+"Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Fzf clashes with my ^HJKL bindings 
@@ -26,7 +32,6 @@ call plug#end()
 "  " NeoBundle "Shougo/unite.vim"
 "  " NeoBundle "Shougo/vimshell.vim"
 "  " NeoBundle "Shougo/vimfiler.vim"
-"  NeoBundle 'bitterjug/vim-colors-freyr'
 "  NeoBundle 'bitterjug/vim-notebook'
 "  NeoBundle 'jnurmine/Zenburn'
 "  NeoBundle 'open-browser.vim'
