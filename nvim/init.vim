@@ -19,11 +19,12 @@ Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
 Plug 'bitterjug/vim-colors-bitterjug'
 Plug 'bitterjug/vim-colors-freyr'
+call plug#end()
+
 " I'm not ready to invest the energy into this yet
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
 "Plug 'junegunn/fzf.vim'
-call plug#end()
-
+"
 " old Neo bundle list
 
 "  NeoBundle "Shougo/neocomplete.vim"
@@ -106,7 +107,7 @@ call plug#end()
 "  endif
 "
 
-runtime init.d/*.vim
+runtime! init.d/*.vim
 
 "" Try and unify the clipboards (not sure if working)
 "  set clipboard=unnamedplus,autoselect,exclude:cons\\\|linux
