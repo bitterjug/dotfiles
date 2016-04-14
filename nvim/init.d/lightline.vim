@@ -25,15 +25,14 @@ let g:lightline = {
       \   'syntastic': 'error',
       \ },
       \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
+      \ 'subseparator': { 'left': '', 'right': '' }     
   \ }
-
 function MyVFPercent()
-    return &ft =~? 'vimfiler' ? '' : (100 * line('.') / line('$')) . '%'
+    return &ft =~? 'nerdtree' ? '' : (100 * line('.') / line('$')) . '%'
 endfunction
 
 function MyVFLineInfo()
-    return &ft =~? 'vimfiler' ? '' : line('.').':'.col('.')
+    return &ft =~? 'nerdtree' ? '' : line('.').':'.col('.')
 endfunction
 
 function! MyModified()

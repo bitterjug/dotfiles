@@ -19,7 +19,11 @@ Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
 Plug 'bitterjug/vim-colors-bitterjug'
 Plug 'bitterjug/vim-colors-freyr'
+Plug 'vim-scripts/darkburn'
+Plug 'chriskempson/base16-vim'
+Plug 'jnurmine/Zenburn'
 call plug#end()
+
 
 " I'm not ready to invest the energy into this yet
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
@@ -108,6 +112,8 @@ call plug#end()
 "
 
 runtime! init.d/*.vim
+colorscheme base16-ashes
+set background=dark
 
 "" Try and unify the clipboards (not sure if working)
 "  set clipboard=unnamedplus,autoselect,exclude:cons\\\|linux
@@ -122,7 +128,6 @@ runtime! init.d/*.vim
 "  set gcr=a:blinkon0
 "
 "" Dont let cursor go near the top of botom
-  set scrolloff=10
 "
 "" This was mostly about python, which now uses pymode
 "" Might have to use other settings for other languages
@@ -198,7 +203,6 @@ runtime! init.d/*.vim
 
 " Lightline
   set laststatus=2
-  runtime lightline.vim
 
 "" `=============/MAPPINGS=========='
 "
