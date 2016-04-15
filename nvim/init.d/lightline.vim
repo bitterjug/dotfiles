@@ -112,3 +112,6 @@ function! s:syntastic()
   SyntasticCheck
   call lightline#update()
 endfunction
+
+" Show status line when only one window
+set laststatus=2

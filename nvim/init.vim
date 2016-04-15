@@ -17,11 +17,14 @@ Plug 'gregsexton/gitv'
 Plug 'Shougo/deoplete.nvim'
 Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
-Plug 'bitterjug/vim-colors-bitterjug'
-Plug 'bitterjug/vim-colors-freyr'
-Plug 'vim-scripts/darkburn'
-Plug 'chriskempson/base16-vim'
-Plug 'jnurmine/Zenburn'
+" colorschemes:
+  Plug 'bitterjug/vim-colors-bitterjug'
+  Plug 'bitterjug/vim-colors-freyr'
+  Plug 'vim-scripts/darkburn'
+  Plug 'chriskempson/base16-vim'
+  Plug 'jnurmine/Zenburn'
+  Plug 'morhetz/gruvbox'
+  Plug 'mhinz/vim-janah'
 call plug#end()
 
 
@@ -112,8 +115,9 @@ call plug#end()
 "
 
 runtime! init.d/*.vim
-colorscheme base16-ashes
+" colorscheme base16-ashes
 set background=dark
+colorscheme janah
 
 "" Try and unify the clipboards (not sure if working)
 "  set clipboard=unnamedplus,autoselect,exclude:cons\\\|linux
@@ -129,88 +133,36 @@ set background=dark
 "
 "" Dont let cursor go near the top of botom
 "
-"" This was mostly about python, which now uses pymode
-"" Might have to use other settings for other languages
-"" Indentation and tabs -- putting back for stuff like this file
-"  function MyVimrc_setup_prog(indent)
-"    hi link LongLines SpellLocal
-"    match LongLines '\%>79v.\+' 
-"    set number
-"    let &tabstop=a:indent
-"    let &shiftwidth=a:indent
-"    inoremap <C-u> _
-"  endfunction
-"
-"" Defult
-"  set autoindent
-"  set expandtab
-"  set smarttab
-"
-"" Vim
-"  autocmd BufEnter * if &ft ==# 'vim' | call MyVimrc_setup_prog(2) | endif
-"
-"" Python
-"  let g:pymode_rope_complete_on_dot = 0
-"  autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_prog(4) | endif
-"
-"" Javascript
-"  autocmd BufEnter * if &ft ==# 'javascript' | call MyVimrc_setup_prog(2) | endif
-"
-"" Elm
-"  autocmd BufEnter * if &ft ==# 'elm' | call MyVimrc_setup_prog(2) | endif
-"  autocmd FileType elm nmap <leader>e <Plug>(elm-make)
-"  autocmd FileType elm nmap <leader>d <Plug>(elm-error-detail)
-"  let g:elm_format_autosave = 1
 "
 "" Long lines
 "  set nowrap
 "
-"" Diff options
-"  set diffopt=filler,iwhite,vertical
 "
 "" folding, off by default
 "  set nofoldenable
 "
-"" NetRW
-"" Hide things from the file list
-"  let g:netrw_list_hide='.*\.pyc,.*\.swp'
-"
 "" .==============MAPPINGS==========.
 "
-"""move among tabs
-" the nvim way:
-  noremap <M-h> gT
-  noremap <M-l> gt
-
 "" ctrl--h and ctrl--l move among windows
 "  nnoremap <C-J> <C-W>j
 "  nnoremap <C-K> <C-W>k
 "  nnoremap <C-H> <C-W>h
 "  nnoremap <C-L> <C-W>l
 "
-" Q reformats paragraph (maybe should be specific to text formats?)
-  map Q gwap
-  vmap Q gqap
-
 "" kj mash
 "  inoremap kj <esc>
 "
-" format lists
-  set formatoptions+=n
-
 ""mouse
 "  set mouse=a
 
-" Lightline
-  set laststatus=2
 
 "" `=============/MAPPINGS=========='
 "
 
 " colours (do this after installing freyr bundle
-  set t_Co=256
-  " while developing jitterbug
-  colorscheme jitterbug
+"  set t_Co=256
+"  " while developing jitterbug
+"  colorscheme jitterbug
 
 "" xml.vim 
 "  let xml_use_xhtml = 1
@@ -245,12 +197,6 @@ set background=dark
 "      inoremap <silent> <C-t> <ESC>:call LbdbExpandCurLine()<RETURN>A
 "  endfunction
 "
-" spell check docs 
-  autocmd BufEnter * if &ft ==# 'rst' | setlocal spell | endif
-  autocmd BufEnter * if &ft ==# 'markdown' | setlocal spell | endif
-
-" new windows
-  set switchbuf=useopen,usetab
 
 "" TagBar
 "  nmap <Leader>o :TagbarOpenAutoClose<enter>
@@ -262,8 +208,6 @@ set background=dark
 "  let g:voom_ft_modes = {'markdown': 'markdown', 'ghmarkdown': 'markdown', 'rst': 'rest', 'org': 'org'}
 "  nmap <Leader>v :VoomToggle<enter>
 "
-"List mode
-  set listchars=eol:¬,tab:▸·,trail:•
 
 "" Open Browser
 "  "   Search with DuckDuckGo
@@ -276,7 +220,7 @@ set background=dark
 "	vmap <Leader>b <Plug>(openbrowser-smart-search)
 "
 " Ag the silver searcher
-  let g:aghighlight=1
+"  let g:aghighlight=1
 
 "" Neocomplete
 "  " Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
@@ -420,8 +364,6 @@ set background=dark
 ""   Javascript
 "  let g:syntastic_javascript_checkers = ['jshint']
 "
-" Gitv
-  let g:Gitv_OpenHorizontal = 'auto'
 
 "" VimOrganizer
 "  let g:ft_ignore_pat = '\.org'
@@ -446,8 +388,6 @@ set background=dark
 "  hi link rstDirective PreProc
 "  hi link rstStrongEmphasisDelimiter LineNr
 
-" Use proper vertical bar for vertsplit 
-  set fillchars=vert:\│
 
 "" DirDiff
 "  let g:DirDiffExcludes = ".git,.pyc,*.swp,CVS,*.class,*.exe,.*.swp"
@@ -455,11 +395,6 @@ set background=dark
 "" Mouse
 "  set mouse=a
 
-" Make stuff easier to type
-  command WQ wq
-  command Wq wq
-  command W w
-  command Q q
 
 "" Fix alt codes
 "let c='a'
@@ -472,7 +407,7 @@ set background=dark
 "set timeout ttimeoutlen=50
 
 """ Deoplete
-  let g:deoplete#enable_at_startup = 1
+"  let g:deoplete#enable_at_startup = 1
 "  " tab-complete
 "  inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
 "  " ,<Tab> for regular tab
