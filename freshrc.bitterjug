@@ -63,3 +63,6 @@ fresh 'tmux/*' --file=~/.tmux.conf
 # Liquidprompt
 fresh nojhan/liquidprompt liquidprompt
 fresh liquidprompt/liquidpromptrc --file=~/.config/liquidpromptrc
+
+# FZF extras (mainly to get fco)
+fresh atweiden/fzf-extras fzf-extras.sh
