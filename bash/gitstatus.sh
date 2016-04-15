@@ -1,1 +1,1 @@
-alias gst='vim -c "Gstatus" _'
+alias gst='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim -c "Gstatus" _'
