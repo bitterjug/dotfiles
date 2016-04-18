@@ -6,21 +6,32 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'elmcast/elm-vim'
-Plug 'scrooloose/nerdtree'
-Plug 'vsushkov/nerdtree-ack'
-Plug 'surround.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'bitterjug/vim-tmux-navigator'
-Plug 'tpope/vim-fugitive'
-Plug 'gregsexton/gitv'
-Plug 'Shougo/deoplete.nvim'
-Plug 'xolox/vim-notes'
-Plug 'xolox/vim-misc'
-" colorschemes:
+" Editing:
+  Plug 'surround.vim'
+  Plug 'ervandew/supertab'
+" Filetyles:
+  Plug 'jtratner/vim-flavored-markdown'
+" Nerdtree:
+  Plug 'scrooloose/nerdtree'
+  Plug 'vsushkov/nerdtree-ack'
+" Git:
+  Plug 'tpope/vim-fugitive'
+  Plug 'gregsexton/gitv'
+" Plug 'Shougo/deoplete.nvim'
+" Programming:
+  Plug 'benekastah/neomake'
+" Elm:
+  Plug 'elmcast/elm-vim'
+" Python:
+  Plug 'davidhalter/jedi-vim'
+" Notes:
+  Plug 'xolox/vim-notes'
+  Plug 'xolox/vim-misc'
+" Colorschemes:
   Plug 'bitterjug/vim-colors-bitterjug'
   Plug 'bitterjug/vim-colors-freyr'
-  Plug 'vim-scripts/darkburn'
   Plug 'chriskempson/base16-vim'
   Plug 'jnurmine/Zenburn'
   Plug 'morhetz/gruvbox'
@@ -50,7 +61,6 @@ call plug#end()
 "  " NeoBundle 'vcsbzr.vim'
 "  NeoBundle 'tpope/vim-ragtag'
 "  NeoBundle 'ap/vim-css-color'
-"  NeoBundle 'ervandew/supertab'
 "  NeoBundle 'Textile-for-VIM'
 "  " NeoBundle 'tpope/vim-markdown'
 "  NeoBundle 'jtratner/vim-flavored-markdown'
