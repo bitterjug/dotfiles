@@ -15,6 +15,8 @@
   set autoindent
   set expandtab
   set smarttab
+  set tabstop=2
+  set shiftwidth=2
 
 " Vim
   autocmd BufEnter * if &ft ==# 'vim' | call MyVimrc_setup_prog(2) | endif
