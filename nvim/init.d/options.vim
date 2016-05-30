@@ -1,3 +1,7 @@
+" default colorscheme base16-ashes
+set background=dark
+colorscheme jitterbug
+
 " Don't scroll near the end of the page
 set scrolloff=10
 
@@ -37,3 +41,4 @@ set scrolloff=10
 
 " Diff options
   set diffopt=filler,iwhite,vertical
+

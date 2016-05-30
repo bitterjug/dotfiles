@@ -125,9 +125,6 @@ call plug#end()
 "
 
 runtime! init.d/*.vim
-" colorscheme base16-ashes
-set background=dark
-colorscheme janah
 
 "" Try and unify the clipboards (not sure if working)
 "  set clipboard=unnamedplus,autoselect,exclude:cons\\\|linux
