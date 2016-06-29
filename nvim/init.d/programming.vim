@@ -30,7 +30,6 @@
 
 " Elm
   autocmd BufEnter * if &ft ==# 'elm' | call MyVimrc_setup_prog(4) | endif
-  " autocmd FileType elm nmap <leader>m <Plug>(elm-make)
-  " autocmd FileType elm nmap <leader>d <Plug>(elm-error-detail)
   let g:elm_format_autosave = 1
+  hi link elmTopLevelDecl Title
 
