@@ -77,7 +77,6 @@ call plug#end()
 "  NeoBundle 'Mark'
 "  NeoBundle 'airblade/vim-gitgutter'
 "  NeoBundle 'unimpaired.vim'
-"  NeoBundle 'majutsushi/tagbar'
 "  NeoBundle 'chrisbra/vim-diff-enhanced'
 "  NeoBundle 'VOoM'
 "  NeoBundle 'rking/ag.vim'
