@@ -36,6 +36,7 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'jnurmine/Zenburn'
   Plug 'morhetz/gruvbox'
   Plug 'mhinz/vim-janah'
+  Plug 'jlanzarotta/bufexplorer'
 call plug#end()
 
 
