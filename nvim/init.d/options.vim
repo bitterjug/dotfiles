@@ -2,6 +2,9 @@
   set background=dark
   colorscheme jitterbug
 
+" Make stuff look smoother (recommended by gitv docs)
+  set lazyredraw
+
 " Don't scroll near the end of the page
   set scrolloff=10
 
@@ -35,9 +38,6 @@
 
 "List mode characters
   set listchars=eol:¬,tab:▸·,trail:•
-
-" Gitv
-  let g:Gitv_OpenHorizontal = 'auto'
 
 " Diff options
   set diffopt=filler,iwhite,vertical
