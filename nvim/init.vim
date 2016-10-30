@@ -36,7 +36,11 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'jnurmine/Zenburn'
   Plug 'morhetz/gruvbox'
   Plug 'mhinz/vim-janah'
+"  Highlight tool
+  Plug 'gerw/vim-HiLinkTrace'
+" Tools:
   Plug 'jlanzarotta/bufexplorer'
+  Plug 'vim-scripts/Mark'
 call plug#end()
 
 
@@ -74,7 +78,6 @@ call plug#end()
 "  " NeoBundle 'digitaltoad/vim-jade'
 "  " NeoBundle 'vim-coffee-script'
 "  " NeoBundle 'lbdbq'
-"  NeoBundle 'gerw/vim-HiLinkTrace'
 "  NeoBundle 'Mark'
 "  NeoBundle 'airblade/vim-gitgutter'
 "  NeoBundle 'unimpaired.vim'
