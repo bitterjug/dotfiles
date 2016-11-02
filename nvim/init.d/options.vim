@@ -30,7 +30,6 @@
   set formatoptions+=n
 
 " spell check docs 
-  autocmd BufEnter * if &ft ==# 'rst' | setlocal spell | endif
   autocmd BufEnter * if &ft ==# 'markdown' | setlocal spell | endif
 
 " new windows
@@ -38,6 +37,14 @@
 
 "List mode characters
   set listchars=eol:¬,tab:▸·,trail:•
+
+" Restructured text
+  autocmd BufEnter * if &ft ==# 'rst' | 
+    \ call MyVimrc_setup_prog(2) | 
+    \ setlocal spell | endif
+
+" Gitv
+  let g:Gitv_OpenHorizontal = 'auto'
 
 " Diff options
   set diffopt=filler,iwhite,vertical
