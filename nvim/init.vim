@@ -15,7 +15,7 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'jtratner/vim-flavored-markdown'
 " Nerdtree:
   Plug 'scrooloose/nerdtree'
-  Plug 'vsushkov/nerdtree-ack'
+  Plug 'eugen0329/vim-esearch' " In place of vim-ack and nerdtree-ack
 " Git:
   Plug 'tpope/vim-fugitive'
   Plug 'gregsexton/gitv'
@@ -84,7 +84,6 @@ call plug#end()
 "  NeoBundle 'chrisbra/vim-diff-enhanced'
 "  NeoBundle 'VOoM'
 "  NeoBundle 'rking/ag.vim'
-"  NeoBundle 'mileszs/ack.vim'
 "  " NeoBundle 'mustache/vim-mustache-handlebars'
 "  NeoBundle 'groenewege/vim-less'
 "  " NeoBundle 'shime/vim-livedown'
@@ -381,9 +380,6 @@ runtime! init.d/*.vim
 "  " and then put these lines in vimrc somewhere after the line above
 "  au! BufRead,BufWrite,BufWritePost,BufNewFile *.org 
 "  au BufEnter *.org            call org#SetOrgFileType()
-"
-" Make Ack use Ag
-  let g:ackprg = 'ag --nogroup --nocolor --column'
 "
 "" Riv Restructured Text Devjournal
 "  let riv_home = { 'Name': 'Home Dev Notes', 'path': '~/SparkleShare/devjournal/home/rst', }
