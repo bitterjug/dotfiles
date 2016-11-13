@@ -2,7 +2,7 @@
 
 function ranger-cd 
 {
-  tempfile='/tmp/chosendir'
+  tempfile="$(mktemp -t tmp.XXXXXX)"
   ranger --choosedir="$tempfile" "${@:-$(pwd)}"
   test -f "$tempfile" &&
   if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
