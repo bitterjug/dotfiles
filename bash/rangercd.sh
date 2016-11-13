@@ -1,6 +1,7 @@
 # Taken from ranger manual, use ^O to use Ranger for cd
 
-function ranger-cd {
+function ranger-cd 
+{
   tempfile='/tmp/chosendir'
   ranger --choosedir="$tempfile" "${@:-$(pwd)}"
   test -f "$tempfile" &&
