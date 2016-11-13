@@ -6,6 +6,7 @@
     hi link LongLines SpellLocal
     match LongLines '\%>79v.\+' 
     set number
+    set nowrap
     let &tabstop=a:indent
     let &shiftwidth=a:indent
     inoremap <C-u> _
