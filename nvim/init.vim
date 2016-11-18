@@ -22,8 +22,10 @@ Plug 'bitterjug/vim-tmux-navigator'
 " Plug 'Shougo/deoplete.nvim'
 " Programming:
   Plug 'benekastah/neomake'
+  Plug 'majutsushi/tagbar'
 " Elm:
-  Plug 'elmcast/elm-vim'
+"  Plug 'elmcast/elm-vim'
+  Plug 'bitterjug/elm-vim'
 " Python:
   Plug 'davidhalter/jedi-vim'
 " Notes:
@@ -207,12 +209,6 @@ runtime! init.d/*.vim
 "  endfunction
 "
 
-"" TagBar
-"  nmap <Leader>o :TagbarOpenAutoClose<enter>
-"  " I prefer tags in file order, unless I sort them
-"  let g:tagbar_sort = 0
-"  let g:tagbar_foldlevel = 0
-"
 "" Voom
 "  let g:voom_ft_modes = {'markdown': 'markdown', 'ghmarkdown': 'markdown', 'rst': 'rest', 'org': 'org'}
 "  nmap <Leader>v :VoomToggle<enter>
