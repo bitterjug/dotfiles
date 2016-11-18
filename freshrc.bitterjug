@@ -68,4 +68,4 @@ fresh liquidprompt/liquidpromptrc --file=~/.config/liquidpromptrc
 fresh atweiden/fzf-extras fzf-extras.sh
 
 # ctags
-fresh bitterjug/ctags-elm '.ctags' --file
+# fresh bitterjug/ctags-elm '.ctags' --file
