@@ -49,4 +49,6 @@
 " Diff options
   set diffopt=filler,iwhite,vertical
 
-
+" Make it easier for me to get out
+  command Qa qa
+  command QA qa
