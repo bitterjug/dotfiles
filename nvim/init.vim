@@ -43,6 +43,7 @@ Plug 'bitterjug/vim-tmux-navigator'
 " Tools:
   Plug 'jlanzarotta/bufexplorer'
   Plug 'vim-scripts/Mark'
+  Plug '~/workspace/vim-tagbar-ctags-elm'
 call plug#end()
 
 
