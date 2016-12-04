@@ -29,11 +29,6 @@
 " Javascript
   autocmd BufEnter * if &ft ==# 'javascript' | call MyVimrc_setup_prog(2) | endif
 
-" Elm
-  autocmd BufEnter * if &ft ==# 'elm' | call MyVimrc_setup_prog(4) | endif
-  let g:elm_format_autosave = 1
-  hi link elmTopLevelDecl Title
-
 " CSS/SCSS
   autocmd BufEnter * if &ft ==# 'scss' | call MyVimrc_setup_prog(4) | endif
   autocmd BufEnter * if &ft ==# 'css' | call MyVimrc_setup_prog(4) | endif
