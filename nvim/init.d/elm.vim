@@ -5,5 +5,7 @@
 " Prevent elm-vim from blathering <leader>M for mark
   let g:elm_setup_keybindings = 0
   let g:elm_syntastic_show_warnings = 1
-  au FileType elm nmap <leader>e <Plug>(elm-make)
-  au FileType elm nmap <leader>d <Plug>(elm-error-detail)
+  au FileType elm nmap <c-e>m <Plug>(elm-make)
+  au FileType elm nmap <c-e>d <Plug>(elm-error-detail)
+  au FileType elm nmap <c-e>b <Plug>(elm-browse-docs)
+  au FileType elm nmap <c-e>s <Plug>(elm-show-docs)
