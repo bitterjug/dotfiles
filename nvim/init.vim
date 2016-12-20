@@ -13,6 +13,8 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'ervandew/supertab'
 " Filetyles:
   Plug 'jtratner/vim-flavored-markdown'
+" Restructured text
+  Plug 'Rykka/riv.vim', { 'for': 'rst' }
 " Nerdtree:
   Plug 'scrooloose/nerdtree'
   Plug 'eugen0329/vim-esearch' " In place of vim-ack and nerdtree-ack
@@ -44,6 +46,7 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'jlanzarotta/bufexplorer'
   Plug 'vim-scripts/Mark'
   Plug '~/workspace/vim-tagbar-ctags-elm'
+  Plug '~/workspace/vim-settings-bitterjug'
 call plug#end()
 
 
@@ -92,7 +95,6 @@ call plug#end()
 "  " NeoBundle 'shime/vim-livedown'
 "  NeoBundle 'reedes/vim-pencil'
 "  NeoBundle 'reedes/vim-wordy'
-"  NeoBundle 'Rykka/riv.vim' "Restructured text
 "  " NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 "
 "   " org mode and related
