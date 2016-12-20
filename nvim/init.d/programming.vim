@@ -23,7 +23,6 @@
   autocmd BufEnter * if &ft ==# 'vim' | call MyVimrc_setup_prog(2) | endif
 
 " Python
-  let g:pymode_rope_complete_on_dot = 0
   autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_prog(4) | endif
 
 " Javascript
