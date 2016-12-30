@@ -26,8 +26,10 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'benekastah/neomake'
   Plug 'majutsushi/tagbar'
 " Elm:
-"  Plug 'elmcast/elm-vim'
-  Plug 'bitterjug/elm-vim'
+  Plug 'elmcast/elm-vim'
+"  Plug 'bitterjug/elm-vim'
+"  Plug 'vim-syntastic/syntastic', { 'for': 'elm' }
+"  Plug 'vim-syntastic/syntastic'
 " Python:
   Plug 'davidhalter/jedi-vim'
 " Notes:
