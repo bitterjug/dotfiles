@@ -30,6 +30,7 @@ Plug 'bitterjug/vim-tmux-navigator'
 "  Plug 'bitterjug/elm-vim'
 "  Plug 'vim-syntastic/syntastic', { 'for': 'elm' }
 "  Plug 'vim-syntastic/syntastic'
+"  Plug 'w0rp/ale'
 " Python:
   Plug 'davidhalter/jedi-vim'
 " Notes:
