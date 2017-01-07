@@ -24,9 +24,12 @@ let g:lightline = {
       \ 'component_type': {
       \   'syntastic': 'error',
       \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }     
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }     
   \ }
+" \ 'separator': { 'left': '', 'right': '' },
+" \ 'subseparator': { 'left': '', 'right': '' }     
+"
 function MyVFPercent()
     return &ft =~? 'nerdtree' ? '' : (100 * line('.') / line('$')) . '%'
 endfunction
@@ -64,7 +67,7 @@ endfunction
 function! MyFugitive()
   try
     if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
-      let mark = '⭠'  " edit here for cool mark
+      let mark = ''  " edit here for cool mark
       let _ = fugitive#head()
       return strlen(_) ? mark._ : ''
     endif
@@ -74,11 +77,17 @@ function! MyFugitive()
 endfunction
 
 function! MyFileformat()
-  return winwidth(0) > 70 ? &fileformat : ''
+  return winwidth(0) > 70 ? 
+        \ (&fileformat . ' ' . WebDevIconsGetFileTypeSymbol()) : 
+        \ ''
 endfunction
 
 function! MyFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+  return winwidth(0) > 70 ? 
+        \ (strlen(&filetype) ? 
+            \ &filetype  .  ' ' . WebDevIconsGetFileTypeSymbol() : 
+            \'no ft') :
+        \ ''
 endfunction
 
 function! MyFileencoding()

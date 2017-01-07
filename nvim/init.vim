@@ -50,6 +50,8 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'vim-scripts/Mark'
   Plug '~/workspace/vim-tagbar-ctags-elm'
   Plug '~/workspace/vim-settings-bitterjug'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
 
