@@ -421,3 +421,7 @@ runtime! init.d/*.vim
 "  " ,<Tab> for regular tab
 "  inoremap <Leader><Tab> <Space><Space>
 
+let g:SuperTabLongestEnhanced = 1
+" let g:SuperTabLongestHighlight = 1
+let g:SuperTabDefaultCompletionType="<c-n>"
+
