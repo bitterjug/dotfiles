@@ -47,17 +47,16 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'gerw/vim-HiLinkTrace'
 " Tools:
   Plug 'jlanzarotta/bufexplorer'
-  Plug 'vim-scripts/Mark'
   Plug '~/workspace/vim-tagbar-ctags-elm'
   Plug '~/workspace/vim-settings-bitterjug'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  Plug 'vim-scripts/Mark'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
-
 " I'm not ready to invest the energy into this yet
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
-"Plug 'junegunn/fzf.vim'
 "
 " old Neo bundle list
 
@@ -424,6 +423,7 @@ runtime! init.d/*.vim
 "  inoremap <Leader><Tab> <Space><Space>
 
 let g:SuperTabLongestEnhanced = 1
-" let g:SuperTabLongestHighlight = 1
+let g:SuperTabLongestHighlight = 0
 let g:SuperTabDefaultCompletionType="<c-n>"
-
+" Remove longest from cmpleteopt because it drives me mad
+set completeopt=preview,menuone

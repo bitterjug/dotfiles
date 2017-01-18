@@ -9,7 +9,8 @@
   set scrolloff=10
 
 " Use proper vertical bar for vertsplit 
-  set fillchars=vert:\│
+"  set fillchars=vert:\│
+  set fillchars=vert:┃
 
 " Make stuff easier to type
   command WQ wq
@@ -52,3 +53,6 @@
 " Make it easier for me to get out
   command Qa qa
   command QA qa
+
+" Make FZF's Files comand work like ctrl-p
+  noremap <c-p> :Files<cr>
