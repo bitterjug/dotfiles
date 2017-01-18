@@ -34,3 +34,7 @@
 
 " Php
   autocmd BufEnter * if &ft ==# 'php' | call MyVimrc_setup_prog(2) | endif
+
+" Html and django templates
+  autocmd BufEnter * if &ft ==# 'html' || &ft ==# 'htmldjango' | 
+        \ inoremap <buffer> << </<c-x><c-o>
