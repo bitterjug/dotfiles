@@ -67,5 +67,6 @@ fresh liquidprompt/liquidpromptrc --file=~/.config/liquidpromptrc
 # FZF extras (mainly to get fco)
 fresh atweiden/fzf-extras fzf-extras.sh
 
+fresh profile --file
 # ctags
 # fresh bitterjug/ctags-elm '.ctags' --file
