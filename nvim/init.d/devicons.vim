@@ -1,4 +1,7 @@
-
+" Entre characters qith ^vunnnn
+"http://vim.wikia.com/wiki/Entering_special_characters
+"Glyphs here
+"https://github.com/ryanoasis/nerd-fonts#glyph-sets
 "  let g:DevIconsEnableFolderPatternMatching = 0
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
@@ -7,7 +10,7 @@ let g:DevIconsDefaultFolderOpenSymbol = ''
 " Custom icon for elm
 let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['elm'] = 'e'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['elm'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['txt'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rst'] = ''
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rst'] = ''
@@ -18,6 +21,7 @@ let s:elmblue = '60B5CC'
 let s:grey    = 'CCCCCC'
 let g:NERDTreeExtensionHighlightColor = {} 
 let g:NERDTreeExtensionHighlightColor['elm'] = s:elmblue 
+
 
 let g:NERDTreePatternMatchHighlightColor = {} 
 let g:NERDTreePatternMatchHighlightColor['^..init..\.py$'] = 'FFFFFF'
