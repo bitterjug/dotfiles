@@ -19,5 +19,8 @@ fi
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-# run xcape if you can
+# Turn caps lock into harmless control
+setxkbmap -option 'caps:ctrl_modifier'
+
+# Then use xcape (if installed) to make control taps function as escape
 xcape -e '#66=Escape'
