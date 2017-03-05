@@ -20,6 +20,7 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'eugen0329/vim-esearch' " In place of vim-ack and nerdtree-ack
 " Git:
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-dispatch'
   Plug 'gregsexton/gitv'
 " Plug 'Shougo/deoplete.nvim'
 " Programming:
@@ -54,6 +55,8 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'vim-scripts/Mark'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
   Plug 'junegunn/fzf.vim'
+  Plug 'elzr/vim-json'
+  Plug 'diepm/vim-rest-console', { 'for': 'rest' }
 call plug#end()
 
 " I'm not ready to invest the energy into this yet
