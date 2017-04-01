@@ -15,6 +15,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['txt'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rst'] = ''
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rst'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['html'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = ''
 
 " Custom colour for elm using vim-nerdtree-syntax-highlighting
 let s:elmblue = '60B5CC'
