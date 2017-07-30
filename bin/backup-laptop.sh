@@ -43,6 +43,8 @@ rsync --archive --partial --progress --verbose \
     --exclude .dropbox/iface_socket \
     --exclude .ssh/control/ \
     --exclude .vagrant.d/boxes/ \
+    --exclude .virtualenvs \
+    --exclude .VirtualBox \
     --exclude .ve/ \
     --exclude .ubuntuone/ \
     $FROM $TO
