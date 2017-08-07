@@ -18,6 +18,7 @@ fi
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+PATH="$HOME/.npm-global/bin:$PATH"
 
 # Turn caps lock into harmless control
 setxkbmap -option 'caps:ctrl_modifier'
