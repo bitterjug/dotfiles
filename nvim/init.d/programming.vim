@@ -38,3 +38,6 @@
 " Html and django templates
   autocmd BufEnter * if &ft ==# 'html' || &ft ==# 'htmldjango' | 
         \ inoremap <buffer> << </<c-x><c-o>
+
+" Make
+  autocmd FileType make setlocal noexpandtab
