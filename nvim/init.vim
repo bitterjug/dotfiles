@@ -9,10 +9,11 @@ call plug#begin()
 Plug 'itchyny/lightline.vim'
 Plug 'bitterjug/vim-tmux-navigator'
 " Editing:
-  Plug 'surround.vim'
+  Plug 'vim-scripts/surround.vim'
   Plug 'ervandew/supertab'
 " Filetyles:
-  Plug 'jtratner/vim-flavored-markdown'
+"  Plug 'jtratner/vim-flavored-markdown'
+  Plug 'rhysd/vim-gfm-syntax'
 " Restructured text
   Plug 'Rykka/riv.vim', { 'for': 'rst' }
 " Nerdtree:
@@ -22,18 +23,21 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-dispatch'
   Plug 'gregsexton/gitv'
+  Plug 'airblade/vim-gitgutter'
 " Plug 'Shougo/deoplete.nvim'
 " Programming:
-  Plug 'benekastah/neomake'
+"  Plug 'benekastah/neomake'
   Plug 'majutsushi/tagbar'
+  Plug 'jaxbot/semantic-highlight.vim'
 " Elm:
   Plug 'elmcast/elm-vim'
 "  Plug 'bitterjug/elm-vim'
 "  Plug 'vim-syntastic/syntastic', { 'for': 'elm' }
 "  Plug 'vim-syntastic/syntastic'
-"  Plug 'w0rp/ale'
 " Python:
   Plug 'davidhalter/jedi-vim'
+" Docker:
+  Plug 'ekalinin/Dockerfile.vim'
 " Notes:
   Plug 'xolox/vim-notes'
   Plug 'xolox/vim-misc'
@@ -44,7 +48,7 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'jnurmine/Zenburn'
   Plug 'morhetz/gruvbox'
   Plug 'mhinz/vim-janah'
-"  Highlight tool
+" Highlighting:
   Plug 'gerw/vim-HiLinkTrace'
 " Tools:
   Plug 'jlanzarotta/bufexplorer'
@@ -52,11 +56,12 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug '~/workspace/vim-settings-bitterjug'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  Plug 'vim-scripts/Mark'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
   Plug 'junegunn/fzf.vim'
   Plug 'elzr/vim-json'
   Plug 'diepm/vim-rest-console', { 'for': 'rest' }
+  Plug 'w0rp/ale'
+  Plug 'vim-scripts/Mark'
 call plug#end()
 
 " I'm not ready to invest the energy into this yet

@@ -57,3 +57,6 @@
 " Make FZF's Files comand work like ctrl-p
   noremap <c-p> :Files<cr>
   noremap <c-b> :Buffers<cr>
+
+" 
+  set switchbuf=useopen,usetab,split

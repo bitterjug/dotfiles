@@ -1,5 +1,5 @@
 " Run linters on save or buffer enter
-autocmd BufWritePost,BufEnter * Neomake
+" autocmd BufWritePost,BufEnter * Neomake
 
 " From this post:
 " https://gregjs.com/vim/2015/lint-as-you-type-with-neovim-and-neomake/

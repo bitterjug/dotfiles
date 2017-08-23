@@ -20,7 +20,7 @@ autocmd LocationChange .* :js modes.passAllKeys = /docs\.google\.com/.test(buffe
 autocmd LocationChange .* :js modes.passAllKeys = /plus\.google\.com/.test(buffer.URL)
 
 " Complete tabs and Awesome bar suggestions
-set cpt=tl
+set cpt=h
 
 
 " minimal gui

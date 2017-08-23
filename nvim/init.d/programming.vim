@@ -12,6 +12,14 @@
     inoremap <C-u> _
   endfunction
 
+" Strip trailing white space, keeping cursor positoin
+  function! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+  endfun
+
 " Defult
   set autoindent
   set expandtab
@@ -24,6 +32,7 @@
 
 " Python
   autocmd BufEnter * if &ft ==# 'python' | call MyVimrc_setup_prog(4) | endif
+  autocmd BufWritePre *.py :call <SID>StripTrailingWhitespaces()
 
 " Javascript
   autocmd BufEnter * if &ft ==# 'javascript' | call MyVimrc_setup_prog(2) | endif
