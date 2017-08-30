@@ -36,6 +36,10 @@ Plug 'bitterjug/vim-tmux-navigator'
 "  Plug 'vim-syntastic/syntastic'
 " Python:
   Plug 'davidhalter/jedi-vim'
+" Elixir:
+  Plug 'elixir-lang/vim-elixir'
+  Plug 'thinca/vim-ref'
+  Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
 " Docker:
   Plug 'ekalinin/Dockerfile.vim'
 " Notes:
@@ -62,6 +66,7 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'diepm/vim-rest-console', { 'for': 'rest' }
   Plug 'w0rp/ale'
   Plug 'vim-scripts/Mark'
+  Plug 'dominikduda/vim_current_word'
 call plug#end()
 
 " I'm not ready to invest the energy into this yet

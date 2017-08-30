@@ -16,7 +16,8 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rst'] = ''
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rst'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['html'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = ''
-
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['ex'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['exs'] = ''
 
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['Dockerfile'] = ''
@@ -24,8 +25,13 @@ let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['Dockerfile'] = ''
 " Custom colour for elm using vim-nerdtree-syntax-highlighting
 let s:elmblue = '60B5CC'
 let s:grey    = 'CCCCCC'
+let s:grey    = 'CCCCCC'
+let s:elixir  = '7a6fa3'
+let s:elixirs  = 'ffae1c'
 let g:NERDTreeExtensionHighlightColor = {} 
 let g:NERDTreeExtensionHighlightColor['elm'] = s:elmblue 
+let g:NERDTreeExtensionHighlightColor['ex'] = s:elixir
+let g:NERDTreeExtensionHighlightColor['exs'] = s:elixirs 
 
 
 let g:NERDTreePatternMatchHighlightColor = {} 
