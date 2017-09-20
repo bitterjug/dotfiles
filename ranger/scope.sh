@@ -73,6 +73,9 @@ case "$extension" in
     m4a)
         try mediainfo "$path" && { dump | trim; exit 0; }
         ;;
+    markdown|md)
+      try mdv "$path" -c $width && { dump | trim; exit 5; } || 2
+      ;;
 esac
 
 case "$mimetype" in
