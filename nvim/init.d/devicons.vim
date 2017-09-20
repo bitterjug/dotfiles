@@ -40,5 +40,6 @@ let g:NERDTreePatternMatchHighlightColor['^..init..\.py$'] = 'FFFFFF'
 " let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 " let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 
+let g:NERDTreeDirArrows = 0
 "let g:NERDTreeDirArrowExpandable = ''
 "let g:NERDTreeDirArrowCollapsible = ''
