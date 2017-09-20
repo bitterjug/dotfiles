@@ -7,7 +7,6 @@ endif
 
 call plug#begin()
 Plug 'itchyny/lightline.vim'
-Plug 'bitterjug/vim-tmux-navigator'
 " Editing:
   Plug 'vim-scripts/surround.vim'
   Plug 'ervandew/supertab'
@@ -18,12 +17,17 @@ Plug 'bitterjug/vim-tmux-navigator'
   Plug 'Rykka/riv.vim', { 'for': 'rst' }
 " Nerdtree:
   Plug 'scrooloose/nerdtree'
+  Plug 'vim-scripts/vim-nerdtree_plugin_open'
   Plug 'eugen0329/vim-esearch' " In place of vim-ack and nerdtree-ack
+" Tmxu navigator has to come after NERDTree to override navigation
+"  Plug 'bitterjug/vim-tmux-navigator'
+  Plug '~/workspace/vim-tmux-navigator'
 " Git:
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-dispatch'
   Plug 'gregsexton/gitv'
   Plug 'airblade/vim-gitgutter'
+  Plug 'idanarye/vim-merginal'
 " Plug 'Shougo/deoplete.nvim'
 " Programming:
 "  Plug 'benekastah/neomake'
@@ -39,7 +43,9 @@ Plug 'bitterjug/vim-tmux-navigator'
 " Elixir:
   Plug 'elixir-lang/vim-elixir'
   Plug 'thinca/vim-ref'
-  Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
+  Plug 'slashmili/alchemist.vim'
+" disabled because of problems editing my test files
+"  Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
 " Docker:
   Plug 'ekalinin/Dockerfile.vim'
 " Notes:
