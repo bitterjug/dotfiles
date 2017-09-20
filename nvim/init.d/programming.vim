@@ -50,3 +50,10 @@
 
 " Make
   autocmd FileType make setlocal noexpandtab
+
+" Elixir
+  autocmd BufEnter * if &ft ==# 'elixir' | set number | endif
+  autocmd BufEnter * if &ft ==# 'elixir' | set nowrap | endif
+
+" Elm (shoudl this be here or in my bitterjug-settings?)
+  autocmd BufEnter * if &ft ==# 'elm' | call MyVimrc_setup_prog(4) | endif
