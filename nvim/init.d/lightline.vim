@@ -1,9 +1,12 @@
 
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \   'left': [ [ 'mode', 'paste' ], 
+      \             [ 'readonly', 'fugitive', 'filename' ],
+      \             [ 'linter_ok', 'linter_warnings', 'linter_errors' ] ],
+      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], 
+      \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
@@ -19,10 +22,14 @@ let g:lightline = {
       \    'percent': 0,
       \ },
       \ 'component_expand': {
-      \   'syntastic': 'SyntasticStatuslineFlag',
+      \   'linter_warnings': 'LightlineLinterWarnings',
+      \   'linter_errors': 'LightlineLinterErrors',
+      \   'linter_ok': 'LightlineLinterOK',
       \ },
       \ 'component_type': {
-      \   'syntastic': 'error',
+      \   'readonly': 'error',
+      \   'linter_warnings': 'warning',
+      \   'linter_errors': 'error'
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }     
@@ -39,12 +46,13 @@ function MyVFLineInfo()
 endfunction
 
 function! MyModified()
-  return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+  return &ft =~ 'help' ? '' : &modified ? ' ' : &modifiable ? '' : ' '
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help' && &readonly ? '' : ''
+  return &ft !~? 'help' && &readonly ? '' : ''
 endfunction
+" 
 
 function! MyVimFilerStatus()
    let parts = split(vimfiler#get_status_string())
@@ -59,8 +67,9 @@ function! MyFilename()
         \ &ft == 'vimfiler' ? MyVimFilerStatus():
         \ &ft == 'unite' ? unite#get_status_string() :
         \ &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+        \ WebDevIconsGetFileTypeSymbol() .
         \ ('' != fname ? fname : '[No Name]') .
+        \ ('' != MyReadonly() ? ' ' . MyReadonly() : '') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
 endfunction
 
@@ -78,7 +87,7 @@ endfunction
 
 function! MyFileformat()
   return winwidth(0) > 70 ? 
-        \ (&fileformat . ' ' . WebDevIconsGetFileTypeSymbol()) : 
+        \ (&fileformat . ' ' .  WebDevIconsGetFileFormatSymbol()) : 
         \ ''
 endfunction
 
@@ -121,6 +130,28 @@ function! s:syntastic()
   SyntasticCheck
   call lightline#update()
 endfunction
+function! LightlineLinterWarnings() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d  ', all_non_errors)
+endfunction
+
+function! LightlineLinterErrors() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d ✖ ', all_errors)
+endfunction
+
+function! LightlineLinterOK() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? ' ' : ''
+endfunction
 
 " Show status line when only one window
 set laststatus=2
+" Update after running the linter
+autocmd User ALELint call lightline#update()
