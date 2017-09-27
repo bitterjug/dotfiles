@@ -46,7 +46,7 @@ function MyVFLineInfo()
 endfunction
 
 function! MyModified()
-  return &ft =~ 'help' ? '' : &modified ? ' ' : &modifiable ? '' : ' '
+  return &ft =~ 'help' ? '' : &modified ? ' ' : &modifiable ? '' : ' '
 endfunction
 
 function! MyReadonly()
@@ -67,7 +67,7 @@ function! MyFilename()
         \ &ft == 'vimfiler' ? MyVimFilerStatus():
         \ &ft == 'unite' ? unite#get_status_string() :
         \ &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ WebDevIconsGetFileTypeSymbol() .
+        \ MyFTSymbol() .
         \ ('' != fname ? fname : '[No Name]') .
         \ ('' != MyReadonly() ? ' ' . MyReadonly() : '') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
@@ -87,8 +87,11 @@ endfunction
 
 function! MyFileformat()
   return winwidth(0) > 70 ? 
-        \ (&fileformat . ' ' .  WebDevIconsGetFileFormatSymbol()) : 
-        \ ''
+        \ (&fileformat . ' ' .  WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
+
+function! MyFTSymbol()
+  return strlen(&filetype) ?   WebDevIconsGetFileTypeSymbol() : ''
 endfunction
 
 function! MyFiletype()
@@ -134,14 +137,14 @@ function! LightlineLinterWarnings() abort
   let l:counts = ale#statusline#Count(bufnr(''))
   let l:all_errors = l:counts.error + l:counts.style_error
   let l:all_non_errors = l:counts.total - l:all_errors
-  return l:counts.total == 0 ? '' : printf('%d  ', all_non_errors)
+  return l:all_non_errors == 0 ? '' : printf('%d  ', all_non_errors)
 endfunction
 
 function! LightlineLinterErrors() abort
   let l:counts = ale#statusline#Count(bufnr(''))
   let l:all_errors = l:counts.error + l:counts.style_error
   let l:all_non_errors = l:counts.total - l:all_errors
-  return l:counts.total == 0 ? '' : printf('%d ✖ ', all_errors)
+  return l:all_errors == 0 ? '' : printf('%d ✖ ', all_errors)
 endfunction
 
 function! LightlineLinterOK() abort
