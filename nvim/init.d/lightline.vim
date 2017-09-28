@@ -77,7 +77,7 @@ function! MyFugitive()
   try
     if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
       let mark = ''  " edit here for cool mark
-      let _ = fugitive#head()
+      let _ = strpart(fugitive#head(), 0, 20)
       return strlen(_) ? mark._ : ''
     endif
   catch
