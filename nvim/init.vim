@@ -12,7 +12,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'ervandew/supertab'
 " Filetyles:
 "  Plug 'jtratner/vim-flavored-markdown'
-  Plug 'rhysd/vim-gfm-syntax'
+"  Plug 'rhysd/vim-gfm-syntax'
 " Restructured text
   Plug 'Rykka/riv.vim', { 'for': 'rst' }
 " Nerdtree:
@@ -446,3 +446,4 @@ let g:SuperTabLongestHighlight = 0
 let g:SuperTabDefaultCompletionType="<c-n>"
 " Remove longest from cmpleteopt because it drives me mad
 set completeopt=preview,menuone
+
