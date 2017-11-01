@@ -34,17 +34,6 @@ fresh bin --bin
 # Bash scripts
 fresh 'bash/*'
 
-# Vim
-fresh vim/vimrc.vim --file=~/.vimrc
-fresh vim/gvimrc.vim --file=~/.gvimrc
-fresh vim/lightline.vim --file=~/.vim/lightline.vim
-
-# Haskell
-fresh ghc/ghci --file=~/.ghci
-
-# XMonad
-fresh xmonad/xmonad.hs --file=~/.xmonad/xmonad.hs
-
 # vimperator
 fresh vimperator/colors --file=~/.vimperator/colors/
 
