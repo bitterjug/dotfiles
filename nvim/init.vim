@@ -77,7 +77,6 @@ Plug 'itchyny/lightline.vim'
 " Tools:
   Plug 'jlanzarotta/bufexplorer'
   Plug '~/workspace/vim-tagbar-ctags-elm'
-  Plug '~/workspace/vim-settings-bitterjug'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
