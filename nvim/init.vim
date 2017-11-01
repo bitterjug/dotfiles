@@ -21,8 +21,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'vim-scripts/vim-nerdtree_plugin_open'
   Plug 'eugen0329/vim-esearch' " In place of vim-ack and nerdtree-ack
 " Tmxu navigator has to come after NERDTree to override navigation
-"  Plug 'bitterjug/vim-tmux-navigator'
-  Plug '~/workspace/vim-tmux-navigator'
+  Plug 'bitterjug/vim-tmux-navigator'
 
 " Git:
   Plug 'tpope/vim-fugitive'
