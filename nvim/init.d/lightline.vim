@@ -32,7 +32,13 @@ let g:lightline = {
       \   'linter_errors': 'error'
       \ },
       \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }     
+      \ 'subseparator': { 'left': '', 'right': '' },
+      \ 'tabline_separator': { 'left': '', 'right': '' },
+      \ 'tab_component': { 'left': [ [ 'tabnum'], [ 'filename', 'modified' ] ] },
+      \ 'tabline_subseparator': { 'left': '⋮', 'right': '' },
+      \ 'tab_component_function':  {
+      \   'modified': 'MyTabModified',
+      \ }
   \ }
 " \ 'separator': { 'left': '', 'right': '' },
 " \ 'subseparator': { 'left': '', 'right': '' }     
@@ -46,7 +52,12 @@ function MyVFLineInfo()
 endfunction
 
 function! MyModified()
-  return &ft =~ 'help' ? '' : &modified ? ' ' : &modifiable ? '' : ' '
+  return &ft =~ 'help' ? '' : &modified ? ' ' : &modifiable ? '' : '-'
+endfunction
+
+function! MyTabModified(n) abort
+  let winnr = tabpagewinnr(a:n)
+  return gettabwinvar(a:n, winnr, '&modified') ? '' : gettabwinvar(a:n, winnr, '&modifiable') ? '' : '-'
 endfunction
 
 function! MyReadonly()
@@ -129,10 +140,12 @@ augroup AutoSyntastic
   autocmd!
   autocmd BufWritePost *.c,*.cpp call s:syntastic()
 augroup END
+
 function! s:syntastic()
   SyntasticCheck
   call lightline#update()
 endfunction
+
 function! LightlineLinterWarnings() abort
   let l:counts = ale#statusline#Count(bufnr(''))
   let l:all_errors = l:counts.error + l:counts.style_error
@@ -158,3 +171,7 @@ endfunction
 set laststatus=2
 " Update after running the linter
 autocmd User ALELint call lightline#update()
+
+
+
+

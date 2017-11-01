@@ -10,11 +10,12 @@ Plug 'itchyny/lightline.vim'
 " Editing:
   Plug 'vim-scripts/surround.vim'
   Plug 'ervandew/supertab'
+ 
 " Filetyles:
-"  Plug 'jtratner/vim-flavored-markdown'
-"  Plug 'rhysd/vim-gfm-syntax'
+" Plug 'tpope/vim-markdown'
 " Restructured text
   Plug 'Rykka/riv.vim', { 'for': 'rst' }
+
 " Nerdtree:
   Plug 'scrooloose/nerdtree'
   Plug 'vim-scripts/vim-nerdtree_plugin_open'
@@ -22,17 +23,24 @@ Plug 'itchyny/lightline.vim'
 " Tmxu navigator has to come after NERDTree to override navigation
 "  Plug 'bitterjug/vim-tmux-navigator'
   Plug '~/workspace/vim-tmux-navigator'
+
 " Git:
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-dispatch'
   Plug 'gregsexton/gitv'
   Plug 'airblade/vim-gitgutter'
   Plug 'idanarye/vim-merginal'
-" Plug 'Shougo/deoplete.nvim'
+
 " Programming:
 "  Plug 'benekastah/neomake'
   Plug 'majutsushi/tagbar'
   Plug 'jaxbot/semantic-highlight.vim'
+  Plug 'bitterjug/vim-easytags'
+
+" Purescript:
+  Plug 'purescript-contrib/purescript-vim'
+  Plug 'FrigoEU/psc-ide-vim'
+ 
 " Elm:
   Plug 'elmcast/elm-vim'
 "  Plug 'bitterjug/elm-vim'
@@ -40,17 +48,21 @@ Plug 'itchyny/lightline.vim'
 "  Plug 'vim-syntastic/syntastic'
 " Python:
   Plug 'davidhalter/jedi-vim'
+
 " Elixir:
   Plug 'elixir-lang/vim-elixir'
   Plug 'thinca/vim-ref'
   Plug 'slashmili/alchemist.vim'
 " disabled because of problems editing my test files
 "  Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
+
 " Docker:
   Plug 'ekalinin/Dockerfile.vim'
+
 " Notes:
   Plug 'xolox/vim-notes'
   Plug 'xolox/vim-misc'
+
 " Colorschemes:
   Plug 'bitterjug/vim-colors-bitterjug'
   Plug 'bitterjug/vim-colors-freyr'
@@ -58,8 +70,10 @@ Plug 'itchyny/lightline.vim'
   Plug 'jnurmine/Zenburn'
   Plug 'morhetz/gruvbox'
   Plug 'mhinz/vim-janah'
+
 " Highlighting:
   Plug 'gerw/vim-HiLinkTrace'
+
 " Tools:
   Plug 'jlanzarotta/bufexplorer'
   Plug '~/workspace/vim-tagbar-ctags-elm'
@@ -96,7 +110,6 @@ call plug#end()
 "  NeoBundle 'tpope/vim-ragtag'
 "  NeoBundle 'ap/vim-css-color'
 "  NeoBundle 'Textile-for-VIM'
-"  " NeoBundle 'tpope/vim-markdown'
 "  NeoBundle 'jtratner/vim-flavored-markdown'
 "  " NeoBundle 'ctrlp.vim'
 "  NeoBundle 'klen/python-mode'
@@ -446,4 +459,3 @@ let g:SuperTabLongestHighlight = 0
 let g:SuperTabDefaultCompletionType="<c-n>"
 " Remove longest from cmpleteopt because it drives me mad
 set completeopt=preview,menuone
-

@@ -31,12 +31,6 @@ fresh vim/lightline.vim --file=~/.config/nvim/lightline.vim
 # Do all the bin files into ~/bin at once, mwahaha
 fresh bin --bin
 
-# Lets keep mail config separate as there is so much of it
-fresh mail/* --file
-
-# Mutt config all lives in .mutt
-fresh mutt --file=~/.mutt/
-
 # Bash scripts
 fresh 'bash/*'
 

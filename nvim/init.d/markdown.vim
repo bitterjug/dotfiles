@@ -1,15 +1,15 @@
 " Code typs for fenced code
 let g:markdown_fenced_languages = [
     \ 'css', 
+    \ 'elm',
+    \ 'elixir',
     \ 'erb=eruby', 
     \ 'javascript',
     \ 'js=javascript', 
     \ 'json=javascript', 
-    \ 'elm',
     \ 'ruby', 
+    \ 'python', 
     \ 'sass', 
     \ 'xml', 
-    \'html'
+    \ 'html'
   \ ]
-" Make inline code stand out
-hi link markdownCode identifier

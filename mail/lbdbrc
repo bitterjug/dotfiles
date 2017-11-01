@@ -1,7 +1,0 @@
-# vim: filetype=config
-
-# Use abook addressbook for the moment
-METHODS="m_abook"
-
-ABOOK_FILES="$HOME/.abook/addressbook"
-
