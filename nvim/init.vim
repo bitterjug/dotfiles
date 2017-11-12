@@ -452,9 +452,9 @@ runtime! init.d/*.vim
 
 let g:SuperTabLongestEnhanced = 1
 let g:SuperTabLongestHighlight = 0
-let g:SuperTabDefaultCompletionType="<c-n>"
+let g:SuperTabDefaultCompletionType="<c-x><c-o>"
 " Remove longest from cmpleteopt because it drives me mad
-set completeopt=preview,menuone
+set completeopt=preview,menuone,longest
 
 "mouse
   set mouse=a
