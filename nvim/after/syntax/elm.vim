@@ -23,4 +23,5 @@ syntax match elmNiceOperator "->" conceal cchar=➜
 "syntax match elmNiceOperator ">\@<!>>>\@!" conceal cchar=❱
 hi link elmNiceOperator Operator
 hi! link Conceal Operator
+hi ALEError ctermbg=234 
 setlocal conceallevel=2

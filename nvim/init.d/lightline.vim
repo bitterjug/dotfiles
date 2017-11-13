@@ -71,7 +71,8 @@ function! MyVimFilerStatus()
 endfunction
 
 function! MyFilename()
-  let fname = expand('%:t')
+  let fname =  expand('%:t')
+  let fullname = expand('%:p:h:t') . '/' . fname
   return fname == 'ControlP' ? g:lightline.ctrlp_item :
         \ fname == '__Tagbar__' ? g:lightline.fname :
         \ fname =~ '__Gundo\|NERD_tree' ? '' :
@@ -79,7 +80,7 @@ function! MyFilename()
         \ &ft == 'unite' ? unite#get_status_string() :
         \ &ft == 'vimshell' ? vimshell#get_status_string() :
         \ MyFTSymbol() .
-        \ ('' != fname ? fname : '[No Name]') .
+        \ ('' != fname ? fullname : '[No Name]') .
         \ ('' != MyReadonly() ? ' ' . MyReadonly() : '') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
 endfunction

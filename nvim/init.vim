@@ -200,7 +200,6 @@ runtime! init.d/*.vim
 "" kj mash
 "  inoremap kj <esc>
 "
-"
 
 
 "" `=============/MAPPINGS=========='
@@ -455,7 +454,7 @@ let g:SuperTabLongestEnhanced = 1
 let g:SuperTabLongestHighlight = 0
 let g:SuperTabDefaultCompletionType="<c-n>"
 " Remove longest from cmpleteopt because it drives me mad
-set completeopt=preview,menuone
+set completeopt=preview,menuone,longest
 
 "mouse
   set mouse=a
