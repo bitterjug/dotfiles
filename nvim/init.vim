@@ -35,6 +35,14 @@ Plug 'itchyny/lightline.vim'
   Plug 'majutsushi/tagbar'
   Plug 'jaxbot/semantic-highlight.vim'
   Plug 'bitterjug/vim-easytags'
+  Plug 'w0rp/ale'
+
+" Rest and Json:
+  Plug 'elzr/vim-json'
+  Plug 'diepm/vim-rest-console', { 'for': 'rest' }
+
+" Javascript:
+  Plug 'jelera/vim-javascript-syntax'
 
 " Purescript:
   Plug 'purescript-contrib/purescript-vim'
@@ -42,9 +50,8 @@ Plug 'itchyny/lightline.vim'
  
 " Elm:
   Plug 'elmcast/elm-vim'
-"  Plug 'bitterjug/elm-vim'
-"  Plug 'vim-syntastic/syntastic', { 'for': 'elm' }
-"  Plug 'vim-syntastic/syntastic'
+  Plug '~/workspace/vim-tagbar-ctags-elm'
+
 " Python:
   Plug 'davidhalter/jedi-vim'
 
@@ -70,21 +77,17 @@ Plug 'itchyny/lightline.vim'
   Plug 'morhetz/gruvbox'
   Plug 'mhinz/vim-janah'
 
-" Highlighting:
-  Plug 'gerw/vim-HiLinkTrace'
-
 " Tools:
   Plug 'jlanzarotta/bufexplorer'
-  Plug '~/workspace/vim-tagbar-ctags-elm'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
   Plug 'junegunn/fzf.vim'
-  Plug 'elzr/vim-json'
-  Plug 'diepm/vim-rest-console', { 'for': 'rest' }
-  Plug 'w0rp/ale'
-  Plug 'vim-scripts/Mark'
+
+" Highlighting (load last to override earlier settings):
+  Plug 'gerw/vim-HiLinkTrace'
   Plug 'dominikduda/vim_current_word'
+  Plug 'vim-scripts/Mark'
 call plug#end()
 
 " I'm not ready to invest the energy into this yet
@@ -458,3 +461,6 @@ set completeopt=preview,menuone,longest
 
 "mouse
   set mouse=a
+
+" Map space to local leader in normal mode
+  map <Space> \

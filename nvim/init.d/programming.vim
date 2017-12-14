@@ -3,8 +3,9 @@
 " Might have to use other settings for other languages
 " Indentation and tabs -- putting back for stuff like this file
   function MyVimrc_setup_prog(indent)
-    hi link LongLines SpellLocal
-    match LongLines '\%>79v.\+' 
+    " hi link LongLines SpellLocal
+    " match LongLines '\%>79v.\+' 
+    " Not not matching long lines in elm aat the moment
     set number
     set nowrap
     let &tabstop=a:indent
@@ -38,7 +39,7 @@
   autocmd BufEnter * if &ft ==# 'javascript' | call MyVimrc_setup_prog(2) | endif
 
 " CSS/SCSS
-  autocmd BufEnter * if &ft ==# 'scss' | call MyVimrc_setup_prog(4) | endif
+  autocmd BufEnter * if &ft ==# 'scss' | call MyVimrc_setup_prog(2) | endif
   autocmd BufEnter * if &ft ==# 'css' | call MyVimrc_setup_prog(4) | endif
 
 " Php
