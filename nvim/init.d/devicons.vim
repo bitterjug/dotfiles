@@ -10,7 +10,8 @@ let g:DevIconsDefaultFolderOpenSymbol = ''
 " Custom icon for elm
 let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['elm'] = ''
+" let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['elm'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['elm'] = '▩'
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['txt'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rst'] = ''
 "let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rst'] = ''
@@ -29,12 +30,18 @@ let s:grey    = 'CCCCCC'
 let s:elixir  = '7a6fa3'
 let s:elixirs  = 'ffae1c'
 let g:NERDTreeExtensionHighlightColor = {} 
+let g:NERDTreeExtensionHighlightColor['spec\.js'] = s:elixirs 
 let g:NERDTreeExtensionHighlightColor['elm'] = s:elmblue 
 let g:NERDTreeExtensionHighlightColor['ex'] = s:elixir
 let g:NERDTreeExtensionHighlightColor['exs'] = s:elixirs 
 
-
-let g:NERDTreePatternMatchHighlightColor = {} 
+let s:test = '3f6548'
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
+" let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*spec\.js$'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*spec\.js$'] = ''
+  
+let g:NERDTreePatternMatchHighlightColor = {}
+let g:NERDTreePatternMatchHighlightColor['.*spec\.js$'] = s:test
 let g:NERDTreePatternMatchHighlightColor['^..init..\.py$'] = 'FFFFFF'
 
 " let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
