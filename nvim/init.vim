@@ -36,6 +36,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'jaxbot/semantic-highlight.vim'
   Plug 'bitterjug/vim-easytags'
   Plug 'w0rp/ale'
+  Plug 'thirtythreeforty/lessspace.vim'
 
 " Rest and Json:
   Plug 'elzr/vim-json'
