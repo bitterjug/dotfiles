@@ -39,6 +39,7 @@ Plug 'itchyny/lightline.vim'
 " Purescript:
   Plug 'purescript-contrib/purescript-vim'
   Plug 'FrigoEU/psc-ide-vim'
+  Plug 'vim-syntastic/syntastic', { 'for': 'purescript' }
  
 " Elm:
   Plug 'elmcast/elm-vim'
