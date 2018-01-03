@@ -429,10 +429,6 @@ runtime! init.d/*.vim
 "" DirDiff
 "  let g:DirDiffExcludes = ".git,.pyc,*.swp,CVS,*.class,*.exe,.*.swp"
 "
-"" Mouse
-"  set mouse=a
-
-
 "" Fix alt codes
 "let c='a'
 "while c <= 'z'
@@ -452,6 +448,7 @@ runtime! init.d/*.vim
 
 let g:SuperTabLongestEnhanced = 1
 let g:SuperTabLongestHighlight = 0
+" let g:SuperTabDefaultCompletionType="<c-x><c-o>"
 let g:SuperTabDefaultCompletionType="<c-n>"
 " Remove longest from cmpleteopt because it drives me mad
 set completeopt=preview,menuone,longest

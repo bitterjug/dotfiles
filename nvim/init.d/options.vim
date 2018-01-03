@@ -1,3 +1,6 @@
+"mouse
+  set mouse=a
+
 " default colorscheme base16-ashes
   set background=dark
   colorscheme jitterbug
@@ -60,3 +63,6 @@
 
 " 
   set switchbuf=useopen,usetab,split
+
+" cmpleteopt 
+set completeopt=preview,menuone,longest
