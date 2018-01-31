@@ -24,10 +24,10 @@
   nmap <c-e>f :ElmFormat<enter>
 
 " While typing
-  inoremap <c-e>t -> 
-  inoremap <c-e>l -> 
-  inoremap <c-e>, <| 
-  inoremap <c-e>. |> 
+  inoremap <buffer> <c-e>t ->
+  inoremap <buffer> <c-e>l ->
+  inoremap <buffer> <c-e>, <|
+  inoremap <buffer> <c-e>. |>
 
 
 " Match let:in if:else
@@ -83,6 +83,6 @@ endfunction
   onoremap <silent> ]L :call NextIndent(1, 1, 1, 1)<CR>
 
 " Control [] jump up and down to lines with the same indentation
-  map <c-[> [l
-  map <c-]> ]l
+  " map <c-[> [l
+  map <buffer> <c-]> ]l
 
