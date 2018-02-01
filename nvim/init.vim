@@ -461,6 +461,3 @@ set completeopt=preview,menuone,longest
 
 "mouse
   set mouse=a
-
-" Map space to local leader in normal mode
-  map <Space> \
