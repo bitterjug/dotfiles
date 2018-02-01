@@ -29,6 +29,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'gregsexton/gitv'
   Plug 'airblade/vim-gitgutter'
   Plug 'idanarye/vim-merginal'
+  Plug 'rhysd/conflict-marker.vim'
 
 " Programming:
 "  Plug 'benekastah/neomake'
