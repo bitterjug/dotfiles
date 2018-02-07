@@ -1,3 +1,6 @@
+" Use space as leader
+	let mapleader = " "
+
 "mouse
   set mouse=a
 

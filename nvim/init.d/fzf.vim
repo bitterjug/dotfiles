@@ -1,6 +1,7 @@
 " Make FZF's Files comand work like ctrl-p
   noremap <c-p> :GFiles<cr>
   noremap <c-b> :Buffers<cr>
+  noremap <Leader>p :History<cr>
 
 " leader-t list tags starting with word under cursor
   noremap <Leader>t :Tags <C-r><C-w><cr>
