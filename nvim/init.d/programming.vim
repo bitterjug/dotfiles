@@ -58,3 +58,6 @@
 
 " Elm (shoudl this be here or in my bitterjug-settings?)
   autocmd BufEnter * if &ft ==# 'elm' | call MyVimrc_setup_prog(4) | endif
+
+" Purescript
+  autocmd BufEnter * if &ft ==# 'purescript' | call MyVimrc_setup_prog(2) | endif

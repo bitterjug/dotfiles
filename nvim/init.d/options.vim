@@ -1,5 +1,11 @@
+" Use space as leader
+	let mapleader = " "
+
 "mouse
   set mouse=a
+
+" full colour
+  set termguicolors
 
 " default colorscheme base16-ashes
   set background=dark
@@ -60,5 +66,9 @@
 " 
   set switchbuf=useopen,usetab,split
 
-" cmpleteopt 
-set completeopt=preview,menuone,longest
+
+"mouse
+  set mouse=a
+
+" Map space to local leader in normal mode
+  map <Space> \
