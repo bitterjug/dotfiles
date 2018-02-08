@@ -39,7 +39,7 @@
 " format lists
   set formatoptions+=n
 
-" spell check docs 
+" spell check docs
   autocmd BufEnter * if &ft ==# 'markdown' | setlocal spell | endif
 
 " new windows
@@ -49,8 +49,8 @@
   set listchars=eol:¬,tab:▸·,trail:•
 
 " Restructured text
-  autocmd BufEnter * if &ft ==# 'rst' | 
-    \ call MyVimrc_setup_prog(2) | 
+  autocmd BufEnter * if &ft ==# 'rst' |
+    \ call MyVimrc_setup_prog(2) |
     \ setlocal spell | endif
 
 " Gitv
@@ -63,12 +63,8 @@
   command Qa qa
   command QA qa
 
-" 
+"
   set switchbuf=useopen,usetab,split
 
-
-"mouse
-  set mouse=a
-
-" Map space to local leader in normal mode
-  map <Space> \
+" cmpleteopt
+set completeopt=preview,menuone,longest
