@@ -1,8 +1,11 @@
 # Pause watch.js during git command
 GIT=$(which git)
 function git {
-  if [ "$1" == "rebase" ] || [ "$1" == "checkout" ] || [ "$1" == "merge" ] || [ "$1" == "reset" ] || [ "$1" == "pull" ] || [ "$1" == "revert" ] || [ "$1" == "stash" ]
-  then
+  if $GIT remote -v 2>&1 | grep aric-ui-client  >/dev/null \
+    && ( [ "$1" == "rebase" ] || [ "$1" == "checkout" ] || \
+         [ "$1" == "merge" ] || [ "$1" == "reset" ] ||  \
+         [ "$1" == "pull" ] || [ "$1" == "revert" ] || [ "$1" == "stash" ] )
+    then
     echo -e "\e[1;31mPausing watch ... \e[0m" >&2
     pkill -TSTP -f watch.js
     $GIT $*
