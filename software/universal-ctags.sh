@@ -1,21 +1,20 @@
 # Install universal ctags from source
 TOOLS=$HOME/dev/tools
 mkdir -p $TOOLS
+cd $TOOLS
 
 sudo apt install -y \
   dh-autoreconf \
   build-essential \
   pkg-config
 
-# Universal ctags
-  cd $TOOLS
-  if cd ctags
-  then
+if cd ctags
+then
     git pull
-  else
-    git clone https://github.com/universal-ctags/ctags.git
+else
+    git clone git@github.com:universal-ctags/ctags.git
     cd ctags
-  fi
+fi
 
 ./autogen.sh
 ./configure --prefix=$HOME

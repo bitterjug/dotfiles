@@ -14,15 +14,24 @@ sudo apt -y install \
   silversearcher-ag \
   tmux \
   dconf-tools \
+	gconf2 \
   xclip
 
 
-# System stuff
+# Applications
 sudo apt -y install \
-	gconf2 \
+  keepassxc \
+  nautilus-dropbox
 
 
 # Now at last...
 # Turn caps lock into control:
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:ctrl_modifier']"
 
+
+# dev
+sudo apt -y install \
+  python-pip \
+
+#
+pip install --user neovim
