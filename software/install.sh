@@ -11,14 +11,18 @@ sudo apt -y install \
 sudo apt -y install \
 	xcape \
 	neovim \
-  tmux \
   silversearcher-ag \
+  tmux \
+  dconf-tools \
   xclip
-
 
 
 # System stuff
 sudo apt -y install \
-	gconf2
+	gconf2 \
 
-# tmux
+
+# Now at last...
+# Turn caps lock into control:
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:ctrl_modifier']"
+
