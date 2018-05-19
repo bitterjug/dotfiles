@@ -5,7 +5,7 @@ set -o vi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Use ag -g "" to find files so that we ignore stuff in .gitignore
-export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_COMMAND='ag -g .'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Display in tmux window if possible
