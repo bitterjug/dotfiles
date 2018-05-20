@@ -20,6 +20,7 @@ fresh freemind/user.properties --file=~/.freemind/user.properties
 # Ranger
 fresh ranger/rc.conf --file=~/.config/ranger/rc.conf
 fresh ranger/rifle.conf --file=~/.config/ranger/rifle.conf
+fresh ranger/scope.sh --bin=~/.config/ranger/scope.sh
 fresh ranger/colorschemes --file=~/.config/ranger/colorschemes/
 
 # NeoVim 
@@ -53,5 +54,5 @@ fresh liquidprompt/liquidpromptrc --file=~/.config/liquidpromptrc
 fresh atweiden/fzf-extras fzf-extras.sh
 
 fresh profile --file
-# ctags
-# fresh bitterjug/ctags-elm '.ctags' --file
+
+fresh autostart/xcape.desktop --file=~/.config/autostart/xcape.autostart
