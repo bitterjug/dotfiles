@@ -1,5 +1,5 @@
 " Diff this
-noreabbrev dt diffthis
+" noreabbrev dt diffthis
 
 " Diff off
-noreabbrev do diffoff
+" noreabbrev do diffoff

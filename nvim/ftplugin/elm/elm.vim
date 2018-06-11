@@ -7,8 +7,8 @@
   set nowrap
   set shiftwidth=4
 
-" Its programming, give me line numbers
-  set number
+" Its programming, Ill turn on line numbers when I want
+  set nonumber
 
 " Make functions look like headings
   hi link elmTopLevelDecl Title
@@ -22,13 +22,14 @@
   nmap <c-e>b <Plug>(elm-browse-docs)
   nmap <c-e>s <Plug>(elm-show-docs)
   nmap <c-e>f :ElmFormat<enter>
+" Split window at imports
+  nmap <c-e>i :split<cr>gg}oimport<space><c-x><c-l>
 
 " While typing
-  inoremap <buffer> <c-e>t ->
-  inoremap <buffer> <c-e>l ->
-  inoremap <buffer> <c-e>, <|
-  inoremap <buffer> <c-e>. |>
-
+  inoremap <buffer> <c-e>t -><space>
+  inoremap <buffer> <c-e>l -><space>
+  inoremap <buffer> <c-e>, <|<space>
+  inoremap <buffer> <c-e>. |><space>
 
 " Match let:in if:else
   let b:match_words='\<if\>:\<else\>,\<let\>:\<in\>'
@@ -86,3 +87,5 @@ endfunction
   " map <c-[> [l
   map <buffer> <c-]> ]l
 
+" Experimental try to make ALE run elm-make more effectively
+  let b:ale_command_wrapper = 'sysconfcpus -n 1' " nice -n 18'

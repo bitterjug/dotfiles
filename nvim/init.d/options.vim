@@ -1,5 +1,6 @@
 " Use space as leader
-	let mapleader = " "
+"	let mapleader = " "
+map <Space> \
 
 "mouse
   set mouse=a
@@ -67,4 +68,4 @@
   set switchbuf=useopen,usetab,split
 
 " cmpleteopt
-set completeopt=preview,menuone,longest
+  set completeopt=preview,menuone,longest
