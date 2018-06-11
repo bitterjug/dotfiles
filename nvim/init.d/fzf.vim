@@ -14,3 +14,5 @@
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %C(blue)%cn %C(reset)%s %C(black)%C(bold)%cr"'
 
 
+" Complete lines
+imap <c-x><c-l> <plug>(fzf-complete-line)

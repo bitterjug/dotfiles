@@ -72,14 +72,15 @@ endfunction
 
 function! MyFilename()
   let fname =  expand('%:t')
-  let fullname = expand('%:p:h:t') . '/' . fname
+  "let fullname =  expand('%:p:~:.:h:h:t') . '/' .  expand('%:p:~:.:h:t') . '/' . fname
+  let fullname =  expand('%:p:~:.')
   return fname == 'ControlP' ? g:lightline.ctrlp_item :
         \ fname == '__Tagbar__' ? g:lightline.fname :
         \ fname =~ '__Gundo\|NERD_tree' ? '' :
         \ &ft == 'vimfiler' ? MyVimFilerStatus():
         \ &ft == 'unite' ? unite#get_status_string() :
         \ &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ MyFTSymbol() .
+        \ MyFTSymbol() . ' ' .
         \ ('' != fname ? fullname : '[No Name]') .
         \ ('' != MyReadonly() ? ' ' . MyReadonly() : '') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
