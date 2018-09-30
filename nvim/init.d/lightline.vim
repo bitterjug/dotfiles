@@ -1,6 +1,6 @@
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'jellybeans',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], 
       \             [ 'readonly', 'fugitive', 'filename' ],
