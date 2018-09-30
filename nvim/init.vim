@@ -83,8 +83,11 @@ Plug 'itchyny/lightline.vim'
   Plug 'jlanzarotta/bufexplorer'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" fzf
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
   Plug 'junegunn/fzf.vim'
+  Plug 'tweekmonster/fzf-filemru'
 
 " Git:
   Plug 'tpope/vim-fugitive'
