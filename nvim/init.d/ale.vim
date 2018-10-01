@@ -1,3 +1,5 @@
+" let g:ale_fixers = { 'elm': ['elm-format'] }
+
 let g:ale_sign_error = '✖ '
 " let g:ale_sign_warning = ' '
 let g:ale_sign_warning = ' '
@@ -8,3 +10,4 @@ nmap <silent> <Leader>d <Plug>(ale_detail)
 nmap <silent> <Leader>l <Plug>(ale_lint)
 nmap <silent> <Leader>j <Plug>(ale_next_wrap)
 nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
+nmap <silent> <Leader>f <Plug>(ale_fix)

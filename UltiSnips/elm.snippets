@@ -71,7 +71,32 @@ Update.map (\\${1:s} -> {$1 | ${2:var} = ${3:val} })
 ${0}
 endsnippet
 
+snippet umc "Update map command"
+Update.mapCmd $1
+endsnippet
+
 snippet "[uU](pdate)?[iI]f" "Init an update pipe" r
 Update.updateIf ${1:true} ${2}
 endsnippet
 	
+
+# Debug
+
+snippet crash "Debug.crash"
+Debug.crash "$1"
+endsnippet
+	
+
+snippet todo "Enter Elm 19 todo"
+Debug.todo "${1}" ${2}
+endsnippet
+
+snippet log "Enter Elm debug log"
+Debug.log "${1}" ${2}
+endsnippet
+
+# Tuple
+snippet mapf "If you happen to be using UpateExra"
+Tuple.mapFirst (\\${1:s} -> {$1 | ${2:var} = ${3:val} })
+${0}
+endsnippet
