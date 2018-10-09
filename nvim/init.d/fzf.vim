@@ -1,6 +1,6 @@
 " Make FZF's Files comand work like ctrl-p
 "  noremap <c-p> :GFiles<cr>
-  nnoremap <c-p> :ProjectMru --tiebreak=end<cr>
+  nnoremap <c-p> :ProjectMru --tiebreak=index<cr>
   noremap <c-b> :Buffers<cr>
   noremap <Leader>p :History<cr>
 
