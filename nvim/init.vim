@@ -99,9 +99,9 @@ Plug 'itchyny/lightline.vim'
 
 " Highlighting (load last to override earlier settings):
   Plug 'gerw/vim-HiLinkTrace'
-  Plug 'dominikduda/vim_current_word'
-  Plug 'vim-scripts/Mark'
-
+"  Plug 'dominikduda/vim_current_word'
+"  Plug 'vim-scripts/Mark'
+  Plug 't9md/vim-quickhl'
 
   Plug 'jaxbot/semantic-highlight.vim'
 call plug#end()
