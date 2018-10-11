@@ -26,13 +26,6 @@ Plug 'itchyny/lightline.vim'
 " Tmxu navigator has to come after NERDTree to override navigation
   Plug 'bitterjug/vim-tmux-navigator'
 
-" Git:
-  Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-dispatch'
-  Plug 'gregsexton/gitv'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'idanarye/vim-merginal'
-  Plug 'rhysd/conflict-marker.vim'
 
 " Programming:
 "  Plug 'benekastah/neomake'
@@ -41,6 +34,8 @@ Plug 'itchyny/lightline.vim'
   Plug 'w0rp/ale'
   Plug 'thirtythreeforty/lessspace.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
+  Plug 'jeetsukumaran/vim-indentwise'
+  Plug 'scrooloose/nerdcommenter'
 
 " Rest and Json:
   Plug 'elzr/vim-json'
@@ -53,7 +48,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'purescript-contrib/purescript-vim'
   Plug 'FrigoEU/psc-ide-vim'
   Plug 'vim-syntastic/syntastic', { 'for': 'purescript' }
- 
+
 " Elm:
   Plug 'elmcast/elm-vim'
   Plug '~/workspace/vim-tagbar-ctags-elm'
@@ -95,10 +90,19 @@ Plug 'itchyny/lightline.vim'
   Plug 'junegunn/fzf.vim'
   Plug 'tweekmonster/fzf-filemru'
 
+" Git:
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-dispatch'
+  Plug 'gregsexton/gitv'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'idanarye/vim-merginal'
+  Plug 'rhysd/conflict-marker.vim'
+
 " Highlighting (load last to override earlier settings):
   Plug 'gerw/vim-HiLinkTrace'
-  Plug 'dominikduda/vim_current_word'
-  Plug 'vim-scripts/Mark'
+"  Plug 'dominikduda/vim_current_word'
+"  Plug 'vim-scripts/Mark'
+  Plug 't9md/vim-quickhl'
 
 "  Plug 'jaxbot/semantic-highlight.vim'
 call plug#end()
