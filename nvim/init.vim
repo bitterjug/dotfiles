@@ -57,9 +57,10 @@ Plug 'itchyny/lightline.vim'
 " Elm:
   Plug 'elmcast/elm-vim'
   Plug '~/workspace/vim-tagbar-ctags-elm'
+  Plug 'tweekmonster/braceless.vim', { 'for': 'elm' }
 
 " Python:
-  Plug 'davidhalter/jedi-vim'
+  Plug 'davidhalter/jedi-vim', { 'for': 'py' }
 
 " Elixir:
   Plug 'elixir-lang/vim-elixir'
@@ -76,7 +77,8 @@ Plug 'itchyny/lightline.vim'
   Plug 'xolox/vim-misc'
 
 " Colorschemes:
-  Plug 'bitterjug/vim-colors-bitterjug'
+"  Plug 'bitterjug/vim-colors-bitterjug'
+  Plug '~/workspace/vim-colors-bitterjug'
   Plug 'bitterjug/vim-colors-freyr'
   Plug 'chriskempson/base16-vim'
   Plug 'jnurmine/Zenburn'
@@ -98,7 +100,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'dominikduda/vim_current_word'
   Plug 'vim-scripts/Mark'
 
-  Plug 'jaxbot/semantic-highlight.vim'
+"  Plug 'jaxbot/semantic-highlight.vim'
 call plug#end()
 
 runtime! init.d/*.vim
