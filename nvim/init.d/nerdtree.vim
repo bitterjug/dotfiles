@@ -26,6 +26,5 @@ if 0 == argc()
 end
 endfunction
 
-
 " Enable open plugin
 let g:nerdtree_plugin_open_cmd = 'xdg-open'

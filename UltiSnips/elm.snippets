@@ -1,4 +1,102 @@
+
+
+snippet "\\([^\s]*)" "lambda function for given variable" r
+(\\ `!p snip.rv = match.group(1)`$0 -> $1)
+endsnippet
+
+# Maybe
+
+snippet mmap "Maybe.map"
+Maybe.map
+endsnippet
+	
+snippet mwd "Maybe with default"
+Maybe.withDefault
+endsnippet
+
+# RemoteData
+
+snippet rmap "Remote Data.map"
+RemoteData.map
+endsnippet
+
+snippet rwd "Remote Data with default"
+RemoteData.withDefault
+endsnippet
+
+# Lists
+
+
+snippet lmap "List with "
+List.map $1
+endsnippet
+
+# Html
+snippet div "Html Div"
+div [$1] [$2]
+endsnippet
+	
+# Some types
+
+snippet WD "Webdata"
+WebData
+endsnippet
+
+
+snippet "[Rr][Dd]" "Webdata" r
+RemoteData
+endsnippet
+
+snippet M "Webdata"
+Maybe
+endsnippet
+
+# Update Extra
+
+snippet "[uU]i(n(it?)?)?" "Init an update pipe" r
+Update.init ${1:model}
+    |> $2
+endsnippet
+
+snippet "ucmds?" "update commands" r
+Update.addCmds [ $1 ]
+endsnippet
+
+snippet "umsgs?" "update messages" r
+Update.addMsgs [ $1 ]
+endsnippet
+
 snippet umap "If you happen to be using UpateExra"
-	Update.map (\\${1:s} -> {$1 | ${2:var} = ${3:val} })
-	${0}
+Update.map (\\${1:s} -> {$1 | ${2:var} = ${3:val} })
+${0}
+endsnippet
+
+snippet umc "Update map command"
+Update.mapCmd $1
+endsnippet
+
+snippet "[uU](pdate)?[iI]f" "Init an update pipe" r
+Update.updateIf ${1:true} ${2}
+endsnippet
+	
+
+# Debug
+
+snippet crash "Debug.crash"
+Debug.crash "$1"
+endsnippet
+	
+
+snippet todo "Enter Elm 19 todo"
+Debug.todo "${1}" ${2}
+endsnippet
+
+snippet log "Enter Elm debug log"
+Debug.log "${1}" ${2}
+endsnippet
+
+# Tuple
+snippet mapf "If you happen to be using UpateExra"
+Tuple.mapFirst (\\${1:s} -> {$1 | ${2:var} = ${3:val} })
+${0}
 endsnippet

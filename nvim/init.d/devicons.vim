@@ -10,15 +10,13 @@ let g:DevIconsDefaultFolderOpenSymbol = ''
 " Custom icon for elm
 let g:WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
-" let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['elm'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['elm'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['txt'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rst'] = ''
-"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rst'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['html'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = ''
-"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['ex'] = ''
-"let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['exs'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['ex'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['exs'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['purs'] = '⇄'
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['Dockerfile'] = ''

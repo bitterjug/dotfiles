@@ -1,11 +1,11 @@
 
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], 
+      \   'left': [ [ 'mode', 'paste' ],
       \             [ 'readonly', 'fugitive', 'filename' ],
       \             [ 'linter_ok', 'linter_warnings', 'linter_errors' ] ],
-      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], 
+      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'],
       \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component_function': {
@@ -41,7 +41,7 @@ let g:lightline = {
       \ }
   \ }
 " \ 'separator': { 'left': '', 'right': '' },
-" \ 'subseparator': { 'left': '', 'right': '' }     
+" \ 'subseparator': { 'left': '', 'right': '' }
 "
 function MyVFPercent()
     return &ft =~? 'nerdtree' ? '' : (100 * line('.') / line('$')) . '%'
@@ -72,14 +72,15 @@ endfunction
 
 function! MyFilename()
   let fname =  expand('%:t')
-  let fullname = expand('%:p:h:t') . '/' . fname
+  "let fullname =  expand('%:p:~:.:h:h:t') . '/' .  expand('%:p:~:.:h:t') . '/' . fname
+  let fullname =  expand('%:p:~:.')
   return fname == 'ControlP' ? g:lightline.ctrlp_item :
         \ fname == '__Tagbar__' ? g:lightline.fname :
         \ fname =~ '__Gundo\|NERD_tree' ? '' :
         \ &ft == 'vimfiler' ? MyVimFilerStatus():
         \ &ft == 'unite' ? unite#get_status_string() :
         \ &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ MyFTSymbol() .
+        \ MyFTSymbol() . ' ' .
         \ ('' != fname ? fullname : '[No Name]') .
         \ ('' != MyReadonly() ? ' ' . MyReadonly() : '') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
@@ -98,7 +99,7 @@ function! MyFugitive()
 endfunction
 
 function! MyFileformat()
-  return winwidth(0) > 70 ? 
+  return winwidth(0) > 70 ?
         \ (&fileformat . ' ' .  WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 
@@ -107,9 +108,9 @@ function! MyFTSymbol()
 endfunction
 
 function! MyFiletype()
-  return winwidth(0) > 70 ? 
-        \ (strlen(&filetype) ? 
-            \ &filetype  .  ' ' . WebDevIconsGetFileTypeSymbol() : 
+  return winwidth(0) > 70 ?
+        \ (strlen(&filetype) ?
+            \ &filetype  .  ' ' . WebDevIconsGetFileTypeSymbol() :
             \'no ft') :
         \ ''
 endfunction

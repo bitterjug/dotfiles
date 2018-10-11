@@ -18,6 +18,7 @@ Plug 'itchyny/lightline.vim'
 " Plug 'tpope/vim-markdown'
 " Restructured text
   Plug 'Rykka/riv.vim', { 'for': 'rst' }
+"  Plug 'suan/vim-instant-markdown' -- doesn't work
 
 " Nerdtree:
   Plug 'scrooloose/nerdtree'

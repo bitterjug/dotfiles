@@ -1,1 +1,1 @@
-let g:notes_directories = ['~/SparkleShare/devjournal/home/notes']
+let g:notes_directories = ['~/Documents/vim-notes']
