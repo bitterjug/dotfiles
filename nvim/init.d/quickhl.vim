@@ -1,6 +1,10 @@
 let g:quickhl_cword_hl_command = 'link QuickhlCword SpellRare'
 
-  nmap <Space>m <Plug>(quickhl-manual-this)
+" Make manual highlights more important than ALE errors!
+let g:quickhl_manual_hl_priority = 50
+
+  nmap <Space>m <Plug>(quickhl-manual-this-whole-word)
+  nmap <Space>w <Plug>(quickhl-manual-this)
   xmap <Space>m <Plug>(quickhl-manual-this)
   nmap <Space>M <Plug>(quickhl-manual-reset)
   xmap <Space>M <Plug>(quickhl-manual-reset)
