@@ -38,6 +38,9 @@ Plug 'itchyny/lightline.vim'
   Plug 'jeetsukumaran/vim-indentwise'
   Plug 'scrooloose/nerdcommenter'
 
+" Haskell:
+  Plug 'bitc/vim-hdevtools'
+
 " Rest and Json:
   Plug 'elzr/vim-json'
   Plug 'diepm/vim-rest-console', { 'for': 'rest' }
@@ -71,6 +74,8 @@ Plug 'itchyny/lightline.vim'
 " Notes:
   Plug 'xolox/vim-notes'
   Plug 'xolox/vim-misc'
+
+  Plug 'alok/notational-fzf-vim'
 
 " Colorschemes:
 "  Plug 'bitterjug/vim-colors-bitterjug'
