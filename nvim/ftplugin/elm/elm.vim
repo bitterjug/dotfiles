@@ -22,6 +22,11 @@
   nmap <c-e>b <Plug>(elm-browse-docs)
   nmap <c-e>s <Plug>(elm-show-docs)
   nmap <c-e>f :ElmFormat<enter>
+
+" Search for the curren type defined in the current file
+" could be extended to search for function definitions too
+  noremap <c-e>/ /^type .*<c-r><c-w>.*\_s\s*=<enter>
+
 " Split window at imports
   nmap <c-e>i :split<cr>gg}oimport<space><c-x><c-l>
 
