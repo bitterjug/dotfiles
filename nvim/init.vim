@@ -72,9 +72,9 @@ Plug 'itchyny/lightline.vim'
   Plug 'ekalinin/Dockerfile.vim'
 
 " Notes:
-  Plug 'xolox/vim-notes'
+"  Plug 'xolox/vim-notes'
   Plug 'xolox/vim-misc'
-
+  Plug 'vimwiki/vimwiki'
   Plug 'alok/notational-fzf-vim'
 
 " Colorschemes:
