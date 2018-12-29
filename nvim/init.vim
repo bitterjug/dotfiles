@@ -36,7 +36,12 @@ Plug 'itchyny/lightline.vim'
   Plug 'thirtythreeforty/lessspace.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
   Plug 'jeetsukumaran/vim-indentwise'
+  Plug 'michaeljsmith/vim-indent-object'
+  Plug 'pseewald/vim-anyfold'
   Plug 'scrooloose/nerdcommenter'
+
+" Haskell:
+  Plug 'bitc/vim-hdevtools'
 
 " Rest and Json:
   Plug 'elzr/vim-json'
@@ -49,13 +54,14 @@ Plug 'itchyny/lightline.vim'
   Plug 'purescript-contrib/purescript-vim'
   Plug 'FrigoEU/psc-ide-vim'
   Plug 'vim-syntastic/syntastic', { 'for': 'purescript' }
- 
+
 " Elm:
   Plug 'elmcast/elm-vim'
   Plug '~/workspace/vim-tagbar-ctags-elm'
+  Plug 'tweekmonster/braceless.vim', { 'for': 'elm' }
 
 " Python:
-  Plug 'davidhalter/jedi-vim'
+  Plug 'davidhalter/jedi-vim', { 'for': 'py' }
 
 " Elixir:
   Plug 'elixir-lang/vim-elixir'
@@ -68,11 +74,14 @@ Plug 'itchyny/lightline.vim'
   Plug 'ekalinin/Dockerfile.vim'
 
 " Notes:
-  Plug 'xolox/vim-notes'
+"  Plug 'xolox/vim-notes'
   Plug 'xolox/vim-misc'
+  Plug 'vimwiki/vimwiki'
+  Plug 'alok/notational-fzf-vim'
 
 " Colorschemes:
-  Plug 'bitterjug/vim-colors-bitterjug'
+"  Plug 'bitterjug/vim-colors-bitterjug'
+  Plug '~/workspace/vim-colors-bitterjug'
   Plug 'bitterjug/vim-colors-freyr'
   Plug 'chriskempson/base16-vim'
   Plug 'jnurmine/Zenburn'
@@ -102,8 +111,11 @@ Plug 'itchyny/lightline.vim'
 "  Plug 'dominikduda/vim_current_word'
 "  Plug 'vim-scripts/Mark'
   Plug 't9md/vim-quickhl'
+" Required for searchhighlignting"
+  Plug 'vim-scripts/ingo-library'
+  Plug 'inkarkat/vim-SearchHighlighting'
 
-  Plug 'jaxbot/semantic-highlight.vim'
+"  Plug 'jaxbot/semantic-highlight.vim'
 call plug#end()
 
 runtime! init.d/*.vim

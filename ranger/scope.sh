@@ -77,7 +77,7 @@ handle_extension() {
 
         # markdown
         markdown|md)
-            mdv "${FILE_PATH}" -c "${PV_WIDTH}"  && exit 5
+            mdv  -c "${PV_WIDTH}" "${FILE_PATH}"  && exit 0
             ;;
 
         # HTML

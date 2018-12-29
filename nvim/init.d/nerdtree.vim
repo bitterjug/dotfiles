@@ -26,7 +26,5 @@ if 0 == argc()
 end
 endfunction
 
-" autocmd VimEnter * call StartUp()
-
 " Enable open plugin
 let g:nerdtree_plugin_open_cmd = 'xdg-open'
