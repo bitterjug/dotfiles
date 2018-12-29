@@ -36,6 +36,8 @@ Plug 'itchyny/lightline.vim'
   Plug 'thirtythreeforty/lessspace.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
   Plug 'jeetsukumaran/vim-indentwise'
+  Plug 'michaeljsmith/vim-indent-object'
+  Plug 'pseewald/vim-anyfold'
   Plug 'scrooloose/nerdcommenter'
 
 " Haskell:
@@ -109,6 +111,9 @@ Plug 'itchyny/lightline.vim'
 "  Plug 'dominikduda/vim_current_word'
 "  Plug 'vim-scripts/Mark'
   Plug 't9md/vim-quickhl'
+" Required for searchhighlignting"
+  Plug 'vim-scripts/ingo-library'
+  Plug 'inkarkat/vim-SearchHighlighting'
 
 "  Plug 'jaxbot/semantic-highlight.vim'
 call plug#end()

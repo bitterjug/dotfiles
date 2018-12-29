@@ -87,5 +87,5 @@ endfunction
   " map <c-[> [l
   map <buffer> <c-]> ]l
 
-" Experimental try to make ALE run elm-make more effectively
-  let b:ale_command_wrapper = 'sysconfcpus -n 1' " nice -n 18'
+" Experimental try to make ALE run elm-make 0.18 more effectively
+"  let b:ale_command_wrapper = 'sysconfcpus -n 1' " nice -n 18'
