@@ -5,3 +5,5 @@
   \}
 
  hi esearchFName guibg=#282844 gui=none guifg=#ddddff
+
+ let g:esearch#util#trunc_omission = ''

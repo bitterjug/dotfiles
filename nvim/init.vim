@@ -80,8 +80,8 @@ Plug 'itchyny/lightline.vim'
   Plug 'alok/notational-fzf-vim'
 
 " Colorschemes:
-"  Plug 'bitterjug/vim-colors-bitterjug'
-  Plug '~/workspace/vim-colors-bitterjug'
+  Plug 'bitterjug/vim-colors-bitterjug'
+"  Plug '~/workspace/vim-colors-bitterjug'
   Plug 'bitterjug/vim-colors-freyr'
   Plug 'chriskempson/base16-vim'
   Plug 'jnurmine/Zenburn'
