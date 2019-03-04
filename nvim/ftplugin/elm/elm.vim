@@ -10,6 +10,7 @@
 " Its programming, Ill turn on line numbers when I want
   set nonumber
 
+
 " Make functions look like headings
   hi link elmTopLevelDecl Title
 
@@ -23,9 +24,36 @@
   nmap <c-e>s <Plug>(elm-show-docs)
   nmap <c-e>f :ElmFormat<enter>
 
-" Search for the curren type defined in the current file
-" could be extended to search for function definitions too
-  noremap <c-e>/ /^type .*<c-r><c-w>.*\_s\s*=<enter>
+" Search for the word under the cursor as
+" -- a type definition
+" -- type constructor
+" -- import
+" -- exposed import
+" -- function
+"  /\(...\|...\)<enter> search for one of the options
+"  ^type... type definition
+"  ^<c-r><c-w> word under the cursor at start of line
+" as <c-r><c-w> import as
+"  exposing... exposed in inport
+"  [=\|]\s... type constructor
+" Should also add custom type constructors and import as or import
+  noremap <c-e>/ /\(^type .*\<<c-r><c-w>\>.*\_s\s*=\\|^\s*<c-r><c-w>\>.*=$\\|as \<<c-r><c-w>\>\\|exposing\_s\+([^)]*\<<c-r><c-w>\>\\|^\s\+[=\|]\s\<<c-r><c-w>\>\)<enter>zz
+
+"Add the word under the cursor to the export list
+" mx mark x
+" yaw yank a word
+" gg to top
+" /(<cr> search for exposing list
+" p paste
+" a,<esc> add a comma
+" :w<cr> save  file to run elm format
+" `x return to mark x
+  noremap <c-e>x mxyawgg/(<cr>pa,<esc>:w<cr>`x
+
+"  Would be good if could combine with the following (maybe this should be
+"  done with tags)
+" Searching for custom type constructor in current file
+" noremap <c-e># /^type\s[^a].*\(\_s*[=\|]\s.*\)*<c-r><c-w><enter>
 
 " Split window at imports
   nmap <c-e>i :split<cr>gg}oimport<space><c-x><c-l>
@@ -33,8 +61,10 @@
 " While typing
   inoremap <buffer> <c-e>t -><space>
   inoremap <buffer> <c-e>l -><space>
-  inoremap <buffer> <c-e>, <|<space>
-  inoremap <buffer> <c-e>. |><space>
+  inoremap <buffer> <c-e>, <<bar><space>
+  inoremap <buffer> <c-e>. <bar>><space>
+  noremap <buffer> <c-e>. mm_i<bar>><space><esc>`mlll
+
 
 " Match let:in if:else
   let b:match_words='\<if\>:\<else\>,\<let\>:\<in\>'
@@ -94,3 +124,7 @@ endfunction
 
 " Experimental try to make ALE run elm-make 0.18 more effectively
 "  let b:ale_command_wrapper = 'sysconfcpus -n 1' " nice -n 18'
+
+" Highlight todo and log
+syn match elmTodo contained /Debug.\(todo\|log\)\s\+"[^"]*"/
+hi def link elmTodo Todo
