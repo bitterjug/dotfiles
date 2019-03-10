@@ -29,7 +29,7 @@ Plug 'itchyny/lightline.vim'
 
 
 " Programming:
-"  Plug 'benekastah/neomake'
+"  Plug 'benekastah/neomake' -- used to show inline errors for Haskell intero
   Plug 'majutsushi/tagbar'
   Plug 'bitterjug/vim-easytags'
   Plug 'w0rp/ale'
@@ -41,7 +41,12 @@ Plug 'itchyny/lightline.vim'
   Plug 'scrooloose/nerdcommenter'
 
 " Haskell:
-  Plug 'bitc/vim-hdevtools'
+"  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
+"  Plug 'parsonsmatt/intero-neovim' -- cool, uses the repl
+  Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': './install.sh'
+    \ }
 
 " Rest and Json:
   Plug 'elzr/vim-json'
@@ -78,6 +83,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'xolox/vim-misc'
   Plug 'vimwiki/vimwiki'
   Plug 'alok/notational-fzf-vim'
+  Plug 'dbeniamine/todo.txt-vim'
 
 " Colorschemes:
 "  Plug 'bitterjug/vim-colors-bitterjug'

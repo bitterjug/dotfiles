@@ -27,17 +27,17 @@ let s:grey    = 'CCCCCC'
 let s:grey    = 'CCCCCC'
 let s:elixir  = '7a6fa3'
 let s:elixirs  = 'ffae1c'
-let g:NERDTreeExtensionHighlightColor = {} 
-let g:NERDTreeExtensionHighlightColor['spec\.js'] = s:elixirs 
-let g:NERDTreeExtensionHighlightColor['elm'] = s:elmblue 
+let g:NERDTreeExtensionHighlightColor = {}
+let g:NERDTreeExtensionHighlightColor['spec\.js'] = s:elixirs
+let g:NERDTreeExtensionHighlightColor['elm'] = s:elmblue
 let g:NERDTreeExtensionHighlightColor['ex'] = s:elixir
-let g:NERDTreeExtensionHighlightColor['exs'] = s:elixirs 
+let g:NERDTreeExtensionHighlightColor['exs'] = s:elixirs
 
 let s:test = '3f6548'
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
 " let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*spec\.js$'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*spec\.js$'] = ''
-  
+
 let g:NERDTreePatternMatchHighlightColor = {}
 let g:NERDTreePatternMatchHighlightColor['.*spec\.js$'] = s:test
 let g:NERDTreePatternMatchHighlightColor['^..init..\.py$'] = 'FFFFFF'
