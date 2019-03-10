@@ -9,8 +9,13 @@ call plug#begin()
 Plug 'itchyny/lightline.vim'
 " Editing:
   Plug 'vim-scripts/surround.vim'
-  " Plug 'ervandew/supertab'
-  Plug 'neitanod/vim-clevertab'
+  Plug 'ervandew/supertab'
+  " Plug 'neitanod/vim-clevertab'
+
+  " Required for NCM2
+  " Plug 'roxma/nvim-yarp'
+  " Plug 'ncm2/ncm2'
+
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 
