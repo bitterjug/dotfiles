@@ -119,12 +119,13 @@ Plug 'itchyny/lightline.vim'
 
 " Highlighting (load last to override earlier settings):
   Plug 'gerw/vim-HiLinkTrace'
-"  Plug 'dominikduda/vim_current_word'
-"  Plug 'vim-scripts/Mark'
-  Plug 't9md/vim-quickhl'
+"  Plug 't9md/vim-quickhl' - disabled to investigate  'inkarkat/vim-mark'
+  Plug 'inkarkat/vim-ingo-library'
+  Plug 'inkarkat/vim-mark'
+
 " Required for searchhighlignting"
-  Plug 'vim-scripts/ingo-library'
-  Plug 'inkarkat/vim-SearchHighlighting'
+"  Plug 'vim-scripts/ingo-library'
+"  Plug 'inkarkat/vim-SearchHighlighting' -- disabled to investigate  'inkarkat/vim-mark'
 
 "  Plug 'jaxbot/semantic-highlight.vim'
 call plug#end()
