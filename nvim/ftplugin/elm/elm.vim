@@ -94,3 +94,4 @@ endfunction
 
 " Experimental try to make ALE run elm-make 0.18 more effectively
 "  let b:ale_command_wrapper = 'sysconfcpus -n 1' " nice -n 18'
+let b:ale_command_wrapper = 'flock -n /tmp/lockfile.elm -c %@'

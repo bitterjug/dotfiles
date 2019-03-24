@@ -7,6 +7,7 @@ endif
 
 call plug#begin()
 Plug 'itchyny/lightline.vim'
+
 " Editing:
   Plug 'vim-scripts/surround.vim'
   Plug 'ervandew/supertab'
@@ -38,6 +39,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'majutsushi/tagbar'
   Plug 'bitterjug/vim-easytags'
   Plug 'w0rp/ale'
+  Plug 'maximbaz/lightline-ale'
   Plug 'thirtythreeforty/lessspace.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
   Plug 'jeetsukumaran/vim-indentwise'
