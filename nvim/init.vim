@@ -34,7 +34,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'bitterjug/vim-tmux-navigator'
 
 " Search:
-  Plug 'wincent/ferret'
+"  Plug 'wincent/ferret' -- seems to add not much more than esearch
   Plug 'yssl/QFEnter' " make it easier to use quickfix
   Plug 'tpope/vim-unimpaired'
 
