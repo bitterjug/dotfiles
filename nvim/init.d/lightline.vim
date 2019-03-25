@@ -4,7 +4,7 @@ let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'readonly', 'fugitive', 'filename' ],
-      \             [ 'linter_ok', 'linter_warnings', 'linter_errors' ] ],
+      \             [ 'linter_checking', 'linter_ok', 'linter_warnings', 'linter_errors' ] ],
       \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'],
       \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
@@ -22,14 +22,15 @@ let g:lightline = {
       \    'percent': 0,
       \ },
       \ 'component_expand': {
-      \   'linter_warnings': 'LightlineLinterWarnings',
-      \   'linter_errors': 'LightlineLinterErrors',
-      \   'linter_ok': 'LightlineLinterOK',
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok'
       \ },
       \ 'component_type': {
       \   'readonly': 'error',
       \   'linter_warnings': 'warning',
-      \   'linter_errors': 'error'
+      \   'linter_errors': 'error',
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
@@ -148,26 +149,11 @@ function! s:syntastic()
   call lightline#update()
 endfunction
 
-function! LightlineLinterWarnings() abort
-  let l:counts = ale#statusline#Count(bufnr(''))
-  let l:all_errors = l:counts.error + l:counts.style_error
-  let l:all_non_errors = l:counts.total - l:all_errors
-  return l:all_non_errors == 0 ? '' : printf('%d  ', all_non_errors)
-endfunction
+let g:lightline#ale#indicator_checking = '  '
+let g:lightline#ale#indicator_warnings = '  '
+let g:lightline#ale#indicator_errors = '✖  '
+let g:lightline#ale#indicator_ok = '  '
 
-function! LightlineLinterErrors() abort
-  let l:counts = ale#statusline#Count(bufnr(''))
-  let l:all_errors = l:counts.error + l:counts.style_error
-  let l:all_non_errors = l:counts.total - l:all_errors
-  return l:all_errors == 0 ? '' : printf('%d ✖ ', all_errors)
-endfunction
-
-function! LightlineLinterOK() abort
-  let l:counts = ale#statusline#Count(bufnr(''))
-  let l:all_errors = l:counts.error + l:counts.style_error
-  let l:all_non_errors = l:counts.total - l:all_errors
-  return l:counts.total == 0 ? ' ' : ''
-endfunction
 
 " Show status line when only one window
 set laststatus=2

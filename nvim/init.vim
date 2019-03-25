@@ -7,10 +7,16 @@ endif
 
 call plug#begin()
 Plug 'itchyny/lightline.vim'
+
 " Editing:
   Plug 'vim-scripts/surround.vim'
-  " Plug 'ervandew/supertab'
-  Plug 'neitanod/vim-clevertab'
+  Plug 'ervandew/supertab'
+  " Plug 'neitanod/vim-clevertab'
+
+  " Required for NCM2
+  " Plug 'roxma/nvim-yarp'
+  " Plug 'ncm2/ncm2'
+
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 
@@ -33,12 +39,11 @@ Plug 'itchyny/lightline.vim'
   Plug 'tpope/vim-unimpaired'
 
 " Programming:
-"  Plug 'benekastah/neomake'
-"  Plug 'thirtythreeforty/lessspace.vim' 
-"  -- removed because it interfeers with ultisnips
   Plug 'majutsushi/tagbar'
   Plug 'bitterjug/vim-easytags'
   Plug 'w0rp/ale'
+  Plug 'maximbaz/lightline-ale'
+  Plug 'thirtythreeforty/lessspace.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
   Plug 'jeetsukumaran/vim-indentwise'
   Plug 'michaeljsmith/vim-indent-object'
@@ -46,7 +51,12 @@ Plug 'itchyny/lightline.vim'
   Plug 'scrooloose/nerdcommenter'
 
 " Haskell:
-  Plug 'bitc/vim-hdevtools'
+"  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
+"  Plug 'parsonsmatt/intero-neovim' -- cool, uses the repl
+  Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': './install.sh'
+    \ }
 
 " Rest and Json:
   Plug 'elzr/vim-json'
@@ -83,6 +93,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'xolox/vim-misc'
   Plug 'vimwiki/vimwiki'
   Plug 'alok/notational-fzf-vim'
+  Plug 'dbeniamine/todo.txt-vim'
 
 " Colorschemes:
   Plug 'bitterjug/vim-colors-bitterjug'
@@ -114,12 +125,12 @@ Plug 'itchyny/lightline.vim'
 
 " Highlighting (load last to override earlier settings):
   Plug 'gerw/vim-HiLinkTrace'
-"  Plug 'dominikduda/vim_current_word'
-"  Plug 'vim-scripts/Mark'
-  Plug 't9md/vim-quickhl'
-" Required for searchhighlignting"
-"  Plug 'vim-scripts/ingo-library'
-"  Plug 'inkarkat/vim-SearchHighlighting'
+"  Plug 't9md/vim-quickhl' - disabled to investigate  'inkarkat/vim-mark'
+  Plug 'inkarkat/vim-ingo-library'
+  Plug 'inkarkat/vim-mark'
+
+" Requires ingo-library
+"  Plug 'inkarkat/vim-SearchHighlighting' -- disabled to investigate  'inkarkat/vim-mark'
 
 "  Plug 'jaxbot/semantic-highlight.vim'
 call plug#end()

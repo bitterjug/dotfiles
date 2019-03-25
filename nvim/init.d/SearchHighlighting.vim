@@ -12,3 +12,7 @@
 "  \gvy?<C-R><C-R>=substitute(
 "  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
 "  \gV:call setreg('"', old_reg, old_regtype)<CR>
+"if exists('g:loaded_SearchHighlighting') || (v:version < 700)
+"  "  let g:SearchHighlighting_ExtendStandardCommands = 1
+"  nmap #  <Plug>SearchHighlightingStar
+"endif
