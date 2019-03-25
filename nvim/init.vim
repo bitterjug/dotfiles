@@ -27,13 +27,18 @@ Plug 'itchyny/lightline.vim'
 " Tmxu navigator has to come after NERDTree to override navigation
   Plug 'bitterjug/vim-tmux-navigator'
 
+" Search:
+  Plug 'wincent/ferret'
+  Plug 'yssl/QFEnter' " make it easier to use quickfix
+  Plug 'tpope/vim-unimpaired'
 
 " Programming:
 "  Plug 'benekastah/neomake'
+"  Plug 'thirtythreeforty/lessspace.vim' 
+"  -- removed because it interfeers with ultisnips
   Plug 'majutsushi/tagbar'
   Plug 'bitterjug/vim-easytags'
   Plug 'w0rp/ale'
-  Plug 'thirtythreeforty/lessspace.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
   Plug 'jeetsukumaran/vim-indentwise'
   Plug 'michaeljsmith/vim-indent-object'
@@ -93,7 +98,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-" fzf
+" Fzf
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
   Plug 'junegunn/fzf.vim'
   Plug 'tweekmonster/fzf-filemru'
@@ -105,6 +110,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'idanarye/vim-merginal'
   Plug 'rhysd/conflict-marker.vim'
+  Plug 'whiteinge/diffconflicts'
 
 " Highlighting (load last to override earlier settings):
   Plug 'gerw/vim-HiLinkTrace'
@@ -112,8 +118,8 @@ Plug 'itchyny/lightline.vim'
 "  Plug 'vim-scripts/Mark'
   Plug 't9md/vim-quickhl'
 " Required for searchhighlignting"
-  Plug 'vim-scripts/ingo-library'
-  Plug 'inkarkat/vim-SearchHighlighting'
+"  Plug 'vim-scripts/ingo-library'
+"  Plug 'inkarkat/vim-SearchHighlighting'
 
 "  Plug 'jaxbot/semantic-highlight.vim'
 call plug#end()

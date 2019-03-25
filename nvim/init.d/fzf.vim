@@ -15,5 +15,17 @@
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %C(blue)%cn %C(reset)%s %C(black)%C(bold)%cr"'
 
 
+
+" Update MRU on buffer write, so most recently changed files ar last in MRU
+  let g:fzf_filemru_bufwrite = 1
+
 " Complete lines
-imap <c-x><c-l> <plug>(fzf-complete-line)
+" imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Global line completion (not just open buffers. ripgrep required.)
+inoremap <expr> <c-x><c-l> fzf#vim#complete(fzf#wrap({
+  \ 'prefix': '^.*$',
+  \ 'source': 'rg -n ^ --color always',
+  \ 'options': '--ansi --delimiter : --nth 3..',
+  \ 'reducer': { lines -> join(split(lines[0], ':\zs')[2:], '') }}
+  \))

@@ -56,3 +56,5 @@ fresh atweiden/fzf-extras fzf-extras.sh
 # fresh profile --file
 # ctags
 # fresh bitterjug/ctags-elm '.ctags' --file
+#
+#fresh alacrity/alacrity.yml --file=~/.alacrity.yml
