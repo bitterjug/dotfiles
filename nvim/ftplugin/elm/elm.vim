@@ -14,6 +14,8 @@
 " Make functions look like headings
   hi link elmTopLevelDecl Title
 
+  hi link elmFuncName Title
+
 " Prevent elm-vim from blathering <leader>M for mark
   let g:elm_setup_keybindings = 0
   let g:elm_syntastic_show_warnings = 1
