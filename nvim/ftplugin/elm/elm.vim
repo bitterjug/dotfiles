@@ -122,9 +122,6 @@ endfunction
   " map <c-[> [l
   map <buffer> <c-]> ]l
 
-" Experimental try to make ALE run elm-make 0.18 more effectively
-"  let b:ale_command_wrapper = 'sysconfcpus -n 1' " nice -n 18'
-
 " Highlight todo and log
 syn match elmTodo contained /Debug.\(todo\|log\)\s\+"[^"]*"/
 hi def link elmTodo Todo
