@@ -40,7 +40,7 @@ Plug 'itchyny/lightline.vim'
 
 " Programming:
   Plug 'majutsushi/tagbar'
-  Plug 'bitterjug/vim-easytags'
+" Plug 'bitterjug/vim-easytags'
   Plug 'w0rp/ale'
   Plug 'maximbaz/lightline-ale'
   Plug 'thirtythreeforty/lessspace.vim'

@@ -32,7 +32,7 @@ fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
 fresh vim/lightline.vim --file=~/.config/nvim/lightline.vim
 
 # Do all the bin files into ~/bin at once, mwahaha
-fresh bin/* --bin
+fresh 'bin/*' --bin
 
 # Bash scripts
 fresh 'bash/*'
