@@ -49,6 +49,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'pseewald/vim-anyfold'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'terryma/vim-expand-region'
 
 " Haskell:
 "  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
@@ -63,7 +64,8 @@ Plug 'itchyny/lightline.vim'
   Plug 'diepm/vim-rest-console', { 'for': 'rest' }
 
 " Javascript:
-  Plug 'jelera/vim-javascript-syntax'
+  "Plug 'jelera/vim-javascript-syntax'
+  Plug 'pangloss/vim-javascript'
 
 " Purescript:
   Plug 'purescript-contrib/purescript-vim'
