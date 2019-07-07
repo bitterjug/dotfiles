@@ -20,11 +20,13 @@ Plug 'itchyny/lightline.vim'
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 
-" Filetyles:
+" Filetypes:
 " Plug 'tpope/vim-markdown'
 " Restructured text
   Plug 'Rykka/riv.vim', { 'for': 'rst' }
 "  Plug 'suan/vim-instant-markdown' -- doesn't work
+"  Nix
+  Plug 'LnL7/vim-nix'
 
 " Nerdtree:
   Plug 'scrooloose/nerdtree'
@@ -46,11 +48,13 @@ Plug 'itchyny/lightline.vim'
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'pseewald/vim-anyfold'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'antew/vim-elm-language-server'
 
 " Haskell:
 "  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
 "  Plug 'parsonsmatt/intero-neovim' -- cool, uses the repl
   Plug 'autozimu/LanguageClient-neovim', {
+    \ 'for': 'haskell',
     \ 'branch': 'next',
     \ 'do': './install.sh'
     \ }
@@ -94,7 +98,7 @@ Plug 'itchyny/lightline.vim'
 
 " Colorschemes:
 "  Plug 'bitterjug/vim-colors-bitterjug'
-  Plug '~/workspace/vim-colors-bitterjug'
+  Plug '~/workspace/vim/vim-colors-bitterjug'
   Plug 'bitterjug/vim-colors-freyr'
   Plug 'chriskempson/base16-vim'
   Plug 'jnurmine/Zenburn'

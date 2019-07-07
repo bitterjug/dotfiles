@@ -25,3 +25,8 @@ setxkbmap -option 'caps:ctrl_modifier'
 
 # Then use xcape (if installed) to make control taps function as escape
 xcape -e '#66=Escape'
+
+# set nix envidonment variables
+if [ -f "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then
+	.  "$HOME/.nix-profile/etc/profile.d/nix.sh"
+fi
