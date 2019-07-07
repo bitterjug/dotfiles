@@ -16,3 +16,5 @@ nmap <silent> <Leader>l <Plug>(ale_lint)
 nmap <silent> <Leader>j <Plug>(ale_next_wrap)
 nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
 nmap <silent> <Leader>f <Plug>(ale_fix)
+
+let g:ale_elm_ls_use_global = 1

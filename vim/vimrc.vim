@@ -1,3 +1,4 @@
+set nomodeline
 "" NeoBundle boot
   filetype off
   let iCanHazNeoBundle=1
