@@ -10,10 +10,10 @@ let g:mwMaxMatchPriority = 100
 
 " Re-bind N and n to search among marks
 " falling back to the last search if not on a mark
-  nmap n <Plug>MarkSearchNext
-  nmap N <Plug>MarkSearchPrev
+  nmap , <Plug>MarkSearchNext
+  nmap <Leader>, <Plug>MarkSearchPrev
 
 " Clear all mark information
-  nmap <Leader>N <Plug>MarkConfirmAllClear
+  nmap <Leader>N <Plug>MarkAllClear
 
 " See /after/plugin/mark.vim for custom palette

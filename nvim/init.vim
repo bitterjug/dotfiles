@@ -35,11 +35,14 @@ Plug 'itchyny/lightline.vim'
 " Tmxu navigator has to come after NERDTree to override navigation
   Plug 'bitterjug/vim-tmux-navigator'
 
+" Search:
+"  Plug 'wincent/ferret' -- seems to add not much more than esearch
+  Plug 'yssl/QFEnter' " make it easier to use quickfix
+  Plug 'tpope/vim-unimpaired'
 
 " Programming:
-"  Plug 'benekastah/neomake' -- used to show inline errors for Haskell intero
   Plug 'majutsushi/tagbar'
-  Plug 'bitterjug/vim-easytags'
+" Plug 'bitterjug/vim-easytags'
   Plug 'w0rp/ale'
   Plug 'maximbaz/lightline-ale'
   Plug 'thirtythreeforty/lessspace.vim'
@@ -49,6 +52,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'pseewald/vim-anyfold'
   Plug 'scrooloose/nerdcommenter'
   Plug 'antew/vim-elm-language-server'
+  Plug 'terryma/vim-expand-region'
 
 " Haskell:
 "  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
@@ -64,7 +68,8 @@ Plug 'itchyny/lightline.vim'
   Plug 'diepm/vim-rest-console', { 'for': 'rest' }
 
 " Javascript:
-  Plug 'jelera/vim-javascript-syntax'
+  "Plug 'jelera/vim-javascript-syntax'
+  Plug 'pangloss/vim-javascript'
 
 " Purescript:
   Plug 'purescript-contrib/purescript-vim'
@@ -110,7 +115,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-" fzf
+" Fzf
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
   Plug 'junegunn/fzf.vim'
   Plug 'tweekmonster/fzf-filemru'
@@ -122,6 +127,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'idanarye/vim-merginal'
   Plug 'rhysd/conflict-marker.vim'
+  Plug 'whiteinge/diffconflicts'
 
 " Highlighting (load last to override earlier settings):
   Plug 'gerw/vim-HiLinkTrace'
@@ -129,8 +135,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'inkarkat/vim-ingo-library'
   Plug 'inkarkat/vim-mark'
 
-" Required for searchhighlignting"
-"  Plug 'vim-scripts/ingo-library'
+" Requires ingo-library
 "  Plug 'inkarkat/vim-SearchHighlighting' -- disabled to investigate  'inkarkat/vim-mark'
 
 "  Plug 'jaxbot/semantic-highlight.vim'

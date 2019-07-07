@@ -5,7 +5,8 @@ sudo apt -y update
 # Get fresh working
 sudo apt -y install \
 	git \
-	curl
+	curl \
+	bash -c "`curl -sL https://get.freshshell.com`"
 
 # Essentials
 sudo apt -y install \
@@ -18,10 +19,12 @@ sudo apt -y install \
   xclip
 
 
+
 # Applications
 sudo apt -y install \
   keepassxc \
-  nautilus-dropbox
+  nautilus-dropbox \
+  ripgrep
 
 
 # Now at last...
