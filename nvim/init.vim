@@ -43,7 +43,6 @@ Plug 'itchyny/lightline.vim'
 " Programming:
   Plug 'majutsushi/tagbar'
 " Plug 'bitterjug/vim-easytags'
-  Plug 'w0rp/ale'
   Plug 'maximbaz/lightline-ale'
   Plug 'thirtythreeforty/lessspace.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
@@ -53,6 +52,10 @@ Plug 'itchyny/lightline.vim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'antew/vim-elm-language-server'
   Plug 'terryma/vim-expand-region'
+" Try out coc 
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Temporarily disable ALE to not interfeer with COC
+"  Plug 'w0rp/ale'
 
 " Haskell:
 "  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
