@@ -1,5 +1,5 @@
 			
-  noremap gD <Plug>(coc-definition)
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Jump to next diagnostic position.
 "  noremap <Leader>j <Plug>(coc-diagnostic-next)
@@ -8,10 +8,10 @@
 "fix
   noremap <Leader>f <Plug>(coc-fix-current)
 
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gd <Plug>(coc-definition)
-set foldmethod=manual
+" go to definition
+  nmap <silent> gr <Plug>(coc-references)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gd <Plug>(coc-definition)
 
  " Use <TAB> to select the popup menu:, enter to confirm
   inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
