@@ -10,14 +10,14 @@ Plug 'itchyny/lightline.vim'
 
 " Editing:
   Plug 'vim-scripts/surround.vim'
-  Plug 'ervandew/supertab'
+  " Plug 'ervandew/supertab'
   " Plug 'neitanod/vim-clevertab'
 
   " Required for NCM2
   " Plug 'roxma/nvim-yarp'
   " Plug 'ncm2/ncm2'
 
-  Plug 'SirVer/ultisnips'
+"  Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 
 " Filetypes:
@@ -54,8 +54,8 @@ Plug 'itchyny/lightline.vim'
   Plug 'terryma/vim-expand-region'
 " Try out coc 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Temporarily disable ALE to not interfeer with COC
-"  Plug 'w0rp/ale'
+" USe ale to show diagnostics from coc?
+  Plug 'w0rp/ale'
 
 " Haskell:
 "  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(

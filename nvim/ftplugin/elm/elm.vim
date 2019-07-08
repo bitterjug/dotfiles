@@ -129,4 +129,4 @@ endfunction
 let b:ale_command_wrapper = 'flock -n /tmp/lockfile.elm -c %@'
 
 " Use elm-format
-" let b:ale_fix_on_save = 1
+ let b:ale_fix_on_save = 1
