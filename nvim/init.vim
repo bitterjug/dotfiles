@@ -82,8 +82,8 @@ Plug 'itchyny/lightline.vim'
 
 " Elixir:
   Plug 'elixir-lang/vim-elixir'
-  Plug 'thinca/vim-ref'
-  Plug 'slashmili/alchemist.vim'
+  Plug 'thinca/vim-ref', { 'for': 'elixir' }
+  Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 " disabled because of problems editing my test files
 "  Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
 
