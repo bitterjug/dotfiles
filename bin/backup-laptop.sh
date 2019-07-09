@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FROM=/home/$USER 
+FROM=/home/$USER
 DEST_MOUNT=/media/$USER/backup-[0-9]
 
 echo -e "\nBackup $USER's home directory to USB backup disk\n"
@@ -39,6 +39,7 @@ rsync --archive --partial --progress --verbose \
     --exclude tmp/ \
     --exclude .wine/ \
     --exclude .cache/ \
+    --exclude .stack/ \
     --exclude .dropbox/command_socket \
     --exclude .dropbox/iface_socket \
     --exclude .ssh/control/ \
@@ -47,6 +48,7 @@ rsync --archive --partial --progress --verbose \
     --exclude .VirtualBox \
     --exclude .ve/ \
     --exclude .ubuntuone/ \
+    --exclude Documents/ipod/ \
     $FROM $TO
 
 # now record the last backup date

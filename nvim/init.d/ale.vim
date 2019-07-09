@@ -1,4 +1,5 @@
-" let g:ale_fixers = { 'elm': ['elm-format'] }
+  let g:ale_fixers = { 'elm': ['elm-format'] }
+  let g:ale_linters = {'elm': []}
 
   let g:ale_sign_error = '✖'
   let g:ale_sign_warning = ''
@@ -15,6 +16,9 @@
   nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
   nmap <silent> <Leader>f <Plug>(ale_fix)
 
+
+" elm
+"  let g:ale_elm_ls_use_global = 1
 
 " Text
   let g:ale_writegood_options = '--yes-eprime'

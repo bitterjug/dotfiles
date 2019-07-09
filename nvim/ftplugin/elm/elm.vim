@@ -1,5 +1,5 @@
 " Elm
-  let g:elm_format_autosave = 1
+"  let g:elm_format_autosave = 1
 
 "
   set tabstop=4
@@ -129,5 +129,4 @@ endfunction
 let b:ale_command_wrapper = 'flock -n /tmp/lockfile.elm -c %@'
 
 " Use elm-format
-let g:ale_fixers.elm = [ 'elm-format' ]
-let b:ale_fix_on_save = 1
+ let b:ale_fix_on_save = 1
