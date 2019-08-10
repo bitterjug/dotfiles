@@ -11,12 +11,13 @@ Plug 'itchyny/lightline.vim'
 " Editing:
   Plug 'vim-scripts/surround.vim'
   Plug 'ervandew/supertab'
-  " Plug 'neitanod/vim-clevertab'
+  
+" Completion:
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+endif
 
-  " Required for NCM2
-  " Plug 'roxma/nvim-yarp'
-  " Plug 'ncm2/ncm2'
-
+" Snippets:
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 
