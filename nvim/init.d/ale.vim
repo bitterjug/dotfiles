@@ -1,5 +1,6 @@
 " let g:ale_fixers = { 'elm': ['elm-format'] }
-
+"
+  let g:ale_linters = { 'elm': ['elm_ls'] }
   let g:ale_sign_error = '✖'
   let g:ale_sign_warning = ''
   let g:ale_lint_on_save = 1
