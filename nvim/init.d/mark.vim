@@ -16,4 +16,11 @@ let g:mwMaxMatchPriority = 100
 " Clear all mark information
   nmap <Leader>N <Plug>MarkAllClear
 
+
+" If you don't want the * and # mappings remember the last search type and
+" instead always search for the next occurrence of the current mark, with a
+" fallback to Vim's original * command, use: 
+  nmap * <Plug>MarkSearchOrCurNext
+  nmap # <Plug>MarkSearchOrCurPrev
+
 " See /after/plugin/mark.vim for custom palette
