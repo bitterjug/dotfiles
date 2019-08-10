@@ -11,6 +11,11 @@
 
 
   nmap <silent> <Leader>d <Plug>(ale_detail)
+
+  nmap <silent> <Leader>g <Plug>(ale_go_to_definition)
+  nmap <silent> <Leader>v <Plug>(ale_go_to_definition_in_vsplit)
+  nmap <silent> <Leader>s <Plug>(ale_go_to_definition_in_split)
+  nmap <silent> <Leader>i <Plug>(ale_hover)
   nmap <silent> <Leader>l <Plug>(ale_lint)
   nmap <silent> <Leader>j <Plug>(ale_next_wrap)
   nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
