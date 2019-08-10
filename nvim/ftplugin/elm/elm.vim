@@ -24,7 +24,6 @@
   nmap <c-e>d <Plug>(elm-error-detail)
   nmap <c-e>b <Plug>(elm-browse-docs)
   nmap <c-e>s <Plug>(elm-show-docs)
-  nmap <c-e>f :ElmFormat<enter>
 
 " Search for the word under the cursor as
 " -- a type definition
