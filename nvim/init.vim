@@ -105,8 +105,8 @@ Plug 'itchyny/lightline.vim'
   Plug 'dbeniamine/todo.txt-vim'
 
 " Colorschemes:
-"  Plug 'bitterjug/vim-colors-bitterjug'
-  Plug '~/workspace/vim/vim-colors-bitterjug'
+  Plug 'bitterjug/vim-colors-bitterjug'
+"  Plug '~/workspace/vim/vim-colors-bitterjug'
   Plug 'bitterjug/vim-colors-freyr'
   Plug 'chriskempson/base16-vim'
   Plug 'jnurmine/Zenburn'
