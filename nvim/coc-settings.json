@@ -13,8 +13,8 @@
       ],
       "initializationOptions": {
         "runtime": "node",
-        "elmPath": "elm",
-        "elmFormatPath": "elm-format",
+        "elmPath": "/home/skipperm/Documents/code/work/aric-ui-client/node_modules/.bin/elm",
+        "elmFormatPath": "/home/skipperm/Documents/code/work/aric-ui-client/node_modules/.bin/elm-format",
         "elmTestPath": "elm-test"
       }
     }
