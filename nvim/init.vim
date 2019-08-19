@@ -43,6 +43,7 @@ Plug 'itchyny/lightline.vim'
 " Programming:
   Plug 'majutsushi/tagbar'
 " Plug 'bitterjug/vim-easytags'
+  Plug 'dense-analysis/ale'
   Plug 'maximbaz/lightline-ale'
   Plug 'thirtythreeforty/lessspace.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
@@ -54,8 +55,6 @@ Plug 'itchyny/lightline.vim'
   Plug 'terryma/vim-expand-region'
 " Try out coc 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" USe ale to show diagnostics from coc?
-  Plug 'w0rp/ale'
 
 " Haskell:
 "  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
@@ -80,12 +79,12 @@ Plug 'itchyny/lightline.vim'
   Plug 'vim-syntastic/syntastic', { 'for': 'purescript' }
 
 " Elm:
-  Plug 'elmcast/elm-vim'
-  Plug '~/workspace/vim-tagbar-ctags-elm'
+  Plug 'elmcast/elm-vim', { 'for': 'elm' }
+"  Plug '~/workspace/vim-tagbar-ctags-elm'
   Plug 'tweekmonster/braceless.vim', { 'for': 'elm' }
 
 " Python:
-  Plug 'davidhalter/jedi-vim', { 'for': 'py' }
+  Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 " Elixir:
   Plug 'elixir-lang/vim-elixir'
