@@ -1,5 +1,11 @@
-  let g:ale_fixers = { 'elm': ['elm-format'] }
-  let g:ale_linters = {'elm': []}
+  let g:ale_fixers = { 
+   \ 'elm': ['elm-format'],
+   \ 'javascript': ['eslint']
+   \ }
+  let g:ale_linters = {
+    \ 'elm': [],
+    \ 'javascript': ['eslint']
+    \ }
 
   let g:ale_sign_error = '✖'
   let g:ale_sign_warning = ''
