@@ -5,7 +5,7 @@ let g:lightline = {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'readonly', 'fugitive', 'filename' ],
       \             [ 'linter_checking', 'linter_ok', 'linter_warnings', 'linter_errors' ] ],
-      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'],
+      \   'right': [ [  'lineinfo' ], ['percent'],
       \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'component_function': {
@@ -139,15 +139,6 @@ function! TagbarStatusFunc(current, sort, fname, ...) abort
   return lightline#statusline(0)
 endfunction
 
-augroup AutoSyntastic
-  autocmd!
-  autocmd BufWritePost *.c,*.cpp call s:syntastic()
-augroup END
-
-function! s:syntastic()
-  SyntasticCheck
-  call lightline#update()
-endfunction
 
 let g:lightline#ale#indicator_checking = '  '
 let g:lightline#ale#indicator_warnings = '  '

@@ -1,5 +1,3 @@
-			
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Jump to next diagnostic position.
 "  noremap <Leader>j <Plug>(coc-diagnostic-next)
@@ -16,7 +14,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
  " Use <TAB> to select the popup menu:, enter to confirm
   inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
   inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
 "                          \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
