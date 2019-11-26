@@ -3,7 +3,7 @@
    \ 'javascript': ['eslint']
    \ }
   let g:ale_linters = {
-    \ 'elm': [],
+    \ 'elm': ['make'],
     \ 'javascript': ['eslint']
     \ }
 

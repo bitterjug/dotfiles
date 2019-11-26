@@ -49,20 +49,23 @@ Plug 'itchyny/lightline.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
   Plug 'jeetsukumaran/vim-indentwise'
   Plug 'michaeljsmith/vim-indent-object'
+  Plug 'nathanaelkane/vim-indent-guides'
   Plug 'pseewald/vim-anyfold'
   Plug 'scrooloose/nerdcommenter'
   Plug 'antew/vim-elm-language-server'
   Plug 'terryma/vim-expand-region'
 " Try out coc 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"  Plug 'easymotion/vim-easymotion'
+  Plug 'justinmk/vim-sneak'
 
 " Haskell:
 "  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
 "  Plug 'parsonsmatt/intero-neovim' -- cool, uses the repl
   Plug 'autozimu/LanguageClient-neovim', {
-    \ 'for': 'haskell',
+    \ 'for': 'javascript',
     \ 'branch': 'next',
-    \ 'do': './install.sh'
+    \ 'do': 'bash install.sh'
     \ }
 
 " Rest and Json:
@@ -124,12 +127,16 @@ Plug 'itchyny/lightline.vim'
 
 " Git:
   Plug 'tpope/vim-fugitive'
+  Plug 'sodapopcan/vim-twiggy'
   Plug 'tpope/vim-dispatch'
-  Plug 'gregsexton/gitv'
+"  Plug 'gregsexton/gitv' 
+"  Try gv in place of gitv
+  Plug 'junegunn/gv.vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'idanarye/vim-merginal'
   Plug 'rhysd/conflict-marker.vim'
-  Plug 'whiteinge/diffconflicts'
+"  Plug 'whiteinge/diffconflicts'
+  Plug 'samoshkin/vim-mergetool'
 
 " Highlighting (load last to override earlier settings):
   Plug 'gerw/vim-HiLinkTrace'
