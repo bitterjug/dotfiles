@@ -129,14 +129,23 @@ Plug 'itchyny/lightline.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'sodapopcan/vim-twiggy'
   Plug 'tpope/vim-dispatch'
+
 "  Plug 'gregsexton/gitv' 
 "  Try gv in place of gitv
   Plug 'junegunn/gv.vim'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'idanarye/vim-merginal'
+
+"  Plug 'idanarye/vim-merginal'
   Plug 'rhysd/conflict-marker.vim'
+
 "  Plug 'whiteinge/diffconflicts'
   Plug 'samoshkin/vim-mergetool'
+
+" Plug 'airblade/vim-gitgutter'
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
 
 " Highlighting (load last to override earlier settings):
   Plug 'gerw/vim-HiLinkTrace'

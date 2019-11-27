@@ -2,8 +2,8 @@
 set updatetime=100
 
 " Bindings
-  nmap [c <Plug>(GitGutterPrevHunk)
-  nmap ]c <Plug>(GitGutterNextHunk)
+"  nmap [c <Plug>(GitGutterPrevHunk)
+"  nmap ]c <Plug>(GitGutterNextHunk)
 
 " let g:gitgutter_sign_added              = '┃'
   let g:gitgutter_sign_added              = '│'
