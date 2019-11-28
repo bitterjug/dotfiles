@@ -10,14 +10,14 @@ Plug 'itchyny/lightline.vim'
 
 " Editing:
   Plug 'vim-scripts/surround.vim'
-  Plug 'ervandew/supertab'
+  " Plug 'ervandew/supertab'
   " Plug 'neitanod/vim-clevertab'
 
   " Required for NCM2
   " Plug 'roxma/nvim-yarp'
   " Plug 'ncm2/ncm2'
 
-  Plug 'SirVer/ultisnips'
+"  Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 
 " Filetypes:
@@ -49,18 +49,23 @@ Plug 'itchyny/lightline.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
   Plug 'jeetsukumaran/vim-indentwise'
   Plug 'michaeljsmith/vim-indent-object'
+  Plug 'nathanaelkane/vim-indent-guides'
   Plug 'pseewald/vim-anyfold'
   Plug 'scrooloose/nerdcommenter'
   Plug 'antew/vim-elm-language-server'
   Plug 'terryma/vim-expand-region'
+" Try out coc 
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"  Plug 'easymotion/vim-easymotion'
+  Plug 'justinmk/vim-sneak'
 
 " Haskell:
 "  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
 "  Plug 'parsonsmatt/intero-neovim' -- cool, uses the repl
   Plug 'autozimu/LanguageClient-neovim', {
-    \ 'for': 'haskell',
+    \ 'for': 'javascript',
     \ 'branch': 'next',
-    \ 'do': './install.sh'
+    \ 'do': 'bash install.sh'
     \ }
 
 " Rest and Json:
@@ -77,17 +82,17 @@ Plug 'itchyny/lightline.vim'
   Plug 'vim-syntastic/syntastic', { 'for': 'purescript' }
 
 " Elm:
-  Plug 'elmcast/elm-vim'
-  Plug '~/workspace/vim-tagbar-ctags-elm'
+  Plug 'elmcast/elm-vim', { 'for': 'elm' }
+"  Plug '~/workspace/vim-tagbar-ctags-elm'
   Plug 'tweekmonster/braceless.vim', { 'for': 'elm' }
 
 " Python:
-  Plug 'davidhalter/jedi-vim', { 'for': 'py' }
+  Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 " Elixir:
   Plug 'elixir-lang/vim-elixir'
-  Plug 'thinca/vim-ref'
-  Plug 'slashmili/alchemist.vim'
+  Plug 'thinca/vim-ref', { 'for': 'elixir' }
+  Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 " disabled because of problems editing my test files
 "  Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
 
@@ -102,8 +107,8 @@ Plug 'itchyny/lightline.vim'
   Plug 'dbeniamine/todo.txt-vim'
 
 " Colorschemes:
-"  Plug 'bitterjug/vim-colors-bitterjug'
-  Plug '~/workspace/vim/vim-colors-bitterjug'
+  Plug 'bitterjug/vim-colors-bitterjug'
+"  Plug '~/workspace/vim/vim-colors-bitterjug'
   Plug 'bitterjug/vim-colors-freyr'
   Plug 'chriskempson/base16-vim'
   Plug 'jnurmine/Zenburn'
@@ -122,12 +127,25 @@ Plug 'itchyny/lightline.vim'
 
 " Git:
   Plug 'tpope/vim-fugitive'
+  Plug 'sodapopcan/vim-twiggy'
   Plug 'tpope/vim-dispatch'
-  Plug 'gregsexton/gitv'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'idanarye/vim-merginal'
+
+"  Plug 'gregsexton/gitv' 
+"  Try gv in place of gitv
+  Plug 'junegunn/gv.vim'
+
+"  Plug 'idanarye/vim-merginal'
   Plug 'rhysd/conflict-marker.vim'
-  Plug 'whiteinge/diffconflicts'
+
+"  Plug 'whiteinge/diffconflicts'
+  Plug 'samoshkin/vim-mergetool'
+
+" Plug 'airblade/vim-gitgutter'
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
 
 " Highlighting (load last to override earlier settings):
   Plug 'gerw/vim-HiLinkTrace'

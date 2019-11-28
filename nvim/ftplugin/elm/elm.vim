@@ -1,5 +1,5 @@
 " Elm
-  let g:elm_format_autosave = 1
+"  let g:elm_format_autosave = 1
 
 "
   set tabstop=4
@@ -19,11 +19,12 @@
 " Prevent elm-vim from blathering <leader>M for mark
   let g:elm_setup_keybindings = 0
   let g:elm_syntastic_show_warnings = 1
-  nmap <c-e>m <Plug>(elm-make)
-  nmap <c-e><c-m> <Plug>(elm-make)
-  nmap <c-e>d <Plug>(elm-error-detail)
-  nmap <c-e>b <Plug>(elm-browse-docs)
-  nmap <c-e>s <Plug>(elm-show-docs)
+"  nmap <c-e>m <Plug>(elm-make)
+"  nmap <c-e><c-m> <Plug>(elm-make)
+"  nmap <c-e>d <Plug>(elm-error-detail)
+"  nmap <c-e>b <Plug>(elm-browse-docs)
+"  nmap <c-e>s <Plug>(elm-show-docs)
+"  nmap <c-e>f :ElmFormat<enter>
 
 " Search for the word under the cursor as
 " -- a type definition
@@ -128,5 +129,4 @@ endfunction
 let b:ale_command_wrapper = 'flock -n /tmp/lockfile.elm -c %@'
 
 " Use elm-format
-let g:ale_fixers.elm = [ 'elm-format' ]
-let b:ale_fix_on_save = 1
+ let b:ale_fix_on_save = 1

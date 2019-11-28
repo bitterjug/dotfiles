@@ -37,4 +37,7 @@ hi def link elmTodo Todo
 
 hi link elmNiceOperator Operator
 hi! link Conceal Operator
+
 setlocal conceallevel=2
+
+hi ALEWarningLine guibg=none

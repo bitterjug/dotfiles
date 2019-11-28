@@ -28,6 +28,7 @@ fresh nvim/init.vim --file=~/.config/nvim/init.vim
 fresh nvim/init.d --file=~/.config/nvim/init.d/
 fresh nvim/after --file=~/.config/nvim/after/
 fresh nvim/ftplugin --file=~/.config/nvim/ftplugin/
+fresh nvim/coc-settings.json --file=~/.config/nvim/coc-settings.json
 fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
 fresh vim/lightline.vim --file=~/.config/nvim/lightline.vim
 
