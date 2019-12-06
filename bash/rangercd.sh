@@ -41,7 +41,7 @@ lfcd () {
     fi
 }
 
-if command -v lf; then
+if command -v lf > /dev/null ; then
   # Use lf if available
   bind '"\C-o":"lfcd\C-m"'  # bash
 else
