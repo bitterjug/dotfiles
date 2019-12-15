@@ -10,8 +10,8 @@ let g:mwMaxMatchPriority = 100
 
 " Re-bind N and n to search among marks
 " falling back to the last search if not on a mark
-  nmap , <Plug>MarkSearchNext
-  nmap <Leader>, <Plug>MarkSearchPrev
+" nmap , <Plug>MarkSearchNext
+" nmap <Leader>, <Plug>MarkSearchPrev
 
 " Clear all mark information
   nmap <Leader>N <Plug>MarkAllClear
