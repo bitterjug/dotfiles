@@ -1,12 +1,11 @@
-dotfiles
-========
+# dotfiles
 
-My dot files are managed by fresh.
+I use fresh to manage  my dotfiles.
 
-- install [fresh] (http://freshshell.com/)
+- install [fresh](http://freshshell.com/)
 
 - link `freshrc`  to `~/.freshrc`
 
-- Source ~/.fresh/build/shell.sh from bashrc
+- Source ~/.fresh/build/shell.sh from `bashrc`
 
 - go
