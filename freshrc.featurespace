@@ -23,7 +23,10 @@ fresh ranger/rifle.conf --file=~/.config/ranger/rifle.conf
 fresh ranger/scope.sh --bin=~/.config/ranger/scope.sh
 fresh ranger/colorschemes --file=~/.config/ranger/colorschemes/
 
-# NeoVim Experiment
+# LF
+fresh lf/lfrc --file=~/.config/lf/lfrc
+
+# NeoVim 
 fresh nvim/init.vim --file=~/.config/nvim/init.vim
 fresh nvim/init.d --file=~/.config/nvim/init.d/
 fresh nvim/after --file=~/.config/nvim/after/

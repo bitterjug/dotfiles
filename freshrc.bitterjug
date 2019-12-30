@@ -15,13 +15,16 @@ fresh freshshell/fresh bin/fresh --bin
 fresh config/* --file
 
 # Freemind config (could also add the custom icons here maybe)
-fresh freemind/user.properties --file=~/.freemind/user.properties
+# fresh freemind/user.properties --file=~/.freemind/user.properties
 
 # Ranger
 fresh ranger/rc.conf --file=~/.config/ranger/rc.conf
 fresh ranger/rifle.conf --file=~/.config/ranger/rifle.conf
 fresh ranger/scope.sh --bin=~/.config/ranger/scope.sh
 fresh ranger/colorschemes --file=~/.config/ranger/colorschemes/
+
+# LF
+fresh lf/lfrc --file=~/.config/lf/lfrc
 
 # NeoVim 
 fresh nvim/init.vim --file=~/.config/nvim/init.vim
@@ -39,7 +42,7 @@ fresh 'bin/*' --bin
 fresh 'bash/*'
 
 # vimperator
-fresh vimperator/colors --file=~/.vimperator/colors/
+# fresh vimperator/colors --file=~/.vimperator/colors/
 
 # Use note.sh from the vim-notebook repo
 fresh bitterjug/vim-notebook bin/note.sh --bin
@@ -53,6 +56,7 @@ fresh liquidprompt/liquidpromptrc --file=~/.config/liquidpromptrc
 
 # FZF extras (mainly to get fco)
 fresh atweiden/fzf-extras fzf-extras.sh
+
 
 fresh profile --file
 
