@@ -56,17 +56,20 @@ Plug 'itchyny/lightline.vim'
   Plug 'terryma/vim-expand-region'
 " Try out coc 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"  Plug 'easymotion/vim-easymotion'
-  Plug 'justinmk/vim-sneak'
+  Plug 'easymotion/vim-easymotion'
+"  Plug 'justinmk/vim-sneak'
 
 " Haskell:
 "  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
 "  Plug 'parsonsmatt/intero-neovim' -- cool, uses the repl
-  Plug 'autozimu/LanguageClient-neovim', {
-    \ 'for': 'javascript',
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh'
-    \ }
+"  Plug 'autozimu/LanguageClient-neovim', {
+"    \ 'for': 'javascript',
+"    \ 'branch': 'next',
+"    \ 'do': 'bash install.sh'
+"    \ }
+  Plug 'neovimhaskell/haskell-vim'
+  Plug 'alx741/vim-hindent'
+  Plug 'monkoose/fzf-hoogle.vim'
 
 " Rest and Json:
   Plug 'elzr/vim-json'
@@ -87,7 +90,8 @@ Plug 'itchyny/lightline.vim'
   Plug 'tweekmonster/braceless.vim', { 'for': 'elm' }
 
 " Python:
-  Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+" If I write python now I will probnably want to set up coc 
+"  Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 " Elixir:
   Plug 'elixir-lang/vim-elixir'
