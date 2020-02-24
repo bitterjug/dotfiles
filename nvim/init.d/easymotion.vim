@@ -8,8 +8,9 @@ omap f <Plug>(easymotion-s2)
 " To
 nmap t <Plug>(easymotion-bd-t2)
 
-" Fancy search
-nmap <Leader>/ <Plug>(easymotion-sn)
+" Fancy search alt /
+nmap <a-/> <Plug>(easymotion-sn)
+
 " s<a><b> search for ab
 "  map <leader>s <Plug>(easymotion-s2)
 
