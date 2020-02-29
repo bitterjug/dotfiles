@@ -28,6 +28,9 @@ function ranger-cd
 #     bindkey -s '^o' 'lfcd\n'  # zsh
 #
 lfcd () {
+    # update - mark to $OLDPWD
+    marks=$HOME/.local/share/lf/marks
+    sed -i -e "/^['-]:/d" -e "\$a-:${OLDPWD}\n':${PWD}" $marks
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
     if [ -f "$tmp" ]; then

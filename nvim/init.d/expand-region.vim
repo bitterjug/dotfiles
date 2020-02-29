@@ -1,6 +1,7 @@
 
-    map , <Plug>(expand_region_shrink)
-    map ; <Plug>(expand_region_expand)
+    map - <Plug>(expand_region_shrink)
+    map + <Plug>(expand_region_expand)
+    map = <Plug>(expand_region_expand)
 
     " Extend the global default (NOTE: Remove comments in dictionary before sourcing)
     call expand_region#custom_text_objects({

@@ -2,20 +2,21 @@
   "languageserver": {
     "elmLS": {
       "command": "elm-language-server",
-      "args": [
-        "--stdio"
-      ],
       "filetypes": [
         "elm"
       ],
       "rootPatterns": [
         "elm.json"
       ],
+      "trace.server": "verbose",
       "initializationOptions": {
         "elmAnalyseTrigger": "save" 
       }
     }
   },
+  "codeLens.enable": true,
+  "diagnostic.displayByAle": true,
+  "coc.preferences.jumpCommand": "drop",
   "suggest.completionItemKindLabels": {
     "keyword": "",
     "variable": "",
@@ -42,7 +43,5 @@
     "snippet": "",
     "typeParameter": "",
     "default": ""
-  },
-  "diagnostic.displayByAle": true,
-  "coc.preferences.jumpCommand": "drop"
+  }
 }

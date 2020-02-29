@@ -49,10 +49,10 @@ Plug 'itchyny/lightline.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
   Plug 'jeetsukumaran/vim-indentwise'
   Plug 'michaeljsmith/vim-indent-object'
-  Plug 'nathanaelkane/vim-indent-guides'
+"  Plug 'nathanaelkane/vim-indent-guides'
   Plug 'pseewald/vim-anyfold'
   Plug 'scrooloose/nerdcommenter'
-  Plug 'antew/vim-elm-language-server'
+"  Plug 'antew/vim-elm-language-server'
   Plug 'terryma/vim-expand-region'
 " Try out coc 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
