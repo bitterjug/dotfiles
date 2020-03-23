@@ -16,6 +16,7 @@
   },
   "codeLens.enable": true,
   "diagnostic.displayByAle": true,
+  "coc.preferences.formatOnSaveFiletypes": [ "elm" ],
   "coc.preferences.jumpCommand": "drop",
   "suggest.completionItemKindLabels": {
     "keyword": "",
