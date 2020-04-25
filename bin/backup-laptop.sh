@@ -36,18 +36,11 @@ echo -e "Backup from $FROM to $TO \n"
 rsync --archive --partial --progress --verbose \
     --delete --one-file-system \
     --exclude Music/ \
+    --exclude Downloads/ \
     --exclude tmp/ \
-    --exclude .wine/ \
-    --exclude .cache/ \
-    --exclude .stack/ \
-    --exclude .dropbox/command_socket \
-    --exclude .dropbox/iface_socket \
-    --exclude .ssh/control/ \
-    --exclude .vagrant.d/boxes/ \
-    --exclude .virtualenvs \
-    --exclude .VirtualBox \
-    --exclude .ve/ \
-    --exclude .ubuntuone/ \
+    --exclude go/ \
+    --exclude snap/ \
+    --exclude ".*" \
     --exclude Documents/ipod/ \
     $FROM $TO
 
