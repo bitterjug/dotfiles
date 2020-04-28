@@ -1,3 +1,4 @@
+  let g:FerretMap=0
 " Vim Plug - load plugins
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -6,7 +7,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'itchyny/lightline.vim'
+  Plug 'itchyny/lightline.vim'
 
 " Editing:
   Plug 'vim-scripts/surround.vim'
@@ -19,6 +20,9 @@ Plug 'itchyny/lightline.vim'
 
 "  Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
+
+" Show marks in sign column
+  Plug 'kshenoy/vim-signature'
 
 " Filetypes:
 " Plug 'tpope/vim-markdown'
@@ -36,7 +40,7 @@ Plug 'itchyny/lightline.vim'
   Plug 'bitterjug/vim-tmux-navigator'
 
 " Search:
-"  Plug 'wincent/ferret' -- seems to add not much more than esearch
+  Plug 'wincent/ferret' " seems to add not much more than esearch
   Plug 'yssl/QFEnter' " make it easier to use quickfix
   Plug 'tpope/vim-unimpaired'
 
@@ -51,12 +55,16 @@ Plug 'itchyny/lightline.vim'
   Plug 'michaeljsmith/vim-indent-object'
 "  Plug 'nathanaelkane/vim-indent-guides'
   Plug 'pseewald/vim-anyfold'
+  Plug 'konfekt/foldtext'
   Plug 'scrooloose/nerdcommenter'
 "  Plug 'antew/vim-elm-language-server'
   Plug 'terryma/vim-expand-region'
-" Try out coc 
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'easymotion/vim-easymotion'
+" Try out coc 
+  let g:coc_global_extensions = ['coc-explorer']
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'antoinemadec/coc-fzf'
+
 "  Plug 'justinmk/vim-sneak'
 
 " Haskell:
