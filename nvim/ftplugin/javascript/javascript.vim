@@ -5,4 +5,4 @@
 " Call language server menu
   nnoremap <C-e>e :call LanguageClient_contextMenu()<CR>
 
-  IndentGuidesEnable
+"  IndentGuidesEnable
