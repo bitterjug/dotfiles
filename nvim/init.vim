@@ -6,7 +6,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'itchyny/lightline.vim'
+  Plug 'itchyny/lightline.vim'
 
 " Editing:
   Plug 'vim-scripts/surround.vim'
@@ -54,10 +54,11 @@ Plug 'itchyny/lightline.vim'
   Plug 'scrooloose/nerdcommenter'
 "  Plug 'antew/vim-elm-language-server'
   Plug 'terryma/vim-expand-region'
-" Try out coc 
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'easymotion/vim-easymotion'
-"  Plug 'justinmk/vim-sneak'
+
+" Try out coc 
+  let g:coc_global_extensions = ['coc-explorer']
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Haskell:
 "  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
