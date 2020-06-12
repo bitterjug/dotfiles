@@ -45,3 +45,14 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.8 } }
 
 nnoremap <leader>o :CocFzfList outline<cr>
 inoremap <c-x> <plug>(fzf-complete-line)
+
+" noremap <silent> <Tab> :CocCommand explorer --quit-on-open --position floating  --reveal % <cr>
+
+" function text object
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
+
+" Instead of nerd tree
+noremap <silent> <Tab> :CocCommand explorer --quit-on-open<cr>

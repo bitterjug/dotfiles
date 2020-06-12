@@ -8,6 +8,7 @@ endif
 
 call plug#begin()
   Plug 'itchyny/lightline.vim'
+  Plug 'yuttie/comfortable-motion.vim'
 
 " Editing:
   Plug 'vim-scripts/surround.vim'
@@ -40,6 +41,7 @@ call plug#begin()
   Plug 'bitterjug/vim-tmux-navigator'
 
 " Search:
+  Plug 'brooth/far.vim'
   Plug 'wincent/ferret' " seems to add not much more than esearch
   Plug 'yssl/QFEnter' " make it easier to use quickfix
   Plug 'tpope/vim-unimpaired'
@@ -53,6 +55,8 @@ call plug#begin()
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
   Plug 'jeetsukumaran/vim-indentwise'
   Plug 'michaeljsmith/vim-indent-object'
+  Plug 'kana/vim-textobj-user' 
+  Plug 'kana/vim-textobj-line'
 "  Plug 'nathanaelkane/vim-indent-guides'
   Plug 'pseewald/vim-anyfold'
   Plug 'konfekt/foldtext'

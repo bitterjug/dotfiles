@@ -45,11 +45,11 @@
     "default": ""
   },
   "explorer": {
+    "file.child.template": "[git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticWarning & 1][diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5][size]",
+    "file.column.git.icon.modified": "",
     "icon.enableNerdfont": true,
-    "icon.enableVimDevicons": true,
+    "icon.enableVimDevicons": false,
     "keyMappings": {
-      "i": "unmap", 
-
       "k": "nodePrev",
       "j": "nodeNext",
       "gk": "expandablePrev",
@@ -58,8 +58,9 @@
       "*": "toggleSelection",
       "<tab>": "actionMenu",
 
-      "h": "collapse",
-      "l": ["expandable?", "expand", "open"],
+      "h": ["collapseRecursive",  "expand" ],
+      "H": "gotoParent",
+      "l": ["expandable?", "expandOrCollapse", "open"],
       "J": ["toggleSelection", "nodeNext"],
       "K": ["toggleSelection", "nodePrev"],
       "gl": "expandRecursive",
@@ -67,9 +68,9 @@
       "o": "expandOrCollapse",
       "<cr>": ["expandable?", "cd", "open"],
       "e": "open",
-      "s": "open:split",
+      "i": "open:split",
       "S": "open:split:plain",
-      "E": "open:vsplit",
+      "s": "open:vsplit",
       "t": "open:tab",
       "<bs>": "gotoParent",
       "gp": "preview:labeling",
@@ -87,7 +88,7 @@
       "r": "rename",
 
       ".": "toggleHidden",
-      "R": "refresh",
+      "<c-r>": "refresh",
 
       "?": "help",
       "q": "quit",

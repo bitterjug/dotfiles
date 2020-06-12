@@ -50,7 +50,8 @@
 " a,<esc> add a comma
 " :w<cr> save  file to run elm format
 " `x return to mark x
-  noremap <c-e>x mxyawgg/(<cr>pa,<esc>:w<cr>`x
+" Remove mark x
+  noremap <c-e>x mxyawgg/(<cr>pa,<esc>:w<cr>`xm-
 
 "  Would be good if could combine with the following (maybe this should be
 "  done with tags)
