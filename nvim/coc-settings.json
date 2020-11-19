@@ -46,72 +46,93 @@
   },
   "explorer": {
     "file.child.template": "[git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticWarning & 1][diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5][size]",
-    "file.column.git.icon.modified": "",
     "icon.enableNerdfont": true,
     "icon.enableVimDevicons": false,
+    "git": {
+      "icon": {
+        "status": {
+          "modified": "+",
+          "mixed": "±",
+          "deleted": "﫧",
+          "untracked": "",
+          "ignored": "",
+          "conflicted": "≇"
+        },
+        "rootStatus": {
+          "modified": "+",
+          "deleted": "﫧",
+          "mixed": "±",
+          "untracked": "",
+          "ignored": "",
+          "conflicted": "≇"
+        }
+     }
+    },
     "keyMappings": {
-      "k": "nodePrev",
-      "j": "nodeNext",
-      "gk": "expandablePrev",
-      "gj": "expandableNext",
+      "global": {
+        "k": "nodePrev",
+        "j": "nodeNext",
+        "gk": "expandablePrev",
+        "gj": "expandableNext",
 
-      "*": "toggleSelection",
-      "<tab>": "actionMenu",
+        "*": "toggleSelection",
+        "<tab>": "actionMenu",
 
-      "h": ["collapseRecursive",  "expand" ],
-      "H": "gotoParent",
-      "l": ["expandable?", "expandOrCollapse", "open"],
-      "J": ["toggleSelection", "nodeNext"],
-      "K": ["toggleSelection", "nodePrev"],
-      "gl": "expandRecursive",
-      "gh": "collapseRecursive",
-      "o": "expandOrCollapse",
-      "<cr>": ["expandable?", "cd", "open"],
-      "e": "open",
-      "i": "open:split",
-      "S": "open:split:plain",
-      "s": "open:vsplit",
-      "t": "open:tab",
-      "<bs>": "gotoParent",
-      "gp": "preview:labeling",
+        "h": ["collapseRecursive",  "expand" ],
+        "H": "gotoParent",
+        "l": ["expandable?", ["expanded?", "collapse", "expand"] , "open"],
+        "J": ["toggleSelection", "nodeNext"],
+        "K": ["toggleSelection", "nodePrev"],
+        "gl": "expandRecursive",
+        "gh": "collapseRecursive",
+        "o": "expandOrCollapse",
+        "<cr>": ["expandable?", "cd", "open"],
+        "e": "open",
+        "i": "open:split",
+        "S": "open:split:plain",
+        "s": "open:vsplit",
+        "t": "open:tab",
+        "<bs>": "gotoParent",
+        "gp": "preview:labeling",
 
-      "y": "copyFilepath",
-      "Y": "copyFilename",
-      "c": "copyFile",
-      "x": "cutFile",
-      "p": "pasteFile",
-      "d": "delete",
-      "D": "deleteForever",
+        "y": "copyFilepath",
+        "Y": "copyFilename",
+        "c": "copyFile",
+        "x": "cutFile",
+        "p": "pasteFile",
+        "d": "delete",
+        "D": "deleteForever",
 
-      "a": "addFile",
-      "A": "addDirectory",
-      "r": "rename",
+        "a": "addFile",
+        "A": "addDirectory",
+        "r": "rename",
 
-      ".": "toggleHidden",
-      "<c-r>": "refresh",
+        ".": "toggleHidden",
+        "<c-r>": "refresh",
 
-      "?": "help",
-      "q": "quit",
-      "<esc>": "esc",
-      "X": "systemExecute",
-      "gd": "listDrive",
+        "?": "help",
+        "q": "quit",
+        "<esc>": "esc",
+        "X": "systemExecute",
+        "gd": "listDrive",
 
-      "f": "search",
-      "F": "searchRecursive",
+        "f": "search",
+        "F": "searchRecursive",
 
-      "gf": "gotoSource:file",
-      "gb": "gotoSource:buffer",
+        "gf": "gotoSource:file",
+        "gb": "gotoSource:buffer",
 
-      "[[": "sourcePrev",
-      "]]": "sourceNext",
+        "[[": "sourcePrev",
+        "]]": "sourceNext",
 
-      "[d": "diagnosticPrev",
-      "]d": "diagnosticNext",
+        "[d": "diagnosticPrev",
+        "]d": "diagnosticNext",
 
-      "[c": "gitPrev",
-      "]c": "gitNext",
-      "<<": "gitStage",
-      ">>": "gitUnstage"
+        "[c": "gitPrev",
+        "]c": "gitNext",
+        "<<": "gitStage",
+        ">>": "gitUnstage"
+      }
     }
   }
 }

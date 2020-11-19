@@ -32,6 +32,9 @@ endfunction
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" Fold command
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
@@ -40,19 +43,14 @@ omap af <Plug>(coc-funcobj-a)
 
 " Coc-fzf
 " Floating layuout
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.8 } }
-
+" let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.8 } }
+let g:fzf_layout = { 'down': '~40%' }
 
 nnoremap <leader>o :CocFzfList outline<cr>
-inoremap <c-x> <plug>(fzf-complete-line)
+" inoremap <c-x> <plug>(fzf-complete-line)
 
 " noremap <silent> <Tab> :CocCommand explorer --quit-on-open --position floating  --reveal % <cr>
 
-" function text object
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-
 " Instead of nerd tree
 noremap <silent> <Tab> :CocCommand explorer --quit-on-open<cr>
+

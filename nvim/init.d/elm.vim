@@ -5,6 +5,3 @@
 
 " Disable format on save -- try via lsp
   let g:elm_format_autosave = 0
-
-"set manual fold 
-  set foldmethod=manual

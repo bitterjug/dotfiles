@@ -2,7 +2,6 @@
    \ 'elm': [],
    \ 'javascript': ['eslint']
    \ }
- " 'elm': ['elm-format'],
  
   let g:ale_linters = {
     \ 'elm': [],

@@ -121,9 +121,6 @@ endfunction
   onoremap <silent> [L :call NextIndent(1, 0, 1, 1)<CR>
   onoremap <silent> ]L :call NextIndent(1, 1, 1, 1)<CR>
 
-" Control [] jump up and down to lines with the same indentation
-  " map <c-[> [l
-  map <buffer> <c-]> ]l
 
 
 " lock elm compiler before running
@@ -131,3 +128,19 @@ let b:ale_command_wrapper = 'flock -n /tmp/lockfile.elm -c %@'
 
 " Use elm-format
  let b:ale_fix_on_save = 1
+
+"  Compile Elm in Neoterm, over on the right
+"
+
+let g:neoterm_size=80
+function Compile()
+  vertical botright Topen
+  Tclear
+  Texec med
+endfunction
+nnoremap <c-e>c :call Compile()<cr>
+
+nnoremap <c-e>t :Ttoggle<cr>
+
+"set manual fold 
+  set foldmethod=manual

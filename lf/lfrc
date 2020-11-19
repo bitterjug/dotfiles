@@ -1,3 +1,4 @@
+set icons
 # interpreter for shell commands (needs to be POSIX compatible)
 set shell sh
 
