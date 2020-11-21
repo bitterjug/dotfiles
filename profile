@@ -30,3 +30,6 @@ xcape -e '#66=Escape'
 if [ -f "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then
 	.  "$HOME/.nix-profile/etc/profile.d/nix.sh"
 fi
+
+#use Kvantum
+export QT_STYLE_OVERRIDE=kvantum
