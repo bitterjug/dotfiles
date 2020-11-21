@@ -29,6 +29,7 @@ call plug#begin()
   Plug 'LnL7/vim-nix'
 
 " Nerdtree:
+  Plug 'cespare/vim-toml'
   Plug 'scrooloose/nerdtree'
   Plug 'vim-scripts/vim-nerdtree_plugin_open'
   Plug 'eugen0329/vim-esearch' " In place of vim-ack and nerdtree-ack
