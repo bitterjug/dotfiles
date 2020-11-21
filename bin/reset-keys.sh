@@ -22,3 +22,5 @@ gsettings set org.gnome.desktop.wm.keybindings close  "['<Alt>F4', '<Super>q']"
 
 gsettings set org.gnome.mutter.keybindings toggle-tiled-left  "['<Super>Left', '<Super><Shift>h']"
 gsettings set org.gnome.mutter.keybindings toggle-tiled-right  "['<Super>Right', '<Super><Shift>l']"
+
+gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
