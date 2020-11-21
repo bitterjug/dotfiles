@@ -11,10 +11,12 @@ nmap t <Plug>(easymotion-bd-t2)
 " Fancy search alt /
 nmap <a-/> <Plug>(easymotion-sn)
 
-
-" s<a><b> search for ab
-"  map <leader>s <Plug>(easymotion-s2)
-
-"<space><space>w search for words, etc
-"  map <Space><Space> <Plug>(easymotion-prefix)
-"  vmap <Space><Space> <Plug>(easymotion-prefix)
+"hi EasyMotionTarget ctermbg=none ctermfg=green
+"hi EasyMotionShade  ctermbg=none ctermfg=blue
+"
+"hi EasyMotionTarget2First ctermbg=none ctermfg=red
+"hi EasyMotionTarget2Second ctermbg=none ctermfg=lightred
+"
+"hi EasyMotionMoveHL ctermbg=green ctermfg=black
+"hi EasyMotionIncSearch ctermbg=green ctermfg=black
+"

@@ -6,7 +6,7 @@
     " hi link LongLines SpellLocal
     " match LongLines '\%>79v.\+' 
     " Not not matching long lines in elm aat the moment
-    set number
+    set nonumber
     set nowrap
     let &tabstop=a:indent
     let &shiftwidth=a:indent

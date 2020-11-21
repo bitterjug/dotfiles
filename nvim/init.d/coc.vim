@@ -15,8 +15,7 @@
   inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
   inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
-"                          \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+ inoremap <silent><expr> <c-cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -33,8 +32,25 @@ endfunction
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" Fold command
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
+
+" Coc-fzf
+" Floating layuout
+" let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.8 } }
+let g:fzf_layout = { 'down': '~40%' }
+
+nnoremap <leader>o :CocFzfList outline<cr>
+" inoremap <c-x> <plug>(fzf-complete-line)
+
+" noremap <silent> <Tab> :CocCommand explorer --quit-on-open --position floating  --reveal % <cr>
+
+" Instead of nerd tree
+noremap <silent> <Tab> :CocCommand explorer --quit-on-open<cr>
+

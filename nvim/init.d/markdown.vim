@@ -11,5 +11,7 @@ let g:markdown_fenced_languages = [
     \ 'python', 
     \ 'sass', 
     \ 'xml', 
-    \ 'html'
+    \ 'html',
+    \ 'bash=sh'
   \ ]
+

@@ -1,9 +1,10 @@
   let g:ale_fixers = { 
-   \ 'elm': ['elm-format'],
+   \ 'elm': [],
    \ 'javascript': ['eslint']
    \ }
+ 
   let g:ale_linters = {
-    \ 'elm': ['make'],
+    \ 'elm': [],
     \ 'javascript': ['eslint']
     \ }
 

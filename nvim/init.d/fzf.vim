@@ -1,8 +1,8 @@
 " Make FZF's Files comand work like ctrl-p
 "  noremap <c-p> :GFiles<cr>
   nnoremap <c-p> :ProjectMru --tiebreak=index<cr>
-  " noremap <c-b> :Buffers<cr>
-  noremap <c-b> :History<cr>
+  noremap <c-b> :Buffers<cr>
+"  noremap <c-b> :History<cr>
   noremap <Leader>p :History<cr>
 
 " leader-t list tags starting with word under cursor
@@ -30,3 +30,9 @@ inoremap <expr> <c-x><c-l> fzf#vim#complete(fzf#wrap({
   \ 'options': '--ansi --delimiter : --nth 3..',
   \ 'reducer': { lines -> join(split(lines[0], ':\zs')[2:], '') }}
   \))
+
+"Search for word under cursor
+noremap <Leader>a :Rg<space><c-r><c-w><cr>
+
+"Search for visual selection using 'v' buffer
+vnoremap <Leader>a "vy:Rg<space><c-r>v<cr>

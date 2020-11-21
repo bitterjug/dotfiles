@@ -7,8 +7,8 @@ let g:NERDTreeMinimalUI=1
 let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeHijackNetrw=1
 " Open NERDTree in the directory of the current file (or /home if no file is open)
-nmap <silent> <C-i> :call NERDTreeToggleInCurDir()<cr>
-nmap <silent> <Leader><Tab> :call NERDTreeToggleInCurDir()<cr>
+" nmap <silent> <C-i> :call NERDTreeToggleInCurDir()<cr>
+" nmap <silent> <Leader><Tab> :call NERDTreeToggleInCurDir()<cr>
 function! NERDTreeToggleInCurDir()
 " If NERDTree is open in the current buffer
   if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)

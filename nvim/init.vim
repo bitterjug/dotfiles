@@ -1,3 +1,4 @@
+  let g:FerretMap=0
 " Vim Plug - load plugins
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -6,7 +7,10 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+  Plug 'junegunn/vim-peekaboo'
+  Plug 'aklt/plantuml-syntax'
   Plug 'itchyny/lightline.vim'
+  Plug 'yuttie/comfortable-motion.vim'
 
 " Editing:
   Plug 'vim-scripts/surround.vim'
@@ -17,11 +21,15 @@ call plug#begin()
   " Plug 'roxma/nvim-yarp'
   " Plug 'ncm2/ncm2'
 
-"  Plug 'SirVer/ultisnips'
+  " Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 
+" Show marks in sign column
+  Plug 'kshenoy/vim-signature'
+
 " Filetypes:
-" Plug 'tpope/vim-markdown'
+  Plug 'tpope/vim-markdown'
+  Plug 'vim-voom/VOom'
 " Restructured text
   Plug 'Rykka/riv.vim', { 'for': 'rst' }
 "  Plug 'suan/vim-instant-markdown' -- doesn't work
@@ -37,11 +45,14 @@ call plug#begin()
   Plug 'bitterjug/vim-tmux-navigator'
 
 " Search:
-"  Plug 'wincent/ferret' -- seems to add not much more than esearch
+  Plug 'brooth/far.vim'
+  Plug 'wincent/ferret' " seems to add not much more than esearch
   Plug 'yssl/QFEnter' " make it easier to use quickfix
   Plug 'tpope/vim-unimpaired'
 
 " Programming:
+  Plug 'luochen1990/rainbow'
+  Plug 'kassio/neoterm'
   Plug 'majutsushi/tagbar'
 " Plug 'bitterjug/vim-easytags'
   Plug 'dense-analysis/ale'
@@ -50,16 +61,21 @@ call plug#begin()
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
   Plug 'jeetsukumaran/vim-indentwise'
   Plug 'michaeljsmith/vim-indent-object'
+  Plug 'kana/vim-textobj-user' 
+  Plug 'kana/vim-textobj-line'
 "  Plug 'nathanaelkane/vim-indent-guides'
   Plug 'pseewald/vim-anyfold'
+  Plug 'konfekt/foldtext'
   Plug 'scrooloose/nerdcommenter'
 "  Plug 'antew/vim-elm-language-server'
   Plug 'terryma/vim-expand-region'
   Plug 'easymotion/vim-easymotion'
-
 " Try out coc 
-  let g:coc_global_extensions = ['coc-explorer']
+  let g:coc_global_extensions = ['coc-explorer', 'coc-bookmark', 'coc-markdownlint']
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'antoinemadec/coc-fzf'
+
+"  Plug 'justinmk/vim-sneak'
 
 " Haskell:
 "  Plug 'bitc/vim-hdevtools' -- relies on ghc-mod :(
@@ -132,6 +148,7 @@ call plug#begin()
   Plug 'tweekmonster/fzf-filemru'
 
 " Git:
+  Plug 'stsewd/fzf-checkout.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'sodapopcan/vim-twiggy'
   Plug 'tpope/vim-dispatch'
