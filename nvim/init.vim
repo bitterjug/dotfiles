@@ -86,8 +86,8 @@ call plug#begin()
 "    \ 'do': 'bash install.sh'
 "    \ }
   Plug 'neovimhaskell/haskell-vim'
-  Plug 'alx741/vim-hindent'
   Plug 'monkoose/fzf-hoogle.vim'
+"  Plug 'alx741/vim-hindent'
 
 " Rest and Json:
   Plug 'elzr/vim-json'
@@ -124,7 +124,7 @@ call plug#begin()
 " Notes:
 "  Plug 'xolox/vim-notes'
   Plug 'xolox/vim-misc'
-  Plug 'vimwiki/vimwiki'
+ " Plug 'vimwiki/vimwiki'
   Plug 'alok/notational-fzf-vim'
   Plug 'dbeniamine/todo.txt-vim'
 
