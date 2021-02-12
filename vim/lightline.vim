@@ -1,6 +1,6 @@
 
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
       \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
@@ -30,11 +30,11 @@ let g:lightline = {
   \ }
 
 function MyPercent()
-    return &ft =~? 'vimfiler' ? '' : (100 * line('.') / line('$')) . '%'
+  return  &filetype =~ '\v(help|coc-explorer)' ?  '' :(100 * line('.') / line('$')) . '%' 
 endfunction
 
 function MyLineInfo()
-    return &ft =~? 'vimfiler' ? '' : line('.').':'.col('.')
+  return  &filetype !~# '\v(help|coc-explorer)' ?  line('.').':'.col('.') : ''
 endfunction
 
 function! MyModified()
@@ -54,7 +54,8 @@ function! MyFilename()
   let fname = expand('%:t')
   return fname == 'ControlP' ? g:lightline.ctrlp_item :
         \ fname == '__Tagbar__' ? g:lightline.fname :
-        \ fname =~ '__Gundo\|NERD_tree' ? '' :
+        \ fname =~ '\[coc-explorer\]' ? '' :
+        \ &ft == 'coc-explorer' ? '' :
         \ &ft == 'vimfiler' ? MyVimFilerStatus():
         \ &ft == 'unite' ? unite#get_status_string() :
         \ &ft == 'vimshell' ? vimshell#get_status_string() :
