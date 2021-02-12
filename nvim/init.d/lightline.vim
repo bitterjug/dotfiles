@@ -4,11 +4,16 @@ let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'readonly', 'fugitive', 'filename' ],
-      \             [ 'linter_checking', 'linter_ok', 'linter_warnings', 'linter_errors' ] ],
-      \   'right': [ [  'lineinfo' ], ['percent'],
-      \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \             [ 'linter_checking', 'linter_ok', 'linter_warnings', 'linter_errors', 'coc_errors' ],
+      \             [ 'status' ]
+      \           ],
+      \   'right': [ [ 'lineinfo' ], 
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype' ] 
+      \            ]
       \ },
       \ 'component_function': {
+      \   'readonly': 'MyReadonly',
       \   'fugitive': 'MyFugitive',
       \   'filename': 'MyFilename',
       \   'fileformat': 'MyFileformat',
@@ -22,15 +27,27 @@ let g:lightline = {
       \    'percent': 0,
       \ },
       \ 'component_expand': {
-      \  'linter_checking': 'lightline#ale#checking',
-      \  'linter_warnings': 'lightline#ale#warnings',
-      \  'linter_errors': 'lightline#ale#errors',
-      \  'linter_ok': 'lightline#ale#ok'
+      \   'linter_checking': 'lightline#ale#checking',
+      \   'linter_warnings': 'lightline#ale#warnings',
+      \   'linter_errors': 'lightline#ale#errors',
+      \   'linter_ok': 'lightline#ale#ok',
+      \   'coc_warnings': 'lightline#coc#warnings',
+      \   'coc_errors': 'lightline#coc#errors',
+      \   'coc_info': 'lightline#coc#info',
+      \   'coc_hints': 'lightline#coc#hints',
+      \   'coc_ok': 'lightline#coc#ok',
+      \   'status': 'lightline#coc#status',
       \ },
       \ 'component_type': {
-      \   'readonly': 'error',
       \   'linter_warnings': 'warning',
       \   'linter_errors': 'error',
+      \   'linter_ok': 'info',
+      \   'readonly': 'error',
+      \   'coc_warnings': 'warning',
+      \   'coc_errors': 'error',
+      \   'coc_info': 'info',
+      \   'coc_hints': 'hints',
+      \   'coc_ok': 'left',
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
@@ -45,11 +62,11 @@ let g:lightline = {
 " \ 'subseparator': { 'left': '', 'right': '' }
 "
 function MyVFPercent()
-    return &ft =~? 'nerdtree' ? '' : (100 * line('.') / line('$')) . '%'
+    return &ft =~? 'coc-explorer' ? '' : (100 * line('.') / line('$')) . '%'
 endfunction
 
 function MyVFLineInfo()
-    return &ft =~? 'nerdtree' ? '' : line('.').':'.col('.')
+    return &ft =~? 'coc-explorer' ? '' : line('.').':'.col('.')
 endfunction
 
 function! MyModified()
@@ -62,7 +79,7 @@ function! MyTabModified(n) abort
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help' && &readonly ? '' : ''
+  return &ft !~? 'help|coc-explorer' && &readonly ? '' : ''
 endfunction
 " 
 
@@ -77,7 +94,8 @@ function! MyFilename()
   let fullname =  expand('%:p:~:.')
   return fname == 'ControlP' ? g:lightline.ctrlp_item :
         \ fname == '__Tagbar__' ? g:lightline.fname :
-        \ fname =~ '__Gundo\|NERD_tree' ? '' :
+        \ fname =~ '__Gundo' ? '' :
+        \ fname =~ 'coc-explorer' ? 'coc-explorer' :
         \ &ft == 'vimfiler' ? MyVimFilerStatus():
         \ &ft == 'unite' ? unite#get_status_string() :
         \ &ft == 'vimshell' ? vimshell#get_status_string() :
@@ -149,7 +167,7 @@ let g:lightline#ale#indicator_ok = '  '
 " Show status line when only one window
 set laststatus=2
 " Update after running the linter
-autocmd User ALELint call lightline#update()
+" autocmd User ALELint call lightline#update()
 
 
 
