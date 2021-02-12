@@ -1,5 +1,5 @@
   let g:ale_fixers = { 
-   \ 'elm': [],
+   \ 'elm': ['elm-format'],
    \ 'javascript': ['eslint']
    \ }
  
