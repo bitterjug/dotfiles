@@ -46,7 +46,8 @@ omap af <Plug>(coc-funcobj-a)
 " let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.8 } }
 let g:fzf_layout = { 'down': '~40%' }
 
-nnoremap <leader>o :CocFzfList outline<cr>
+nnoremap <leader>ol :CocFzfList outline<cr>
+nnoremap <leader>oa :CocAction<cr>
 " inoremap <c-x> <plug>(fzf-complete-line)
 
 " noremap <silent> <Tab> :CocCommand explorer --quit-on-open --position floating  --reveal % <cr>
