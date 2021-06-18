@@ -71,7 +71,7 @@ call plug#begin()
   Plug 'terryma/vim-expand-region'
   Plug 'easymotion/vim-easymotion'
 " Try out coc 
-  let g:coc_global_extensions = ['coc-explorer', 'coc-bookmark', 'coc-markdownlint']
+  let g:coc_global_extensions = ['coc-explorer', 'coc-markdownlint']
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'antoinemadec/coc-fzf'
 
@@ -103,7 +103,7 @@ call plug#begin()
   Plug 'vim-syntastic/syntastic', { 'for': 'purescript' }
 
 " Elm:
-  Plug 'elmcast/elm-vim', { 'for': 'elm' }
+  " Plug 'elmcast/elm-vim', { 'for': 'elm' }
 "  Plug '~/workspace/vim-tagbar-ctags-elm'
   Plug 'tweekmonster/braceless.vim', { 'for': 'elm' }
 
@@ -148,6 +148,7 @@ call plug#begin()
   Plug 'tweekmonster/fzf-filemru'
 
 " Git:
+  Plug 'lambdalisue/gina.vim'
   Plug 'stsewd/fzf-checkout.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'sodapopcan/vim-twiggy'
