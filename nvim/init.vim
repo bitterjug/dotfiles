@@ -11,6 +11,7 @@ call plug#begin()
   Plug 'aklt/plantuml-syntax'
   Plug 'itchyny/lightline.vim'
   Plug 'yuttie/comfortable-motion.vim'
+"  Plug 'karb94/neoscroll.nvim'
 
 " Editing:
   Plug 'vim-scripts/surround.vim'
@@ -69,7 +70,10 @@ call plug#begin()
   Plug 'scrooloose/nerdcommenter'
 "  Plug 'antew/vim-elm-language-server'
   Plug 'terryma/vim-expand-region'
-  Plug 'easymotion/vim-easymotion'
+"  Plug 'easymotion/vim-easymotion'
+"
+"  "Try out hop
+  Plug 'phaazon/hop.nvim'
 " Try out coc 
   let g:coc_global_extensions = ['coc-explorer', 'coc-markdownlint']
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -184,4 +188,3 @@ endif
 call plug#end()
 
 runtime! init.d/*.vim
-

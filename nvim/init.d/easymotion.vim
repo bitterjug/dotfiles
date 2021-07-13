@@ -1,16 +1,16 @@
 
 
-" Find
-nmap f <Plug>(easymotion-overwin-f2)
-xmap f <Plug>(easymotion-s2)
-omap f <Plug>(easymotion-s2)
-
-" To
-nmap t <Plug>(easymotion-bd-t2)
-
-" Fancy search alt /
-nmap <a-/> <Plug>(easymotion-sn)
-
+" " Find
+" nmap f <Plug>(easymotion-overwin-f2)
+" xmap f <Plug>(easymotion-s2)
+" omap f <Plug>(easymotion-s2)
+" 
+" " To
+" nmap t <Plug>(easymotion-bd-t2)
+" 
+" " Fancy search alt /
+" nmap <a-/> <Plug>(easymotion-sn)
+" 
 "hi EasyMotionTarget ctermbg=none ctermfg=green
 "hi EasyMotionShade  ctermbg=none ctermfg=blue
 "
