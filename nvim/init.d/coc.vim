@@ -52,5 +52,5 @@ nnoremap <leader>o :CocFzfList outline<cr>
 " noremap <silent> <Tab> :CocCommand explorer --quit-on-open --position floating  --reveal % <cr>
 
 " Instead of nerd tree
-noremap <silent> <Tab> :CocCommand explorer --quit-on-open<cr>
+noremap <silent> - :CocCommand explorer --quit-on-open<cr>
 
