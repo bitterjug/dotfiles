@@ -10,6 +10,7 @@ call plug#begin()
   Plug 'junegunn/vim-peekaboo'
   Plug 'aklt/plantuml-syntax'
   Plug 'yuttie/comfortable-motion.vim'
+  " could https://github.com/karb94/neoscroll.nvim replace comfortable motion?
   Plug 'brtastic/vim-jsonviewer'
 
   "Lightline
@@ -62,6 +63,7 @@ call plug#begin()
   Plug 'tpope/vim-unimpaired'
 
 " Programming:
+  Plug 'uiiaoo/java-syntax.vim'
   " Plug 'luochen1990/rainbow'
   Plug 'junegunn/rainbow_parentheses.vim'
   Plug 'kassio/neoterm'
@@ -79,7 +81,10 @@ call plug#begin()
   Plug 'konfekt/foldtext'
   Plug 'scrooloose/nerdcommenter'
   Plug 'terryma/vim-expand-region'
-  Plug 'easymotion/vim-easymotion'
+  " Plug 'easymotion/vim-easymotion'
+  " lightspeed Gave rise to bugs
+  " Plug 'ggandor/lightspeed.nvim'
+  Plug 'phaazon/hop.nvim'
 "  Plug 'antew/vim-elm-language-server'
 " Try out coc 
   let g:coc_global_extensions = ['coc-explorer', 'coc-markdownlint']

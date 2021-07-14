@@ -46,8 +46,10 @@
   },
   "explorer": {
     "file.child.template": "[git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticWarning & 1][diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5][size]",
-    "icon.enableNerdfont": true,
-    "icon.enableVimDevicons": false,
+    "icon": {
+      "enableNerdfont": true,
+      "enableVimDevicons": false
+    },
     "git": {
       "icon": {
         "status": {
