@@ -9,9 +9,16 @@ endif
 call plug#begin()
   Plug 'junegunn/vim-peekaboo'
   Plug 'aklt/plantuml-syntax'
-  Plug 'itchyny/lightline.vim'
   Plug 'yuttie/comfortable-motion.vim'
-"  Plug 'karb94/neoscroll.nvim'
+  Plug 'brtastic/vim-jsonviewer'
+
+  "Lightline
+  Plug 'maximbaz/lightline-ale'
+  Plug 'josa42/vim-lightline-coc'
+  Plug 'itchyny/lightline.vim'
+
+" Jq:
+  Plug 'bfrg/vim-jq'
 
 " Editing:
   Plug 'vim-scripts/surround.vim'
@@ -46,18 +53,20 @@ call plug#begin()
   Plug 'bitterjug/vim-tmux-navigator'
 
 " Search:
-  Plug 'brooth/far.vim'
-  Plug 'wincent/ferret' " seems to add not much more than esearch
+  " Remove far  and ferret in favour of CocSearch
+  " Plug 'brooth/far.vim'
+  " Plug 'wincent/ferret' " seems to add not much more than esearch
+  Plug 'eugen0329/vim-esearch' " In place of vim-ack and nerdtree-ack
   Plug 'yssl/QFEnter' " make it easier to use quickfix
   Plug 'tpope/vim-unimpaired'
 
 " Programming:
-  Plug 'luochen1990/rainbow'
+  " Plug 'luochen1990/rainbow'
+  Plug 'junegunn/rainbow_parentheses.vim'
   Plug 'kassio/neoterm'
   Plug 'majutsushi/tagbar'
 " Plug 'bitterjug/vim-easytags'
   Plug 'dense-analysis/ale'
-  Plug 'maximbaz/lightline-ale'
   Plug 'thirtythreeforty/lessspace.vim'
   Plug 'Rykka/colorv.vim', { 'for': 'vim' }
   Plug 'jeetsukumaran/vim-indentwise'
@@ -68,11 +77,7 @@ call plug#begin()
   Plug 'pseewald/vim-anyfold'
   Plug 'konfekt/foldtext'
   Plug 'scrooloose/nerdcommenter'
-"  Plug 'antew/vim-elm-language-server'
   Plug 'terryma/vim-expand-region'
-"  Plug 'easymotion/vim-easymotion'
-"
-"  "Try out hop
   Plug 'phaazon/hop.nvim'
 " Try out coc 
   let g:coc_global_extensions = ['coc-explorer', 'coc-markdownlint']
@@ -91,7 +96,8 @@ call plug#begin()
 "    \ }
   Plug 'neovimhaskell/haskell-vim'
   Plug 'monkoose/fzf-hoogle.vim'
-"  Plug 'alx741/vim-hindent'
+  Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+  Plug 'alx741/vim-hindent', { 'for': 'haskell' }
 
 " Rest and Json:
   Plug 'elzr/vim-json'
@@ -102,8 +108,8 @@ call plug#begin()
   Plug 'pangloss/vim-javascript'
 
 " Purescript:
-  Plug 'purescript-contrib/purescript-vim'
-  Plug 'FrigoEU/psc-ide-vim'
+  Plug 'purescript-contrib/purescript-vim', { 'for': 'purescript' }
+  Plug 'FrigoEU/psc-ide-vim', { 'for': 'purescript' }
   Plug 'vim-syntastic/syntastic', { 'for': 'purescript' }
 
 " Elm:
@@ -136,15 +142,14 @@ call plug#begin()
   Plug 'bitterjug/vim-colors-bitterjug'
 "  Plug '~/workspace/vim/vim-colors-bitterjug'
   Plug 'bitterjug/vim-colors-freyr'
-  Plug 'chriskempson/base16-vim'
-  Plug 'jnurmine/Zenburn'
-  Plug 'morhetz/gruvbox'
-  Plug 'mhinz/vim-janah'
+"  Plug 'chriskempson/base16-vim'
+"  Plug 'jnurmine/Zenburn'
+"  Plug 'morhetz/gruvbox'
+"  Plug 'mhinz/vim-janah'
 
 " Tools:
   Plug 'jlanzarotta/bufexplorer'
   Plug 'ryanoasis/vim-devicons'
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Fzf
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
