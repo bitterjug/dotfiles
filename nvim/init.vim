@@ -188,3 +188,6 @@ endif
 call plug#end()
 
 runtime! init.d/*.vim
+
+" set guifont=JetBrainsMono\ Nerd\ Font\ Mono
+set guifont=Hasklug\ Nerd\ Font
