@@ -1,4 +1,4 @@
-lua require('hop').setup()
+
 
 " Find
 "nmap f <Plug>(easymotion-overwin-f2)
