@@ -40,6 +40,7 @@
 "  [=\|]\s... type constructor
 " Should also add custom type constructors and import as or import
   noremap <c-e>/ /\(^type .*\<<c-r><c-w>\>.*\_s\s*=\\|^\s*<c-r><c-w>\>.*=$\\|as \<<c-r><c-w>\>\\|exposing\_s\+([^)]*\<<c-r><c-w>\>\\|^\s\+[=\|]\s\<<c-r><c-w>\>\)<enter>zz
+  noremap ge /\(^type .*\<<c-r><c-w>\>.*\_s\s*=\\|^\s*<c-r><c-w>\>.*=$\\|as \<<c-r><c-w>\>\\|exposing\_s\+([^)]*\<<c-r><c-w>\>\\|^\s\+[=\|]\s\<<c-r><c-w>\>\)<enter>zz
 
 "Add the word under the cursor to the export list
 " mx mark x
