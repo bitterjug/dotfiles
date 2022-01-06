@@ -131,6 +131,9 @@ call plug#begin()
 " Docker:
   Plug 'ekalinin/Dockerfile.vim'
 
+" Arduino: (for Keyboardio)
+  Plug 'sudar/vim-arduino-syntax'
+
 " Notes:
 "  Plug 'xolox/vim-notes'
   Plug 'xolox/vim-misc'
