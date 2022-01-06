@@ -6,6 +6,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
   fn.system({'git', 'clone', '--depth=1', 'https://github.com/savq/paq-nvim.git', install_path})
 end
 
+-- Paq
+
 require "paq" {
   "savq/paq-nvim";                  -- Let Paq manage itself
   "karb94/neoscroll.nvim";
@@ -25,6 +27,23 @@ require "paq" {
 
 
 vim.cmd('PaqInstall')
+
+-- Local helpers
+
+function map(mode, shortcut, command)
+  vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
+end
+
+function nmap(shortcut, command)
+  map('n', shortcut, command)
+end
+
+function imap(shortcut, command)
+  map('i', shortcut, command)
+end
+
+-- Colorscheme
+
 vim.cmd('colorschem jitterbug')
 
 -- neoscroll
@@ -62,6 +81,8 @@ local neogit = require 'neogit'
 neogit.setup {}
 
 --  telescope
+
+nmap("<c-p>", "<cmd>Telescope find_files<cr>")
 
 require('telescope').setup{
   defaults = {
