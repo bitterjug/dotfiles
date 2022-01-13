@@ -24,6 +24,7 @@ sudo apt -y install \
 sudo apt -y install \
   keepassxc \
   nautilus-dropbox \
+  fd-find\
   ripgrep
 
 
