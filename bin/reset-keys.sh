@@ -13,8 +13,8 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Shift>
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Primary><Alt><Super>l']"
 
-gsettings set org.gnome.desktop.wm.keybindings cycle-windows "['<Super>j', '<Super>l']"
-gsettings set org.gnome.desktop.wm.keybindings cycle-windows-backward "['<Super>k', '<Super>h']"
+gsettings set org.gnome.desktop.wm.keybindings cycle-windows "['<Super>j', '<Super>l', '<Super>tab']"
+gsettings set org.gnome.desktop.wm.keybindings cycle-windows-backward "['<Super>k', '<Super>h', '<Super><Shift>tab']"
 gsettings set org.gnome.desktop.wm.keybindings minimize  "['<Super>comma']"
 gsettings set org.gnome.desktop.wm.keybindings maximize  "['<Super>Up', '<Super><Shift>k']"
 gsettings set org.gnome.desktop.wm.keybindings unmaximize  "['<Super>Down', '<Super><Shift>j']"
