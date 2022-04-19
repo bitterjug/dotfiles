@@ -155,7 +155,9 @@ call plug#begin()
 
 " Tools:
   Plug 'jlanzarotta/bufexplorer'
-  Plug 'ryanoasis/vim-devicons'
+  Plug 'ryanoasis/vim-devicons' 
+"  replaced with...
+  Plug 'kyazdani42/nvim-web-devicons'
 
 " Fzf
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
@@ -167,6 +169,8 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'sodapopcan/vim-twiggy'
   Plug 'tpope/vim-dispatch'
+  Plug 'nvim-lua/plenary.nvim' " used by diffview
+  Plug 'sindrets/diffview.nvim'
 
 "  Plug 'gregsexton/gitv' 
 "  Try gv in place of gitv
