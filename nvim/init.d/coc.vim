@@ -3,6 +3,9 @@
 "  noremap <Leader>j <Plug>(coc-diagnostic-next)
 "  noremap <Leader>k <Plug>(coc-diagnostic-prev)
 
+" rename symbol
+  nnoremap <leader>rn <Plug>(coc-rename)
+
 "fix
   noremap <Leader>f <Plug>(coc-fix-current)
 
