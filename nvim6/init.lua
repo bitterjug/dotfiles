@@ -28,8 +28,8 @@ require "paq" {
 
 vim.cmd('PaqInstall')
 
-local maps =  require("maps")
-require("bindings")
+local maps =  require("lua.maps")
+require("lua.bindings")
 
 -- Colorscheme
 

@@ -1,4 +1,4 @@
-local maps = require('maps')
+local maps = require('lua.maps')
 
 -- Window navigation using Alt
 maps.normal("<m-h>", "<c-w>h")
