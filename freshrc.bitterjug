@@ -57,6 +57,8 @@ fresh liquidprompt/liquidpromptrc --file=~/.config/liquidpromptrc
 # FZF extras (mainly to get fco)
 fresh atweiden/fzf-extras fzf-extras.sh
 
+# Lunarvim confg
+fresh lvim/config.lua --file=~/.config/lvim/config.lua
 
 fresh profile --file
 
