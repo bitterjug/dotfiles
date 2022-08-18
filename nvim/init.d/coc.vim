@@ -1,3 +1,4 @@
+let g:coc_node_path= '~/.nvm/versions/node/v18.4.0/bin/node'
 
 " Jump to next diagnostic position.
 "  noremap <Leader>j <Plug>(coc-diagnostic-next)
