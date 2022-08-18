@@ -14,7 +14,7 @@
     }
   },
   "codeLens.enable": true,
-  "codeLens.position": "right_align",
+  "codeLens.position": "eol",
   "coc.preferences.formatOnSaveFiletypes": [ "elm" ],
   "diagnostic.displayByAle": true,
   "coc.preferences.jumpCommand": "vsplit",

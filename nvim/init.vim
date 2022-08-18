@@ -87,7 +87,11 @@ call plug#begin()
   Plug 'phaazon/hop.nvim'
 "  Plug 'antew/vim-elm-language-server'
 " Try out coc 
-  let g:coc_global_extensions = ['coc-explorer', 'coc-markdownlint']
+  let g:coc_global_extensions = [
+     \ 'coc-explorer', 
+     \ 'coc-markdownlint', 
+     \ 'coc-json', 
+   \]
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'antoinemadec/coc-fzf'
 
@@ -108,6 +112,10 @@ call plug#begin()
 " Rest and Json:
   Plug 'elzr/vim-json'
   Plug 'diepm/vim-rest-console', { 'for': 'rest' }
+
+
+" Treesitter
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Javascript:
   "Plug 'jelera/vim-javascript-syntax'
@@ -148,10 +156,7 @@ call plug#begin()
   Plug 'bitterjug/vim-colors-bitterjug'
 "  Plug '~/workspace/vim/vim-colors-bitterjug'
   Plug 'bitterjug/vim-colors-freyr'
-"  Plug 'chriskempson/base16-vim'
-"  Plug 'jnurmine/Zenburn'
-"  Plug 'morhetz/gruvbox'
-"  Plug 'mhinz/vim-janah'
+  Plug 'LunarVim/onedarker.nvim'
 
 " Tools:
   Plug 'jlanzarotta/bufexplorer'
@@ -202,4 +207,4 @@ endif
 call plug#end()
 
 runtime! init.d/*.vim
-
+:luafile ~/.config/nvim/lua/treesetter.lua
