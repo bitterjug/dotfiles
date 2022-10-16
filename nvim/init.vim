@@ -7,6 +7,13 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+"Treesitter
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'tomasiser/vim-code-dark'
+  Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+  Plug 'nvim-treesitter/playground'
+  Plug 'nvim-treesitter/nvim-treesitter-context'
+
   Plug 'junegunn/vim-peekaboo'
   Plug 'aklt/plantuml-syntax'
   Plug 'yuttie/comfortable-motion.vim'
@@ -77,7 +84,7 @@ call plug#begin()
   Plug 'pseewald/vim-anyfold'
   Plug 'konfekt/foldtext'
   Plug 'scrooloose/nerdcommenter'
-  Plug 'terryma/vim-expand-region'
+"  Plug 'terryma/vim-expand-region'
   Plug 'phaazon/hop.nvim'
 " Try out coc 
   let g:coc_global_extensions = ['coc-explorer', 'coc-markdownlint']

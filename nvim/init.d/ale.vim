@@ -1,6 +1,8 @@
   let g:ale_fixers = { 
    \ 'elm': ['elm-format'],
-   \ 'javascript': ['eslint']
+   \ 'javascript': ['eslint'],
+   \ 'rust': ['rustfmt'],
+   \ '*': ['remove_trailing_lines', 'trim_whitespace']
    \ }
  
   let g:ale_linters = {
