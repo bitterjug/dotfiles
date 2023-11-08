@@ -27,13 +27,7 @@ fresh ranger/colorschemes --file=~/.config/ranger/colorschemes/
 fresh lf/lfrc --file=~/.config/lf/lfrc
 
 # NeoVim 
-fresh nvim/init.vim --file=~/.config/nvim/init.vim
-fresh nvim/init.d --file=~/.config/nvim/init.d/
-fresh nvim/after --file=~/.config/nvim/after/
-fresh nvim/ftplugin --file=~/.config/nvim/ftplugin/
-fresh nvim/coc-settings.json --file=~/.config/nvim/coc-settings.json
-fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
-fresh vim/lightline.vim --file=~/.config/nvim/lightline.vim
+fresh nvim/lua/custom --file=~/.config/nvim/custom/
 
 # Do all the bin files into ~/bin at once, mwahaha
 fresh 'bin/*' --bin
