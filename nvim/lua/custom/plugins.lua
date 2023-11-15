@@ -57,7 +57,7 @@ local plugins = {
 	},
 
 	{
-		"Mr-LLLLL/interestingwords.nvim",
+		"lfv98/interestingwords.nvim",
 		config = function()
 			require("interestingwords").setup({
 				colors = {

@@ -9,3 +9,4 @@
 --
 -- Set alternate fill character for deleted lines in diffs
 vim.opt.fillchars:append({ diff = "╱" })
+vim.opt.wrap = false
