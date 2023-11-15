@@ -129,6 +129,10 @@ local plugins = {
       { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
 	},
+	{
+		"NvChad/nvcommunity",
+		{ import = "nvcommunity.git.diffview" },
+	},
 	-- To make a plugin not be loaded
 	-- {
 	--   "NvChad/nvim-colorizer.lua",

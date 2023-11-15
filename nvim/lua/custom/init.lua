@@ -5,3 +5,7 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+--
+--
+-- Set alternate fill character for deleted lines in diffs
+vim.opt.fillchars:append({ diff = "╱" })
