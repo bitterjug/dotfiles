@@ -131,12 +131,34 @@ local plugins = {
 	},
 	{
 		"NvChad/nvcommunity",
-		{ import = "nvcommunity.git.diffview" },
+		{
+			import = "nvcommunity.git.diffview",
+			init = function()
+				vim.opt.fillchars:append({ diff = "╱" })
+			end,
+		},
 		{ import = "nvcommunity.diagnostics.trouble" },
+		{ import = "nvcommunity.folds.ufo" },
+		-- Install manually to set custom key maps
+		--		{ import = "nvcommunity.folds.origami" },
 	},
 	{
 		"tpope/vim-fugitive",
 		event = "VeryLazy",
+	},
+	{
+		"chrisgrieser/nvim-origami",
+		event = "BufReadPost",
+		opts = {
+			keepFoldsAcrossSessions = true,
+			pauseFoldsOnSearch = true,
+			setupFoldKeymaps = false,
+		},
+    -- stylua: ignore
+		keys = {
+			{ "l", mode = { "n" }, function() require("origami").l() end, desc = "Unfold line", },
+			{ "H", mode = { "n" }, function() require("origami").h() end, desc = "Fold line", },
+		},
 	},
 	-- To make a plugin not be loaded
 	-- {

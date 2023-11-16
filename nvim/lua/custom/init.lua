@@ -8,7 +8,6 @@
 --
 --
 -- Set alternate fill character for deleted lines in diffs
-vim.opt.fillchars:append({ diff = "╱" })
 vim.opt.wrap = false
 vim.go.diffopt = "internal,closeoff,filler,vertical,iwhiteall"
 -- vim.go.number = false
