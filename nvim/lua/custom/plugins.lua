@@ -133,6 +133,10 @@ local plugins = {
 		"NvChad/nvcommunity",
 		{ import = "nvcommunity.git.diffview" },
 	},
+	{
+		"tpope/vim-fugitive",
+		event = "VeryLazy",
+	},
 	-- To make a plugin not be loaded
 	-- {
 	--   "NvChad/nvim-colorizer.lua",
