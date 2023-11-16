@@ -132,6 +132,7 @@ local plugins = {
 	{
 		"NvChad/nvcommunity",
 		{ import = "nvcommunity.git.diffview" },
+		{ import = "nvcommunity.diagnostics.trouble" },
 	},
 	{
 		"tpope/vim-fugitive",
