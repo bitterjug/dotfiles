@@ -10,3 +10,12 @@
 -- Set alternate fill character for deleted lines in diffs
 vim.opt.fillchars:append({ diff = "╱" })
 vim.opt.wrap = false
+vim.go.diffopt = "internal,closeoff,filler,vertical,iwhiteall"
+-- vim.go.number = false
+-- Either turn off by default as above, or for particular buffers:
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "fugitive",
+	callback = function()
+		vim.wo.number = false
+	end,
+})
