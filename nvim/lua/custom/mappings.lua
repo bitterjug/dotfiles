@@ -4,7 +4,7 @@ local M = {}
 M.general = {
 	n = {
 		[";"] = { ":", "enter command mode", opts = { nowait = true } },
-		["-"] = { "<cmd> NvimTreeFindFileToggle<CR>", "Find file in tree view" },
+		["-"] = { "<cmd> NvimTreeFindFileToggle!<CR>", "Find file in tree view" },
 	},
 	v = {
 		[">"] = { ">gv", "indent" },
