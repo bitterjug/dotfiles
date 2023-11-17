@@ -1,13 +1,13 @@
 # Open vim from bash on control key
 
-nvim=/snap/bin/nvim
+nvim=nvim
 
 # Control n opens nerdtree
-bind '"\C-n":" $nvim -c NERDTree \C-m"'
+bind '"\C-n":" $nvim -c NvimTreeToggle \C-m"'
 
 # Control p opens fzf
-bind '"\C-p":" $nvim -c ProjectMru \C-m"'
+bind '"\C-p":" $nvim -c '\''Telescope find_files'\'' \C-m"'
 
 # Use neo vim as vi
-alias vi='NVIM_TUI_ENABLE_TRUE_COLOR=1 $nvim'
+alias vi='$nvim'
 

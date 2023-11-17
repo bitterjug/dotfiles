@@ -89,12 +89,7 @@ local plugins = {
 				cancel_color_key = "<leader>mn",
 			})
 		end,
-		keys = {
-			"<leader>ms",
-			"<leader>mM",
-			"<leader>mm",
-			"<leader>mn",
-		},
+		event = { "BufReadPre", "BufNewFile" },
 	},
 
 	{
@@ -131,12 +126,7 @@ local plugins = {
 	},
 	{
 		"NvChad/nvcommunity",
-		{
-			import = "nvcommunity.git.diffview",
-			init = function()
-				vim.opt.fillchars:append({ diff = "╱" })
-			end,
-		},
+		{ import = "nvcommunity.git.diffview" },
 		{ import = "nvcommunity.diagnostics.trouble" },
 		{ import = "nvcommunity.folds.ufo" },
 		-- Install manually to set custom key maps

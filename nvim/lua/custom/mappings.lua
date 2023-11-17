@@ -4,6 +4,7 @@ local M = {}
 M.general = {
 	n = {
 		[";"] = { ":", "enter command mode", opts = { nowait = true } },
+		["-"] = { "<cmd> NvimTreeFindFileToggle<CR>", "Find file in tree view" },
 	},
 	v = {
 		[">"] = { ">gv", "indent" },
@@ -12,7 +13,7 @@ M.general = {
 
 M.diffview = {
 	n = {
-		["<leader>gd"] = { "<cmd> DiffviewOpen <CR>", "Git diff view" },
+		["<leader>gd"] = { "<cmd> DiffviewOpen --imply-local<CR>", "Diff view" },
 		["<leader>gc"] = { "<cmd> DiffviewClose <CR>", "Close diff view  " },
 	},
 }
