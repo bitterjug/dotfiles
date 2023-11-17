@@ -154,7 +154,16 @@ local plugins = {
 		"nvim-tree/nvim-tree.lua",
 		cmd = { "NvimTreeToggle", "NvimTreeFocus", "NvimTreeFindFileToggle" },
 	},
-	{},
+	{
+		"lewis6991/gitsigns.nvim",
+		dependencies = {
+			"sindrets/diffview.nvim",
+			config = function()
+				-- Set alternate fill character for deleted lines in diffs
+				vim.opt.fillchars:append({ diff = "╱" })
+			end,
+		},
+	},
 	-- To make a plugin not be loaded
 	-- {
 	--   "NvChad/nvim-colorizer.lua",

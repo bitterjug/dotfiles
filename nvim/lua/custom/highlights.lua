@@ -9,12 +9,13 @@ M.override = {
 	Comment = {
 		italic = true,
 	},
+	DiffAdd = { bg = "grey", fg = "NONE" },
+	FlashLabel = { fg = "black2", bg = "cyan" },
 }
 
 ---@type HLTable
 M.add = {
 	NvimTreeOpenedFolderName = { fg = "green", bold = true },
-	FlashLabel = { fg = "black2", bg = "cyan" },
 }
 
 return M

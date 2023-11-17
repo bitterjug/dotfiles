@@ -10,9 +10,6 @@
 -- turn off wrap by default
 vim.opt.wrap = false
 
--- Set alternate fill character for deleted lines in diffs
-vim.opt.fillchars:append({ diff = "╱" })
-
 vim.go.diffopt = "internal,closeoff,filler,vertical,iwhiteall"
 -- vim.go.number = false
 -- Either turn off by default as above, or for particular buffers:
