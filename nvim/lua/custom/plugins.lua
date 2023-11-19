@@ -38,7 +38,6 @@ local plugins = {
 		opts = overrides.nvimtree,
 	},
 
-	-- Install a plugin
 	{
 		"max397574/better-escape.nvim",
 		event = "InsertEnter",
@@ -52,7 +51,9 @@ local plugins = {
 		event = { "BufReadPre", "BufNewFile" },
 
 		config = function()
-			require("neoscroll").setup({})
+			require("neoscroll").setup({
+				-- easing_function = "quartic",
+			})
 		end,
 	},
 
@@ -99,7 +100,7 @@ local plugins = {
 			require("conform").setup({
 				formatters_by_ft = {
 					lua = { "stylua" },
-					elm = { "elm-format" },
+					elm = { "elm_format" },
 				},
 				format_on_save = {
 					-- These options will be passed to conform.format()
@@ -129,6 +130,8 @@ local plugins = {
 		{ import = "nvcommunity.git.diffview" },
 		{ import = "nvcommunity.diagnostics.trouble" },
 		{ import = "nvcommunity.folds.ufo" },
+		{ import = "nvcommunity.lsp.barbecue" },
+		{ import = "nvcommunity.editor.symbols-outline" },
 		-- Install manually to set custom key maps
 		--		{ import = "nvcommunity.folds.origami" },
 	},
