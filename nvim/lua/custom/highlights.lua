@@ -6,11 +6,12 @@ local M = {}
 
 ---@type Base46HLGroupsList
 M.override = {
-	Comment = {
-		italic = true,
-	},
-	DiffAdd = { bg = "grey", fg = "NONE" },
-	FlashLabel = { fg = "black2", bg = "cyan" },
+	Comment = { italic = true },
+	DiffAdd = { bg = "#222a22", fg = "NONE" },
+	DiffAdded = { bg = "#3a3a3a", fg = "NONE" },
+	DiffDelete = { bg = "#1c0909", fg = "NONE" },
+	DiffChange = { bg = "#20202e", fg = "NONE" },
+	Substitute = { fg = "black2", bg = "cyan" },
 }
 
 ---@type HLTable
