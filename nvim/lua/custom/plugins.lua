@@ -59,6 +59,7 @@ local plugins = {
 
 	{
 		"lfv98/interestingwords.nvim",
+		enabled = false,
 		config = function()
 			require("interestingwords").setup({
 				colors = {
@@ -90,7 +91,7 @@ local plugins = {
 				cancel_color_key = "<leader>mn",
 			})
 		end,
-		event = { "BufReadPre", "BufNewFile" },
+		event = "VeryLazy",
 	},
 
 	{
@@ -103,7 +104,7 @@ local plugins = {
 					elm = { "elm_format" },
 				},
 				format_on_save = {
-					-- These options will be passed to conform.format()
+					-- These options will be paspused to conform.format()
 					timeout_ms = 500,
 					lsp_fallback = true,
 				},
@@ -166,6 +167,17 @@ local plugins = {
 				vim.opt.fillchars:append({ diff = "╱" })
 			end,
 		},
+	},
+	{
+		"LhKipp/nvim-nu",
+		build = ":TSInstall nu",
+	},
+	{
+		"simrat39/rust-tools.nvim",
+		after = "nvim-lspconfig",
+		config = function()
+			require("rust-tools").setup({})
+		end,
 	},
 	-- To make a plugin not be loaded
 	-- {

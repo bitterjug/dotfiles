@@ -10,6 +10,7 @@ local sources = {
 
 	-- Lua
 	b.formatting.stylua,
+	b.formatting.rustfmt,
 }
 
 null_ls.setup({

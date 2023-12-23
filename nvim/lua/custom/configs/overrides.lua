@@ -2,17 +2,18 @@ local M = {}
 
 M.treesitter = {
 	ensure_installed = {
-		"vim",
-		"lua",
-		"html",
-		"css",
-		"javascript",
-		"typescript",
-		"tsx",
 		"c",
+		"css",
+		"elm",
+		"html",
+		"javascript",
+		"lua",
 		"markdown",
 		"markdown_inline",
-		"elm",
+		"rust",
+		"tsx",
+		"typescript",
+		"vim",
 	},
 	indent = {
 		enable = true,
@@ -42,6 +43,9 @@ M.mason = {
 		-- Elm dev
 		"elm-format",
 		"elm-language-server",
+
+		-- Rust stuff
+		"rust-analyzer",
 	},
 }
 
