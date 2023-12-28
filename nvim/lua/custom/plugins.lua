@@ -171,10 +171,12 @@ local plugins = {
 	{
 		"LhKipp/nvim-nu",
 		build = ":TSInstall nu",
+		ft = "nu",
 	},
 	{
 		"simrat39/rust-tools.nvim",
 		after = "nvim-lspconfig",
+		ft = "rust",
 		config = function()
 			require("rust-tools").setup({})
 		end,
