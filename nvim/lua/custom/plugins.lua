@@ -102,6 +102,7 @@ local plugins = {
 				formatters_by_ft = {
 					lua = { "stylua" },
 					elm = { "elm_format" },
+					rust = { "rustfmt" },
 				},
 				format_on_save = {
 					-- These options will be paspused to conform.format()
@@ -174,6 +175,8 @@ local plugins = {
 		ft = "nu",
 	},
 	{
+		-- Disabled because clashes with built in lsp config
+		enabled = false,
 		"simrat39/rust-tools.nvim",
 		after = "nvim-lspconfig",
 		ft = "rust",
