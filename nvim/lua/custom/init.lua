@@ -9,6 +9,12 @@
 
 -- turn off wrap by default
 vim.opt.wrap = false
+-- turn off line numbers by default
+vim.opt.number = false
+-- This puts the Fugitive window above which Im used to
+vim.opt.splitbelow = false
+-- Conceal level for obsidian -- shiould the be just in markdown files?
+vim.opt.conceallevel = 2
 
 vim.go.diffopt = "internal,closeoff,filler,vertical,iwhiteall"
 -- vim.go.number = false
