@@ -10,6 +10,8 @@ M.ui = {
 
 	hl_override = highlights.override,
 	hl_add = highlights.add,
+	-- semantic tokens possibly has no effect depending on the lsp
+	lsp_semantic_tokens = true,
 }
 
 M.plugins = "custom.plugins"
