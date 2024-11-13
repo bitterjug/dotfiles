@@ -40,6 +40,8 @@ rsync --archive --partial --progress --verbose \
     --exclude .wine/ \
     --exclude .cache/ \
     --exclude .rustup/ \
+    --exclude .cargo/ \
+    --exclude .var/ \
     --exclude .stack/ \
     --exclude .npm/ \
     --exclude .nvm/ \
@@ -54,6 +56,8 @@ rsync --archive --partial --progress --verbose \
     --exclude .ubuntuone/ \
     --exclude .local/share/ \
     --exclude Documents/ipod/ \
+    --exclude Downloads/ \
+    --exclude Local\ Sites/ \
     $FROM $TO
 
 # now record the last backup date
