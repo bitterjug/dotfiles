@@ -39,15 +39,20 @@ rsync --archive --partial --progress --verbose \
     --exclude tmp/ \
     --exclude .wine/ \
     --exclude .cache/ \
+    --exclude .rustup/ \
     --exclude .stack/ \
+    --exclude .npm/ \
+    --exclude .nvm/ \
     --exclude .dropbox/command_socket \
     --exclude .dropbox/iface_socket \
     --exclude .ssh/control/ \
     --exclude .vagrant.d/boxes/ \
+    --exclude .mozilla/ \
     --exclude .virtualenvs \
     --exclude .VirtualBox \
     --exclude .ve/ \
     --exclude .ubuntuone/ \
+    --exclude .local/share/ \
     --exclude Documents/ipod/ \
     $FROM $TO
 
