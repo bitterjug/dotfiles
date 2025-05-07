@@ -1,11 +1,9 @@
-let g:coc_node_path= '~/.nvm/versions/node/v18.4.0/bin/node'
+let g:coc_node_path= '~/.nvm/versions/node/v20.17.0/bin/node'
 
 " Jump to next diagnostic position.
 "  noremap <Leader>j <Plug>(coc-diagnostic-next)
 "  noremap <Leader>k <Plug>(coc-diagnostic-prev)
 
-" rename symbol
-  nnoremap <leader>rn <Plug>(coc-rename)
 
 "fix
   noremap <Leader>f <Plug>(coc-fix-current)
@@ -14,6 +12,9 @@ let g:coc_node_path= '~/.nvm/versions/node/v18.4.0/bin/node'
   nmap <silent> gr <Plug>(coc-references)
   nmap <silent> gy <Plug>(coc-type-definition)
   nmap <silent> gd <Plug>(coc-definition)
+
+" rename symbol
+  nnoremap <leader>rn <Plug>(coc-rename)
 
  " Use <TAB> to select the popup menu:, enter to confirm
   inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -57,5 +58,8 @@ nnoremap <leader>oa :CocAction<cr>
 " noremap <silent> <Tab> :CocCommand explorer --quit-on-open --position floating  --reveal % <cr>
 
 " Instead of nerd tree
-noremap <silent> <Tab> :CocCommand explorer --quit-on-open<cr>
+noremap <silent> - :CocCommand explorer --quit-on-open<cr>
 
+
+noremap <silent> <c-e>] :call CocAction('diagnosticNext')<CR>
+noremap <silent> <c-e>] :call CocAction('diagnosticPrevious')<CR>

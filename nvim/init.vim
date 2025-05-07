@@ -175,6 +175,7 @@ call plug#begin()
   Plug 'sodapopcan/vim-twiggy'
   Plug 'tpope/vim-dispatch'
   Plug 'nvim-lua/plenary.nvim' " used by diffview
+" diffview
   Plug 'sindrets/diffview.nvim'
 
 "  Plug 'gregsexton/gitv' 

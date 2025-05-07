@@ -14,15 +14,15 @@ syntax match elmNiceOperator "\\" conceal cchar=λ
 "➨
 " ≫ 》>>
 
-syntax match cons "::" conceal cchar=∷
+"syntax match cons "::" conceal cchar=∷
 
 " syntax match elmNiceOperator "|>" conceal cchar=►
-syntax match elmNiceOperator "|>" conceal cchar=⊳
+" syntax match elmNiceOperator "|>" conceal cchar=⊳
 
 " syntax match elmNiceOperator "<|" conceal cchar=◄
-syntax match elmNiceOperator "<|" conceal cchar=⊲
+" syntax match elmNiceOperator "<|" conceal cchar=⊲
 
-syntax match elmNiceOperator "->" conceal cchar=➜
+" syntax match elmNiceOperator "->" conceal cchar=➜
 "nerd: 
 " unicode: ⇒ ⟹   ➔ ➨ ➙ ➭
 " ╭─ what isi it─╮
@@ -38,6 +38,6 @@ hi def link elmTodo Todo
 hi link elmNiceOperator Operator
 hi! link Conceal Operator
 
-setlocal conceallevel=2
+setlocal conceallevel=1
 
 hi ALEWarningLine guibg=none

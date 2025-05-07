@@ -61,3 +61,4 @@
 
 " Purescript
   autocmd BufEnter * if &ft ==# 'purescript' | call MyVimrc_setup_prog(2) | endif
+
